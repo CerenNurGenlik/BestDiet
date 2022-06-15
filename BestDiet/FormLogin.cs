@@ -16,5 +16,6 @@ namespace BestDiet
         {
             InitializeComponent();
         }
+        ///Bugra albayrak
     }
 }
