@@ -44,7 +44,7 @@
             this.label1.ForeColor = System.Drawing.Color.DarkGreen;
             this.label1.Location = new System.Drawing.Point(34, 296);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 24);
+            this.label1.Size = new System.Drawing.Size(113, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kullanıcı Adı:";
             // 
@@ -54,7 +54,7 @@
             this.label2.ForeColor = System.Drawing.Color.DarkGreen;
             this.label2.Location = new System.Drawing.Point(100, 380);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 24);
+            this.label2.Size = new System.Drawing.Size(52, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Şifre:";
             // 
@@ -75,7 +75,7 @@
             this.lnkKayitOl.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lnkKayitOl.Location = new System.Drawing.Point(208, 555);
             this.lnkKayitOl.Name = "lnkKayitOl";
-            this.lnkKayitOl.Size = new System.Drawing.Size(73, 24);
+            this.lnkKayitOl.Size = new System.Drawing.Size(73, 22);
             this.lnkKayitOl.TabIndex = 2;
             this.lnkKayitOl.TabStop = true;
             this.lnkKayitOl.Text = "Kayıt Ol";
@@ -102,7 +102,7 @@
             // 
             // pictureBox1
             // 
-            //this.pictureBox1.Image = global::Proje_Formlar.Properties.Resources.bestdiet;
+            this.pictureBox1.Image = global::BestDiet.Properties.Resources.Screenshot_1;
             this.pictureBox1.Location = new System.Drawing.Point(165, 49);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(192, 178);
@@ -110,7 +110,7 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // GirisEkrani
+            // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -125,7 +125,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "GirisEkrani";
+            this.Name = "FormLogin";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
