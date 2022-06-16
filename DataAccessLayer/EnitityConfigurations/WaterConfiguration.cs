@@ -12,7 +12,6 @@ namespace DataAccessLayer.EnitityConfigurations
     {
         public WaterConfiguration()
         {
-            Property(w => w.WaterID).IsRequired();
             Property(w => w.Quantity).IsRequired();
             Property(w => w.UserID).IsRequired();
         }
