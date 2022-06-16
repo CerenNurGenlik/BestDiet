@@ -216,6 +216,14 @@ namespace DataAccessLayer.Strategy
             foods.Add(new Food() { FoodName = "Künefe", Calori = 420, FoodCategoryID = 13 });
 
             context.Foods.AddRange(foods);
+
+            List<MealCategory> mealCategories = new List<MealCategory>();
+            mealCategories.Add(new MealCategory() { MealCategoryName = "Sabah" });
+            mealCategories.Add(new MealCategory() { MealCategoryName = "Öğle" });
+            mealCategories.Add(new MealCategory() { MealCategoryName = "Akşam" });
+            mealCategories.Add(new MealCategory() { MealCategoryName = "Aperatif" });
+
+            context.MealCategories.AddRange(mealCategories);
         }
     }
 }
