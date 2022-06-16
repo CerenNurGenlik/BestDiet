@@ -110,6 +110,7 @@
     <Compile Include="FormUserMain.Designer.cs">
       <DependentUpon>FormUserMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormActivity.resx">

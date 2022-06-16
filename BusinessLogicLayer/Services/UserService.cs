@@ -23,7 +23,7 @@ namespace BusinessLogicLayer.Services
         {
             return userRepository.GetUserByUserName(userName);
         }
-        public void InsertUser(User user)
+        public bool InsertUser(User user)
         {
             if (string.IsNullOrWhiteSpace(user.FirstName) || string.IsNullOrWhiteSpace(user.LastName))
                 throw new Exception("İsim yada Soyisim boş olamaz!");
@@ -33,8 +33,12 @@ namespace BusinessLogicLayer.Services
                 throw new Exception("Kullanıcı boyu 100cm den az, 240cm den fazla olamaz!");
             else if (user.Weight < 40 || user.Weight > 400)
                 throw new Exception("Kullanıcı kilosu 40kg den küçük, 400kg den fazla olamaz!");
-            else if(user.TargetWeight > user.Weight || user.TargetWeight<40)
+            else if (user.TargetWeight > user.Weight || user.TargetWeight < 40)
                 throw new Exception("Kullanıcı hedef kilosu şu anki kilosundan büyük olamaz ve 40kg den az olamaz");
+            else if (string.IsNullOrWhiteSpace(user.Password))
+                throw new Exception("Şifre boş olamaz");
+            
+            return userRepository.InsertUser(user);
         }
     }
 }

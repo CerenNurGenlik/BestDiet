@@ -12,7 +12,7 @@ namespace Model.Entites
         {
             Foods = new HashSet<Food>();
         }
-        public string MealName { get; set; }
+        public int MealID { get; set; }
         public DateTime MealTime { get; set; }
         public string UserID { get; set; }
         public int MealCategoryID { get; set; }

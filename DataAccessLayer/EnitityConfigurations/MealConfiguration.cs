@@ -12,8 +12,6 @@ namespace DataAccessLayer.EnitityConfigurations
     {
         public MealConfiguration()
         {
-            Property(m => m.MealName).IsRequired().HasMaxLength(100);
-            HasIndex(m => m.MealName);
             Property(m => m.UserID).IsRequired();
             Property(m=> m.MealCategoryID).IsRequired();
         }
