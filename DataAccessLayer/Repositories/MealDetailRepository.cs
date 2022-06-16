@@ -23,6 +23,6 @@ namespace DataAccessLayer.Repositories
             MealDetail mealDetail= db.MealDetails.Where(a => a.MealDetailID == mealDetailId).FirstOrDefault();
             db.MealDetails.Remove(mealDetail);
             return db.SaveChanges() > 0;
-        }
+        }       
     }
 }

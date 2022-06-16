@@ -47,7 +47,7 @@ namespace BestDiet
                     {
                         case UserType.User:
                             this.Hide();
-                            FormUserMain formUserMain = new FormUserMain(user.UserID);
+                            FormUserMain formUserMain = new FormUserMain(user);
                             formUserMain.ShowDialog();
                             this.Show();
                             break;

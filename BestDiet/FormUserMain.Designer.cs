@@ -48,59 +48,60 @@
             this.lblYas = new System.Windows.Forms.Label();
             this.btnRaporGoruntule = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblKahvaltiEkle = new System.Windows.Forms.LinkLabel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lblAlinanKalori = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.lblAperatifEkle = new System.Windows.Forms.LinkLabel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.lblYakilanKalori = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.nudSuLitresi = new System.Windows.Forms.NumericUpDown();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lblAksamEkle = new System.Windows.Forms.LinkLabel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.grpAlinanKalori = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lblOgleEkle = new System.Windows.Forms.LinkLabel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.grpYakilanKalori = new System.Windows.Forms.GroupBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblKalanKalori = new System.Windows.Forms.Label();
             this.lblKullaniciAdi = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.dtpTarih = new System.Windows.Forms.DateTimePicker();
             this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSuLitresi)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.grpAlinanKalori.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.grpYakilanKalori.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
@@ -108,7 +109,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.White;
             this.label9.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label9.Location = new System.Drawing.Point(72, 21);
+            this.label9.Location = new System.Drawing.Point(19, 47);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(40, 24);
@@ -309,6 +310,7 @@
             this.lblEgzersizEkle.TabIndex = 17;
             this.lblEgzersizEkle.TabStop = true;
             this.lblEgzersizEkle.Text = "+/-";
+            this.lblEgzersizEkle.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblEgzersizEkle_LinkClicked);
             // 
             // lblSuEkle
             // 
@@ -316,13 +318,14 @@
             this.lblSuEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblSuEkle.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lblSuEkle.LinkColor = System.Drawing.Color.DarkGreen;
-            this.lblSuEkle.Location = new System.Drawing.Point(105, 56);
+            this.lblSuEkle.Location = new System.Drawing.Point(105, 102);
             this.lblSuEkle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSuEkle.Name = "lblSuEkle";
             this.lblSuEkle.Size = new System.Drawing.Size(65, 42);
             this.lblSuEkle.TabIndex = 17;
             this.lblSuEkle.TabStop = true;
             this.lblSuEkle.Text = "+/-";
+            this.lblSuEkle.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblSuEkle_LinkClicked);
             // 
             // lblYas
             // 
@@ -342,7 +345,7 @@
             this.btnRaporGoruntule.BackColor = System.Drawing.Color.White;
             this.btnRaporGoruntule.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnRaporGoruntule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnRaporGoruntule.Location = new System.Drawing.Point(146, 697);
+            this.btnRaporGoruntule.Location = new System.Drawing.Point(146, 749);
             this.btnRaporGoruntule.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnRaporGoruntule.Name = "btnRaporGoruntule";
             this.btnRaporGoruntule.Size = new System.Drawing.Size(200, 40);
@@ -379,13 +382,24 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Bilgilerim";
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::BestDiet.Properties.Resources.Screenshot_121;
+            this.pictureBox10.Location = new System.Drawing.Point(159, 17);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(104, 91);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 3;
+            this.pictureBox10.TabStop = false;
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
             this.groupBox2.Controls.Add(this.lblKahvaltiEkle);
             this.groupBox2.Controls.Add(this.pictureBox5);
             this.groupBox2.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox2.Location = new System.Drawing.Point(32, 359);
+            this.groupBox2.Location = new System.Drawing.Point(31, 415);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -407,6 +421,18 @@
             this.lblKahvaltiEkle.TabIndex = 17;
             this.lblKahvaltiEkle.TabStop = true;
             this.lblKahvaltiEkle.Text = "+/-";
+            this.lblKahvaltiEkle.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblKahvaltiEkle_LinkClicked);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::BestDiet.Properties.Resources.Screenshot_141;
+            this.pictureBox5.Location = new System.Drawing.Point(18, 20);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(71, 65);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 3;
+            this.pictureBox5.TabStop = false;
             // 
             // lblAlinanKalori
             // 
@@ -428,7 +454,7 @@
             this.groupBox5.Controls.Add(this.pictureBox8);
             this.groupBox5.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox5.ForeColor = System.Drawing.Color.Black;
-            this.groupBox5.Location = new System.Drawing.Point(268, 360);
+            this.groupBox5.Location = new System.Drawing.Point(267, 359);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -450,6 +476,18 @@
             this.lblAperatifEkle.TabIndex = 17;
             this.lblAperatifEkle.TabStop = true;
             this.lblAperatifEkle.Text = "+/-";
+            this.lblAperatifEkle.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblAperatifEkle_LinkClicked);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::BestDiet.Properties.Resources.Screenshot_17;
+            this.pictureBox8.Location = new System.Drawing.Point(12, 26);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(66, 59);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 3;
+            this.pictureBox8.TabStop = false;
             // 
             // lblYakilanKalori
             // 
@@ -472,14 +510,26 @@
             this.groupBox8.Controls.Add(this.nudSuLitresi);
             this.groupBox8.Controls.Add(this.label9);
             this.groupBox8.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox8.Location = new System.Drawing.Point(266, 553);
+            this.groupBox8.Location = new System.Drawing.Point(265, 552);
             this.groupBox8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.groupBox8.Size = new System.Drawing.Size(192, 124);
+            this.groupBox8.Size = new System.Drawing.Size(192, 180);
             this.groupBox8.TabIndex = 25;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Su";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::BestDiet.Properties.Resources.unknown;
+            this.pictureBox1.Location = new System.Drawing.Point(14, 94);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(56, 63);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // nudSuLitresi
             // 
@@ -490,10 +540,10 @@
             0,
             0,
             65536});
-            this.nudSuLitresi.Location = new System.Drawing.Point(120, 19);
+            this.nudSuLitresi.Location = new System.Drawing.Point(67, 45);
             this.nudSuLitresi.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nudSuLitresi.Name = "nudSuLitresi";
-            this.nudSuLitresi.Size = new System.Drawing.Size(54, 29);
+            this.nudSuLitresi.Size = new System.Drawing.Size(103, 29);
             this.nudSuLitresi.TabIndex = 10;
             this.nudSuLitresi.Value = new decimal(new int[] {
             1,
@@ -507,7 +557,7 @@
             this.groupBox4.Controls.Add(this.lblAksamEkle);
             this.groupBox4.Controls.Add(this.pictureBox7);
             this.groupBox4.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox4.Location = new System.Drawing.Point(266, 456);
+            this.groupBox4.Location = new System.Drawing.Point(265, 455);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -529,6 +579,18 @@
             this.lblAksamEkle.TabIndex = 17;
             this.lblAksamEkle.TabStop = true;
             this.lblAksamEkle.Text = "+/-";
+            this.lblAksamEkle.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblAksamEkle_LinkClicked);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::BestDiet.Properties.Resources.Screenshot_16;
+            this.pictureBox7.Location = new System.Drawing.Point(12, 21);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(68, 64);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 3;
+            this.pictureBox7.TabStop = false;
             // 
             // grpAlinanKalori
             // 
@@ -545,13 +607,24 @@
             this.grpAlinanKalori.TabStop = false;
             this.grpAlinanKalori.Text = "Alınan Kalori";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::BestDiet.Properties.Resources.Screenshot_91;
+            this.pictureBox2.Location = new System.Drawing.Point(62, 39);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(58, 57);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
             // groupBox7
             // 
             this.groupBox7.BackColor = System.Drawing.Color.White;
             this.groupBox7.Controls.Add(this.lblEgzersizEkle);
             this.groupBox7.Controls.Add(this.pictureBox9);
             this.groupBox7.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox7.Location = new System.Drawing.Point(32, 553);
+            this.groupBox7.Location = new System.Drawing.Point(31, 609);
             this.groupBox7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -560,13 +633,24 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Egzersiz";
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::BestDiet.Properties.Resources.Screenshot_11;
+            this.pictureBox9.Location = new System.Drawing.Point(18, 37);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(71, 63);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 3;
+            this.pictureBox9.TabStop = false;
+            // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
             this.groupBox3.Controls.Add(this.lblOgleEkle);
             this.groupBox3.Controls.Add(this.pictureBox6);
             this.groupBox3.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox3.Location = new System.Drawing.Point(32, 456);
+            this.groupBox3.Location = new System.Drawing.Point(31, 512);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -588,6 +672,18 @@
             this.lblOgleEkle.TabIndex = 17;
             this.lblOgleEkle.TabStop = true;
             this.lblOgleEkle.Text = "+/-";
+            this.lblOgleEkle.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblOgleEkle_LinkClicked);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::BestDiet.Properties.Resources.Screenshot_15;
+            this.pictureBox6.Location = new System.Drawing.Point(18, 20);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(72, 65);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 3;
+            this.pictureBox6.TabStop = false;
             // 
             // grpYakilanKalori
             // 
@@ -604,6 +700,17 @@
             this.grpYakilanKalori.TabStop = false;
             this.grpYakilanKalori.Text = "Yakılan Kalori";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::BestDiet.Properties.Resources.Screenshot_82;
+            this.pictureBox3.Location = new System.Drawing.Point(62, 39);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(59, 57);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
@@ -617,7 +724,18 @@
             this.groupBox1.Size = new System.Drawing.Size(138, 102);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Kalan Kalori";
+            this.groupBox1.Text = "Alınması Gereken Kalori";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::BestDiet.Properties.Resources.Screenshot_131;
+            this.pictureBox4.Location = new System.Drawing.Point(66, 39);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(55, 57);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
             // 
             // lblKalanKalori
             // 
@@ -667,123 +785,21 @@
             this.pictureBox12.TabIndex = 30;
             this.pictureBox12.TabStop = false;
             // 
-            // pictureBox10
+            // dtpTarih
             // 
-            this.pictureBox10.Image = global::BestDiet.Properties.Resources.Screenshot_121;
-            this.pictureBox10.Location = new System.Drawing.Point(159, 17);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(104, 91);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 3;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::BestDiet.Properties.Resources.Screenshot_141;
-            this.pictureBox5.Location = new System.Drawing.Point(18, 20);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(71, 65);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 3;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::BestDiet.Properties.Resources.Screenshot_17;
-            this.pictureBox8.Location = new System.Drawing.Point(12, 26);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(66, 59);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 3;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::BestDiet.Properties.Resources.unknown;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 36);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(56, 63);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::BestDiet.Properties.Resources.Screenshot_16;
-            this.pictureBox7.Location = new System.Drawing.Point(12, 21);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(68, 64);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 3;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::BestDiet.Properties.Resources.Screenshot_91;
-            this.pictureBox2.Location = new System.Drawing.Point(62, 39);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(58, 57);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::BestDiet.Properties.Resources.Screenshot_11;
-            this.pictureBox9.Location = new System.Drawing.Point(18, 37);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(71, 63);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 3;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::BestDiet.Properties.Resources.Screenshot_15;
-            this.pictureBox6.Location = new System.Drawing.Point(18, 20);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(72, 65);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 3;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::BestDiet.Properties.Resources.Screenshot_82;
-            this.pictureBox3.Location = new System.Drawing.Point(62, 39);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(59, 57);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::BestDiet.Properties.Resources.Screenshot_131;
-            this.pictureBox4.Location = new System.Drawing.Point(66, 39);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(55, 57);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
+            this.dtpTarih.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTarih.Location = new System.Drawing.Point(31, 373);
+            this.dtpTarih.Name = "dtpTarih";
+            this.dtpTarih.Size = new System.Drawing.Size(189, 27);
+            this.dtpTarih.TabIndex = 32;
             // 
             // FormUserMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(498, 761);
+            this.ClientSize = new System.Drawing.Size(498, 801);
+            this.Controls.Add(this.dtpTarih);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.btnRaporGoruntule);
@@ -799,42 +815,43 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblKullaniciAdi);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormUserMain";
             this.Text = "FormUserMain";
+            this.Load += new System.EventHandler(this.FormUserMain_Load);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSuLitresi)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.grpAlinanKalori.ResumeLayout(false);
             this.grpAlinanKalori.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.grpYakilanKalori.ResumeLayout(false);
             this.grpYakilanKalori.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -892,5 +909,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label lblKalanKalori;
         private System.Windows.Forms.Label lblKullaniciAdi;
+        private System.Windows.Forms.DateTimePicker dtpTarih;
     }
 }

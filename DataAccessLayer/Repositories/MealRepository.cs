@@ -27,5 +27,10 @@ namespace DataAccessLayer.Repositories
         {
             return db.Meals.Where(a => a.UserID == userID && a.MealCategoryID == mealCategoryID && a.MealTime == dateTime).FirstOrDefault();
         }
+        public Meal GetMealByUserIDandMealCategoryName(string userID, string mealCategoryName, DateTime dateTime)
+        {
+            return db.Meals.Where(a => a.UserID == userID && a.MealCategory.MealCategoryName == mealCategoryName && a.MealTime == dateTime).FirstOrDefault();
+        }
+
     }
 }
