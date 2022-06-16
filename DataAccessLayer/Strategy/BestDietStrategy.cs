@@ -37,12 +37,8 @@ namespace DataAccessLayer.Strategy
             sports.Add(new Sport() { SportName = "Voleybol", BurningCalori = 294 });
             sports.Add(new Sport() { SportName = "Golf", BurningCalori = 390 });
             sports.Add(new Sport() { SportName = "Ağırlık Çalışması", BurningCalori = 440 });
-            
-
 
             context.Sports.AddRange(sports);
-            
-
         }
     }
 }
