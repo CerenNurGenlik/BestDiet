@@ -24,6 +24,7 @@ namespace DataAccessLayer
         public DbSet<Meal> Meals { get; set; }
         public DbSet<Food> Foods { get; set; }
         public DbSet<Exercise> Exercises { get; set; }
+        public DbSet<MealDetail> MealDetails { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -33,6 +34,8 @@ namespace DataAccessLayer
             modelBuilder.Configurations.Add(new SportConfiguration());
             modelBuilder.Configurations.Add(new ExerciseConfiguration());
             modelBuilder.Configurations.Add(new WaterConfiguration());
+            modelBuilder.Configurations.Add(new FoodConfiguration());
+            modelBuilder.Configurations.Add(new FoodCategoryConfiguration());
         }
     }
 }

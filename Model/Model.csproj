@@ -46,6 +46,7 @@
     <Compile Include="Entites\FoodCategory.cs" />
     <Compile Include="Entites\Meal.cs" />
     <Compile Include="Entites\MealCategory.cs" />
+    <Compile Include="Entites\MealDetail.cs" />
     <Compile Include="Entites\Sport.cs" />
     <Compile Include="Entites\User.cs" />
     <Compile Include="Entites\Water.cs" />

@@ -10,17 +10,16 @@ namespace Model.Entites
     {
         public Meal()
         {
-            Foods = new HashSet<Food>();
+            MealDetails=new HashSet<MealDetail>();
         }
         public int MealID { get; set; }
         public DateTime MealTime { get; set; }
         public string UserID { get; set; }
         public int MealCategoryID { get; set; }
+        public virtual ICollection<MealDetail> MealDetails { get; set; }
 
 
         public virtual MealCategory MealCategory { get; set; }
-        public virtual User User { get; set; }
-
-        public virtual ICollection<Food> Foods { get; set; }
+        public virtual User User { get; set; }        
     }
 }

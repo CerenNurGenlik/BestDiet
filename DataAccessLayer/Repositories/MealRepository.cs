@@ -23,5 +23,9 @@ namespace DataAccessLayer.Repositories
         {
             return db.Meals.Where(m => m.MealTime >= startDate && m.MealTime <= endDate).ToList();
         }
+        public Meal GetMealByUserIDandMealCategoryID(string userID, int mealCategoryID, DateTime dateTime)
+        {
+            return db.Meals.Where(a => a.UserID == userID && a.MealCategoryID == mealCategoryID && a.MealTime == dateTime).FirstOrDefault();
+        }
     }
 }
