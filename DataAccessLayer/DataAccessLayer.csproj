@@ -53,6 +53,8 @@
   <ItemGroup>
     <Compile Include="BestDietDbContext.cs" />
     <Compile Include="EnitityConfigurations\ExerciseConfiguration.cs" />
+    <Compile Include="EnitityConfigurations\FoodCategoryConfiguration.cs" />
+    <Compile Include="EnitityConfigurations\FoodConfiguration.cs" />
     <Compile Include="EnitityConfigurations\MealCategoryConfiguration.cs" />
     <Compile Include="EnitityConfigurations\MealConfiguration.cs" />
     <Compile Include="EnitityConfigurations\SportConfiguration.cs" />
