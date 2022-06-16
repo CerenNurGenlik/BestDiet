@@ -30,6 +30,9 @@ namespace DataAccessLayer
             modelBuilder.Configurations.Add(new UserConfiguration());
             modelBuilder.Configurations.Add(new MealConfiguration());
             modelBuilder.Configurations.Add(new MealCategoryConfiguration());
+            modelBuilder.Configurations.Add(new SportConfiguration());
+            modelBuilder.Configurations.Add(new ExerciseConfiguration());
+            modelBuilder.Configurations.Add(new WaterConfiguration());
         }
     }
 }

@@ -52,13 +52,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BestDietDbContext.cs" />
+    <Compile Include="EnitityConfigurations\ExerciseConfiguration.cs" />
     <Compile Include="EnitityConfigurations\MealCategoryConfiguration.cs" />
     <Compile Include="EnitityConfigurations\MealConfiguration.cs" />
+    <Compile Include="EnitityConfigurations\SportConfiguration.cs" />
     <Compile Include="EnitityConfigurations\UserConfiguration.cs" />
+    <Compile Include="EnitityConfigurations\WaterConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ExerciseRepository.cs" />
     <Compile Include="Repositories\MealCategoryRepository.cs" />
     <Compile Include="Repositories\MealRepository.cs" />
+    <Compile Include="Repositories\SportRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Repositories\WaterRepository.cs" />
     <Compile Include="Strategy\BestDietStrategy.cs" />
   </ItemGroup>
   <ItemGroup>
