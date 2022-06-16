@@ -23,5 +23,6 @@ namespace Model.Entites
         public virtual FoodCategory FoodCategory { get; set; }
 
         public virtual ICollection<Meal> Meals { get; set; }
+        public string ImagePath { get; set; }
     }
 }
