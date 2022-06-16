@@ -1,4 +1,6 @@
-﻿using Model.Entites;
+﻿using DataAccessLayer.EnitityConfigurations;
+using DataAccessLayer.Strategy;
+using Model.Entites;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -10,9 +12,9 @@ namespace DataAccessLayer
 {
     public class BestDietDbContext : DbContext
     {
-        public BestDietDbContext() : base(@"Data Source=DESKTOP-46Q3ART\MSSQLKD10;Initial Catalog=016_OneToOneDB;User=sa;Password=123456")
+        public BestDietDbContext() : base(@"Data Source=DESKTOP-46Q3ART\MSSQLKD10;Initial Catalog=030_BestDietDB;User=sa;Password=123456")
         {
-            Database.SetInitializer(new CreateDatabaseIfNotExists<BestDietDbContext>());
+            Database.SetInitializer(new BestDietStrategy());
         }
         public DbSet<User> Users { get; set; }
         public DbSet<Water> Waters { get; set; }
@@ -22,5 +24,12 @@ namespace DataAccessLayer
         public DbSet<Meal> Meals { get; set; }
         public DbSet<Food> Foods { get; set; }
         public DbSet<Exercise> Exercises { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new UserConfiguration());
+            modelBuilder.Configurations.Add(new MealConfiguration());
+            modelBuilder.Configurations.Add(new MealCategoryConfiguration());
+        }
     }
 }
