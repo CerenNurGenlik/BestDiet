@@ -70,13 +70,14 @@
             this.btnKaydol.TabIndex = 34;
             this.btnKaydol.Text = "Kaydol";
             this.btnKaydol.UseVisualStyleBackColor = true;
+            this.btnKaydol.Click += new System.EventHandler(this.btnKaydol_Click);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(329, 396);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(26, 24);
+            this.label13.Size = new System.Drawing.Size(21, 20);
             this.label13.TabIndex = 33;
             this.label13.Text = "kg";
             // 
@@ -85,7 +86,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(329, 342);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(26, 24);
+            this.label12.Size = new System.Drawing.Size(21, 20);
             this.label12.TabIndex = 32;
             this.label12.Text = "kg";
             // 
@@ -94,7 +95,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(329, 289);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(29, 24);
+            this.label11.Size = new System.Drawing.Size(25, 20);
             this.label11.TabIndex = 31;
             this.label11.Text = "cm";
             // 
@@ -104,7 +105,7 @@
             this.txtSifreTekrar.Location = new System.Drawing.Point(163, 502);
             this.txtSifreTekrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSifreTekrar.Name = "txtSifreTekrar";
-            this.txtSifreTekrar.Size = new System.Drawing.Size(194, 29);
+            this.txtSifreTekrar.Size = new System.Drawing.Size(194, 25);
             this.txtSifreTekrar.TabIndex = 30;
             // 
             // txtSifre
@@ -113,7 +114,7 @@
             this.txtSifre.Location = new System.Drawing.Point(163, 449);
             this.txtSifre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(194, 29);
+            this.txtSifre.Size = new System.Drawing.Size(194, 25);
             this.txtSifre.TabIndex = 29;
             // 
             // nudHedefKilo
@@ -123,7 +124,7 @@
             this.nudHedefKilo.Location = new System.Drawing.Point(163, 396);
             this.nudHedefKilo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nudHedefKilo.Name = "nudHedefKilo";
-            this.nudHedefKilo.Size = new System.Drawing.Size(160, 29);
+            this.nudHedefKilo.Size = new System.Drawing.Size(160, 25);
             this.nudHedefKilo.TabIndex = 28;
             // 
             // nudKilo
@@ -133,7 +134,7 @@
             this.nudKilo.Location = new System.Drawing.Point(163, 342);
             this.nudKilo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nudKilo.Name = "nudKilo";
-            this.nudKilo.Size = new System.Drawing.Size(160, 29);
+            this.nudKilo.Size = new System.Drawing.Size(160, 25);
             this.nudKilo.TabIndex = 27;
             // 
             // nudBoy
@@ -143,7 +144,7 @@
             this.nudBoy.Location = new System.Drawing.Point(163, 289);
             this.nudBoy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nudBoy.Name = "nudBoy";
-            this.nudBoy.Size = new System.Drawing.Size(160, 29);
+            this.nudBoy.Size = new System.Drawing.Size(160, 25);
             this.nudBoy.TabIndex = 26;
             // 
             // dtpDogumTarihi
@@ -154,7 +155,7 @@
             this.dtpDogumTarihi.Location = new System.Drawing.Point(163, 236);
             this.dtpDogumTarihi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpDogumTarihi.Name = "dtpDogumTarihi";
-            this.dtpDogumTarihi.Size = new System.Drawing.Size(194, 29);
+            this.dtpDogumTarihi.Size = new System.Drawing.Size(194, 25);
             this.dtpDogumTarihi.TabIndex = 25;
             // 
             // rdbKadin
@@ -164,7 +165,7 @@
             this.rdbKadin.Location = new System.Drawing.Point(261, 185);
             this.rdbKadin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdbKadin.Name = "rdbKadin";
-            this.rdbKadin.Size = new System.Drawing.Size(69, 28);
+            this.rdbKadin.Size = new System.Drawing.Size(58, 24);
             this.rdbKadin.TabIndex = 24;
             this.rdbKadin.Text = "Kadın";
             this.rdbKadin.UseVisualStyleBackColor = true;
@@ -177,7 +178,7 @@
             this.rdbErkek.Location = new System.Drawing.Point(163, 185);
             this.rdbErkek.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdbErkek.Name = "rdbErkek";
-            this.rdbErkek.Size = new System.Drawing.Size(69, 28);
+            this.rdbErkek.Size = new System.Drawing.Size(57, 24);
             this.rdbErkek.TabIndex = 23;
             this.rdbErkek.TabStop = true;
             this.rdbErkek.Text = "Erkek";
@@ -189,7 +190,7 @@
             this.txtEmail.Location = new System.Drawing.Point(163, 129);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(194, 29);
+            this.txtEmail.Size = new System.Drawing.Size(194, 25);
             this.txtEmail.TabIndex = 22;
             // 
             // txtSoyisim
@@ -198,7 +199,7 @@
             this.txtSoyisim.Location = new System.Drawing.Point(163, 75);
             this.txtSoyisim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSoyisim.Name = "txtSoyisim";
-            this.txtSoyisim.Size = new System.Drawing.Size(194, 29);
+            this.txtSoyisim.Size = new System.Drawing.Size(194, 25);
             this.txtSoyisim.TabIndex = 21;
             // 
             // txtIsim
@@ -207,7 +208,7 @@
             this.txtIsim.Location = new System.Drawing.Point(163, 22);
             this.txtIsim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtIsim.Name = "txtIsim";
-            this.txtIsim.Size = new System.Drawing.Size(194, 29);
+            this.txtIsim.Size = new System.Drawing.Size(194, 25);
             this.txtIsim.TabIndex = 20;
             // 
             // label10
@@ -216,7 +217,7 @@
             this.label10.ForeColor = System.Drawing.Color.DarkGreen;
             this.label10.Location = new System.Drawing.Point(41, 502);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 24);
+            this.label10.Size = new System.Drawing.Size(79, 20);
             this.label10.TabIndex = 18;
             this.label10.Text = "Şifre Tekrarı:";
             // 
@@ -226,7 +227,7 @@
             this.label9.ForeColor = System.Drawing.Color.DarkGreen;
             this.label9.Location = new System.Drawing.Point(91, 449);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 24);
+            this.label9.Size = new System.Drawing.Size(38, 20);
             this.label9.TabIndex = 17;
             this.label9.Text = "Şifre:";
             // 
@@ -236,7 +237,7 @@
             this.label8.ForeColor = System.Drawing.Color.DarkGreen;
             this.label8.Location = new System.Drawing.Point(51, 396);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 24);
+            this.label8.Size = new System.Drawing.Size(68, 20);
             this.label8.TabIndex = 16;
             this.label8.Text = "Hedef Kilo:";
             // 
@@ -246,7 +247,7 @@
             this.label7.ForeColor = System.Drawing.Color.DarkGreen;
             this.label7.Location = new System.Drawing.Point(97, 342);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 24);
+            this.label7.Size = new System.Drawing.Size(33, 20);
             this.label7.TabIndex = 15;
             this.label7.Text = "Kilo:";
             // 
@@ -256,7 +257,7 @@
             this.label6.ForeColor = System.Drawing.Color.DarkGreen;
             this.label6.Location = new System.Drawing.Point(97, 289);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 24);
+            this.label6.Size = new System.Drawing.Size(33, 20);
             this.label6.TabIndex = 14;
             this.label6.Text = "Boy:";
             // 
@@ -266,7 +267,7 @@
             this.label5.ForeColor = System.Drawing.Color.DarkGreen;
             this.label5.Location = new System.Drawing.Point(31, 236);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 24);
+            this.label5.Size = new System.Drawing.Size(86, 20);
             this.label5.TabIndex = 13;
             this.label5.Text = "Doğum Tarihi:";
             // 
@@ -276,7 +277,7 @@
             this.label4.ForeColor = System.Drawing.Color.DarkGreen;
             this.label4.Location = new System.Drawing.Point(71, 183);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 24);
+            this.label4.Size = new System.Drawing.Size(55, 20);
             this.label4.TabIndex = 12;
             this.label4.Text = "Cinsiyet:";
             // 
@@ -286,7 +287,7 @@
             this.label3.ForeColor = System.Drawing.Color.DarkGreen;
             this.label3.Location = new System.Drawing.Point(83, 129);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 24);
+            this.label3.Size = new System.Drawing.Size(43, 20);
             this.label3.TabIndex = 11;
             this.label3.Text = "Email:";
             // 
@@ -296,7 +297,7 @@
             this.label2.ForeColor = System.Drawing.Color.DarkGreen;
             this.label2.Location = new System.Drawing.Point(71, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 24);
+            this.label2.Size = new System.Drawing.Size(54, 20);
             this.label2.TabIndex = 19;
             this.label2.Text = "Soyisim:";
             // 
@@ -306,7 +307,7 @@
             this.label1.ForeColor = System.Drawing.Color.DarkGreen;
             this.label1.Location = new System.Drawing.Point(96, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 24);
+            this.label1.Size = new System.Drawing.Size(36, 20);
             this.label1.TabIndex = 10;
             this.label1.Text = "İsim:";
             // 
@@ -323,7 +324,7 @@
             // 
             // FormRegistration
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(436, 675);

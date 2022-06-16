@@ -23,5 +23,23 @@ namespace DataAccessLayer.Repositories
         {
             return db.Users.Where(u=>u.IsActive == isActive).ToList();
         }
+        public User CheckLogin(string userName,string password)
+        {
+            User user = db.Users.Find(userName);
+            if(user !=null && user.Password == password)
+            {
+                return user;
+            }
+            return null;
+        }
+        public User GetUserByUserName(string userName)
+        {
+            return db.Users.Find(userName);
+        }
+        public bool InsertUser(User user)
+        {
+            db.Users.Add(user);
+            return db.SaveChanges() > 0;
+        }
     }
 }

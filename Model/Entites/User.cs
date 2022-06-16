@@ -33,5 +33,6 @@ namespace Model.Entites
         public virtual ICollection<Exercise> Exercises { get; set; }
 
         public UserType UserType { get; set; }
+        public string Password { get; set; }
     }
 }

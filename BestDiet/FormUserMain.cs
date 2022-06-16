@@ -12,9 +12,11 @@ namespace BestDiet
 {
     public partial class FormUserMain : Form
     {
-        public FormUserMain()
+        string _userName;
+        public FormUserMain(string userName)
         {
             InitializeComponent();
+            _userName = userName;
         }
     }
 }
