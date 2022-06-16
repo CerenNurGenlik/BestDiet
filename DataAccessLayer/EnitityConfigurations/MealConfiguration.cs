@@ -10,5 +10,12 @@ namespace DataAccessLayer.EnitityConfigurations
 {
     public class MealConfiguration : EntityTypeConfiguration<Meal>
     {
+        public MealConfiguration()
+        {
+            Property(m => m.MealName).IsRequired().HasMaxLength(100);
+            HasIndex(m => m.MealName);
+            Property(m => m.UserID).IsRequired();
+            Property(m=> m.MealCategoryID).IsRequired();
+        }
     }
 }

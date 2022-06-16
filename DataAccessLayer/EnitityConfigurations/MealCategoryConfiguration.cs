@@ -10,5 +10,9 @@ namespace DataAccessLayer.EnitityConfigurations
 {
     public class MealCategoryConfiguration : EntityTypeConfiguration<MealCategory>
     {
+        public MealCategoryConfiguration()
+        {
+            Property(mc => mc.MealCategoryName).IsRequired().HasMaxLength(100);
+        }
     }
 }
