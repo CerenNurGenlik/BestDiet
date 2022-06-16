@@ -1,6 +1,7 @@
 ﻿using Model.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,7 @@ namespace Model.Entites
         public double Weight { get; set; }
         public double TargetWeight { get; set; }
         public DateTime BirthDate { get; set; }
+        [DefaultValue(true)]
         public bool IsActive { get; set; }
 
         public virtual ICollection<Meal> Meals { get; set; }
