@@ -8,12 +8,16 @@ namespace Model.Entites
 {
     public class Exercise
     {
+        public Exercise()
+        {
+            ExerciseDetails = new HashSet<ExerciseDetail>();
+        }
         public int ExerciseID { get; set; }
         public DateTime ExerciseDate { get; set; }
         public string UserID { get; set; }
-        public int SportID { get; set; }
 
+        
         public virtual User User { get; set; }
-        public virtual Sport Sport { get; set; }
+        public virtual ICollection<ExerciseDetail> ExerciseDetails { get; set; }
     }
 }

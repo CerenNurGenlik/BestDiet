@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entites\Exercise.cs" />
+    <Compile Include="Entites\ExerciseDetail.cs" />
     <Compile Include="Entites\Food.cs" />
     <Compile Include="Entites\FoodCategory.cs" />
     <Compile Include="Entites\Meal.cs" />
