@@ -31,6 +31,11 @@ namespace DataAccessLayer.Repositories
         {
             return db.Meals.Where(a => a.UserID == userID && a.MealCategory.MealCategoryName == mealCategoryName && a.MealTime == dateTime).FirstOrDefault();
         }
+        public bool Insert(Meal meal)
+        {
+            db.Meals.Add(meal);
+            return db.SaveChanges() >0;
+        }
 
     }
 }

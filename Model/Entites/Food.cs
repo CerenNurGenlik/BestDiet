@@ -11,7 +11,7 @@ namespace Model.Entites
     {
         public Food()
         {
-            Meals = new HashSet<Meal>();
+            MealDetails = new HashSet<MealDetail>();
         }
         public int FoodID { get; set; }
         public string FoodName { get; set; }
@@ -22,7 +22,7 @@ namespace Model.Entites
 
         public virtual FoodCategory FoodCategory { get; set; }
 
-        public virtual ICollection<Meal> Meals { get; set; }
+        public virtual ICollection<MealDetail> MealDetails { get; set; }
         public string ImagePath { get; set; }
     }
 }

@@ -13,7 +13,7 @@ namespace BusinessLogicLayer.Services
         MealRepository mealRepository;
         public MealService()
         {
-            mealRepository=new MealRepository();
+            mealRepository = new MealRepository();
         }
         public Meal GetMealByUserIDandMealCategoryID(string userID, int mealCategoryID, DateTime dateTime)
         {
@@ -24,6 +24,10 @@ namespace BusinessLogicLayer.Services
         {
             Meal meal = mealRepository.GetMealByUserIDandMealCategoryName(userID, mealCategoryName, dateTime);
             return meal;
+        }
+        public bool Insert(Meal meal)
+        {
+            return mealRepository.Insert(meal);
         }
     }
 }

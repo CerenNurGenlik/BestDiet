@@ -15,70 +15,95 @@ namespace BestDiet
     public partial class FormMeal : Form
     {
         Meal meal;
+        User user;
+        MealCategory mealCategory;
+        DateTime dateTime;
+        MealService mealService;
         MealDetail mealDetail;
         MealDetailService mealDetailService;
         FoodService foodService;
         List<Food> foodList;
         List<MealDetail> mealDetails;
-        
 
 
-        public FormMeal(Meal _meal)
+
+        public FormMeal(Meal _meal, User _user, DateTime _dateTime, MealCategory _mealCategory)
         {
             InitializeComponent();
             meal = _meal;
-            foodService = new FoodService();  
-            mealDetailService= new MealDetailService();
+            user = _user;
+            dateTime = _dateTime;
+            mealCategory = _mealCategory;
+            foodService = new FoodService();
+            mealDetailService = new MealDetailService();
+            mealService = new MealService();
         }
 
         private void FormMeal_Load(object sender, EventArgs e)
         {
             Helper.ClearControls(Controls);
             foodList = foodService.GetFoods();
-            mealDetails = mealDetailService.GetFoodsByMeal(meal.UserID, meal.MealCategoryID, meal.MealTime);
+
+            if (meal != null)
+            {
+                mealDetails = mealDetailService.GetFoodsByMeal(meal.UserID, meal.MealCategoryID, meal.MealTime);
+                EklenenYiyecekleriListele();
+                lblOgunAdi.Text = meal.MealCategory.MealCategoryName;
+                pbYemekResmi.Image = null;
+            }
+
             YiyecekleriListele();
-            EklenenYiyecekleriListele();
-            lblOgunAdi.Text = meal.MealCategory.MealCategoryName;
-            pbYemekResmi.Image = null;
+
         }
         void YiyecekleriListele()
         {
             lvYiyecekler.Items.Clear();
             ListViewItem lvi;
-            foreach (Food item in foodList )
+            foreach (Food item in foodList)
             {
                 lvi = new ListViewItem();
                 lvi.Text = item.FoodName;
                 lvi.SubItems.Add(item.FoodCategory.CategoryName);
                 lvi.SubItems.Add(item.Calori.ToString());
                 lvi.Tag = item.FoodID;
-                lvYiyecekler.Items.Add(lvi);                
-            } 
+                lvYiyecekler.Items.Add(lvi);
+            }
         }
-        
+
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            if(lvYiyecekler.SelectedItems.Count <= 0) return;
+            if (lvYiyecekler.SelectedItems.Count <= 0) return;
             else
             {
+                if (meal == null)
+                {
+                    meal = new Meal();
+                    meal.MealTime = dateTime;
+                    meal.User = user;
+                    meal.UserID = user.UserID;
+                    meal.MealCategory = mealCategory;
+                    meal.MealCategoryID = mealCategory.MealCategoryID;
+                    mealService.Insert(meal);
+
+                }
                 int foodID = (int)lvYiyecekler.SelectedItems[0].Tag;
                 Food food = foodService.GetByFoodID(foodID);
 
                 try
                 {
                     mealDetail = new MealDetail();
-                    mealDetail.FoodID = foodID;
-                    mealDetail.MealID = meal.MealID;
+                    mealDetail.Food = food;
+                    mealDetail.Meal = meal;
                     mealDetail.Quantity = Convert.ToInt32(nudUrunSayisi.Value);
                     mealDetail.Portion = Convert.ToInt32(nudPorsiyon.Value);
                     mealDetail.Calori = food.Calori;
-                    mealDetail.Meal.MealTime = dtpOgunTarihi.Value;
+
 
 
                     if (mealDetailService.Insert(mealDetail))
                     {
-                        mealDetails.Add(mealDetail);
+
                         MessageBox.Show("Yiyecekler eklendi.");
 
                     }
@@ -88,7 +113,7 @@ namespace BestDiet
                 {
                     MessageBox.Show(ex.Message);
                 }
-            }          
+            }
             EklenenYiyecekleriListele();
         }
 
@@ -108,7 +133,7 @@ namespace BestDiet
             }
         }
 
-        
+
 
         private void txtYiyecekAra_TextChanged(object sender, EventArgs e)
         {
@@ -144,7 +169,7 @@ namespace BestDiet
 
                     MessageBox.Show(check ? "Güncelleme başarılı !" : "Güncellenemedi !");
                 }
-            }                
+            }
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -155,7 +180,7 @@ namespace BestDiet
                 int mealDetailID = (int)lvEklenenYiyecekler.SelectedItems[0].Tag;
                 bool check = mealDetailService.Delete(mealDetailID);
                 MessageBox.Show(check ? "Eklenen ürün silindi !" : "Silme işlemi başarısız !");
-            }            
+            }
         }
 
         private void lvEklenenYiyecekler_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -173,7 +198,7 @@ namespace BestDiet
                     nudUrunSayisi.Value = mealDetail.Quantity;
                 }
                 else throw new Exception("Listeden eklenen ürünü seçiniz.");
-            }            
+            }
         }
 
         private void lvYiyecekler_MouseClick(object sender, MouseEventArgs e)

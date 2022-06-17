@@ -19,5 +19,9 @@ namespace DataAccessLayer.Repositories
         {
             return db.MealCategories.ToList();
         }
+        public MealCategory GetMealCategoryByName(string name)
+        {
+            return db.MealCategories.Where(a=>a.MealCategoryName==name).FirstOrDefault();
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace DataAccessLayer.Repositories
         }
         public List<Food> GetFoods()
         {
-            return db.Foods.Where(a => a.IsActive).ToList();
+            return db.Foods.Where(a => !a.IsActive).ToList();
         }
         public List<Food> GetFoodsByCategory(int foodCategoryID)
         {
