@@ -9,32 +9,27 @@ namespace DataAccessLayer.Repositories
 {
     public class MealRepository
     {
-        BestDietDbContext db;
-        public MealRepository()
-        {
-            db = new BestDietDbContext();
-        }
         public List<Meal> GetMealsByDate(DateTime dateTime)
         {
-            return db.Meals.Where(m=> m.MealTime == dateTime).ToList();
+            return MainRepository.db.Meals.Where(m=> m.MealTime == dateTime).ToList();
         }
 
         public List<Meal> GetMealsBetweenDates(DateTime startDate, DateTime endDate)
         {
-            return db.Meals.Where(m => m.MealTime >= startDate && m.MealTime <= endDate).ToList();
+            return MainRepository.db.Meals.Where(m => m.MealTime >= startDate && m.MealTime <= endDate).ToList();
         }
         public Meal GetMealByUserIDandMealCategoryID(string userID, int mealCategoryID, DateTime dateTime)
         {
-            return db.Meals.Where(a => a.UserID == userID && a.MealCategoryID == mealCategoryID && a.MealTime == dateTime).FirstOrDefault();
+            return MainRepository.db.Meals.Where(a => a.UserID == userID && a.MealCategoryID == mealCategoryID && a.MealTime == dateTime).FirstOrDefault();
         }
         public Meal GetMealByUserIDandMealCategoryName(string userID, string mealCategoryName, DateTime dateTime)
         {
-            return db.Meals.Where(a => a.UserID == userID && a.MealCategory.MealCategoryName == mealCategoryName && a.MealTime == dateTime).FirstOrDefault();
+            return MainRepository.db.Meals.Where(a => a.UserID == userID && a.MealCategory.MealCategoryName == mealCategoryName && a.MealTime == dateTime).FirstOrDefault();
         }
         public bool Insert(Meal meal)
         {
-            db.Meals.Add(meal);
-            return db.SaveChanges() >0;
+            MainRepository.db.Meals.Add(meal);
+            return MainRepository.db.SaveChanges() >0;
         }
 
     }

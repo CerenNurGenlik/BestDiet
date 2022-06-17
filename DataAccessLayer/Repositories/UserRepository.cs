@@ -10,22 +10,17 @@ namespace DataAccessLayer.Repositories
 {
     public class UserRepository
     {
-        BestDietDbContext db;
-        public UserRepository()
-        {
-            db = new BestDietDbContext();
-        }
         public List<User> GetUsersByUserType(UserType userType)
         {
-            return db.Users.Where(u=> u.UserType == userType).ToList();
+            return MainRepository.db.Users.Where(u=> u.UserType == userType).ToList();
         }
         public List<User> GetUsersByIsActive(bool isActive)
         {
-            return db.Users.Where(u=>u.IsActive == isActive).ToList();
+            return MainRepository.db.Users.Where(u=>u.IsActive == isActive).ToList();
         }
         public User CheckLogin(string userName,string password)
         {
-            User user = db.Users.Find(userName);
+            User user = MainRepository.db.Users.Find(userName);
             if(user !=null && user.Password == password)
             {
                 return user;
@@ -34,12 +29,12 @@ namespace DataAccessLayer.Repositories
         }
         public User GetUserByUserName(string userName)
         {
-            return db.Users.Find(userName);
+            return MainRepository.db.Users.Find(userName);
         }
         public bool InsertUser(User user)
         {
-            db.Users.Add(user);
-            return db.SaveChanges() > 0;
+            MainRepository.db.Users.Add(user);
+            return MainRepository.db.SaveChanges() > 0;
         }
     }
 }

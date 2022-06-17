@@ -11,9 +11,13 @@ namespace BusinessLogicLayer.Services
     public class MealService
     {
         MealRepository mealRepository;
+        UserRepository userRepository;
+        MealCategoryRepository mealCategoryRepository;
         public MealService()
         {
             mealRepository = new MealRepository();
+            userRepository = new UserRepository();
+            mealCategoryRepository = new MealCategoryRepository();
         }
         public Meal GetMealByUserIDandMealCategoryID(string userID, int mealCategoryID, DateTime dateTime)
         {
@@ -29,5 +33,15 @@ namespace BusinessLogicLayer.Services
         {
             return mealRepository.Insert(meal);
         }
+
+        public User FindUserByUserID(string userID)
+        {
+            return userRepository.GetUserByUserName(userID);
+        }
+        public MealCategory FindMealCategoryByMealCategoryName(string name)
+        {
+            return mealCategoryRepository.GetMealCategoryByName(name);
+        }
+
     }
 }

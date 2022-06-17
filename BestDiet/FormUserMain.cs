@@ -55,9 +55,9 @@ namespace BestDiet
         {
             this.Hide();
             mealService = new MealService();
-            Meal meal = mealService.GetMealByUserIDandMealCategoryName(user.UserID, "Sabah", dtpTarih.Value);
+            Meal meal = mealService.GetMealByUserIDandMealCategoryName(user.UserID, "Sabah", dtpTarih.Value.Date);
             MealCategory mealCategory = mealcategoryService.GetMealCategoryByName("Sabah");
-            FormMeal formMeal = new FormMeal(meal, user, dtpTarih.Value, mealCategory);
+            FormMeal formMeal = new FormMeal(meal, user, dtpTarih.Value.Date, mealCategory);
             formMeal.ShowDialog();
         }
 
@@ -68,6 +68,7 @@ namespace BestDiet
 
         private void lblAperatifEkle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+
 
         }
 

@@ -9,20 +9,13 @@ namespace DataAccessLayer.Repositories
 {
     public class ExerciseRepository
     {
-        BestDietDbContext db;
-
-        public ExerciseRepository()
-        {
-            db = new BestDietDbContext();
-        }
-
         public List<Exercise> GetExercisesByDate(DateTime dateTime)
         {
-            return db.Exercises.Where(m => m.ExerciseDate == dateTime).ToList();
+            return MainRepository.db.Exercises.Where(m => m.ExerciseDate == dateTime).ToList();
         }
         public Exercise GetExercise(string userID,DateTime dateTime)
         {
-            return db.Exercises.Where(a => a.UserID == userID && a.ExerciseDate == dateTime).FirstOrDefault();
+            return MainRepository.db.Exercises.Where(a => a.UserID == userID && a.ExerciseDate == dateTime).FirstOrDefault();
         }
     }
 }

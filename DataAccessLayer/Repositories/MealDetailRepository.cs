@@ -9,37 +9,33 @@ namespace DataAccessLayer.Repositories
 {
     public class MealDetailRepository
     {
-        BestDietDbContext db;
-        public MealDetailRepository()
+        
+        public List<MealDetail> GetMealDeteailsByMealId(int mealID)
         {
-            db = new BestDietDbContext();
-        }
-        public List<MealDetail> GetMealDeteailByMealId(int mealID)
-        {
-            return db.MealDetails.Where(a => a.MealID == mealID).ToList();
+            return MainRepository.db.MealDetails.Where(a => a.MealID == mealID).ToList();
         }
         public bool Delete(int mealDetailId)
         {
-            MealDetail mealDetail= db.MealDetails.Where(a => a.MealDetailID == mealDetailId).FirstOrDefault();
-            db.MealDetails.Remove(mealDetail);
-            return db.SaveChanges() > 0;
+            MealDetail mealDetail= MainRepository.db.MealDetails.Where(a => a.MealDetailID == mealDetailId).FirstOrDefault();
+            MainRepository.db.MealDetails.Remove(mealDetail);
+            return MainRepository.db.SaveChanges() > 0;
         }   
         public bool Insert(MealDetail mealDetail)
         {
-            db.MealDetails.Add(mealDetail);
-            return db.SaveChanges() > 0;
+            MainRepository.db.MealDetails.Add(mealDetail);
+            return MainRepository.db.SaveChanges() > 0;
         }
         public bool Update(MealDetail mealDetail)
         {
-            MealDetail updatedMealDetail = db.MealDetails.Find(mealDetail.MealDetailID);
+            MealDetail updatedMealDetail = MainRepository.db.MealDetails.Find(mealDetail.MealDetailID);
             updatedMealDetail.Quantity = mealDetail.Quantity;
             updatedMealDetail.Meal.MealTime = mealDetail.Meal.MealTime;
             updatedMealDetail.Portion = mealDetail.Portion;
-            return db.SaveChanges() > 0;
+            return MainRepository.db.SaveChanges() > 0;
         }
         public MealDetail GetMealDetailById(int mealDetailID)
         {
-            MealDetail mealDetail = db.MealDetails.Find(mealDetailID);
+            MealDetail mealDetail = MainRepository.db.MealDetails.Find(mealDetailID);
             return mealDetail;
         }
     }

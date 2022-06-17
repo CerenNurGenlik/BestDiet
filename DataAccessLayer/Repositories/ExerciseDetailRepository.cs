@@ -9,34 +9,28 @@ namespace DataAccessLayer.Repositories
 {
     public class ExerciseDetailRepository
     {
-        BestDietDbContext db;
-        public ExerciseDetailRepository()
-        {
-            db = new BestDietDbContext();
-        }
-
         public List<ExerciseDetail> GetExerciseDetails(int exerciseID)
         {
-            return db.ExerciseDetails.Where(a => a.ExerciseID == exerciseID).ToList();
+            return MainRepository.db.ExerciseDetails.Where(a => a.ExerciseID == exerciseID).ToList();
         }
         public bool Delete(int exerciseDetailId)
         {
-            ExerciseDetail exerciseDetail = db.ExerciseDetails.Where(a => a.ExerciseDetailID == exerciseDetailId).FirstOrDefault();
-            db.ExerciseDetails.Remove(exerciseDetail);
-            return db.SaveChanges() > 0;
+            ExerciseDetail exerciseDetail = MainRepository.db.ExerciseDetails.Where(a => a.ExerciseDetailID == exerciseDetailId).FirstOrDefault();
+            MainRepository.db.ExerciseDetails.Remove(exerciseDetail);
+            return MainRepository.db.SaveChanges() > 0;
         }
         public bool Insert(ExerciseDetail exerciseDetail)
         {
-            db.ExerciseDetails.Add(exerciseDetail);
-            return db.SaveChanges() > 0;
+            MainRepository.db.ExerciseDetails.Add(exerciseDetail);
+            return MainRepository.db.SaveChanges() > 0;
         }
         public bool Update(ExerciseDetail exerciseDetail)
         {
-            ExerciseDetail updatedExerciseDetail = db.ExerciseDetails.Find(exerciseDetail.ExerciseDetailID);
+            ExerciseDetail updatedExerciseDetail = MainRepository.db.ExerciseDetails.Find(exerciseDetail.ExerciseDetailID);
             updatedExerciseDetail.BurningCalori = exerciseDetail.BurningCalori;
             updatedExerciseDetail.Minute = exerciseDetail.Minute;
 
-            return db.SaveChanges() > 0;
+            return MainRepository.db.SaveChanges() > 0;
         }
     }
 }

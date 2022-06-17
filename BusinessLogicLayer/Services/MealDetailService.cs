@@ -19,11 +19,9 @@ namespace BusinessLogicLayer.Services
             mealDetailRepository = new MealDetailRepository();
         }
 
-        public List<MealDetail> GetFoodsByMeal(string userID, int mealCategoryID, DateTime dateTime)
+        public List<MealDetail> GetMealDetailsByMealID(int mealID)
         {
-            Meal meal = mealRepository.GetMealByUserIDandMealCategoryID(userID, mealCategoryID, dateTime);
-            List<MealDetail> mealDetails = mealDetailRepository.GetMealDeteailByMealId(meal.MealID);
-            return mealDetails;
+            return mealDetailRepository.GetMealDeteailsByMealId(mealID);
         }
         public bool Delete(int mealDetailID)
         {
@@ -37,7 +35,7 @@ namespace BusinessLogicLayer.Services
         }
         public bool Insert(MealDetail mealDetail)
         {
-            CheckMealDetailId(mealDetail.MealDetailID);
+            //CheckMealDetailId(mealDetail.MealDetailID);
             return mealDetailRepository.Insert(mealDetail);
         }
         public bool Update(MealDetail mealDetail)

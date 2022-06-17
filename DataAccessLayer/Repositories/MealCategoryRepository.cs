@@ -9,19 +9,13 @@ namespace DataAccessLayer.Repositories
 {
     public class MealCategoryRepository
     {
-        BestDietDbContext db;
-        public MealCategoryRepository()
-        {
-            db= new BestDietDbContext();
-        }
-
         public List<MealCategory> GetMealCategories()
         {
-            return db.MealCategories.ToList();
+            return MainRepository.db.MealCategories.ToList();
         }
         public MealCategory GetMealCategoryByName(string name)
         {
-            return db.MealCategories.Where(a=>a.MealCategoryName==name).FirstOrDefault();
+            return MainRepository.db.MealCategories.Where(a=>a.MealCategoryName==name).FirstOrDefault();
         }
     }
 }

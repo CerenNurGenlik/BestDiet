@@ -24,9 +24,6 @@ namespace BestDiet
         FoodService foodService;
         List<Food> foodList;
         List<MealDetail> mealDetails;
-
-
-
         public FormMeal(Meal _meal, User _user, DateTime _dateTime, MealCategory _mealCategory)
         {
             InitializeComponent();
@@ -46,12 +43,12 @@ namespace BestDiet
 
             if (meal != null)
             {
-                mealDetails = mealDetailService.GetFoodsByMeal(meal.UserID, meal.MealCategoryID, meal.MealTime);
+                mealDetails = mealDetailService.GetMealDetailsByMealID(meal.MealID);
                 EklenenYiyecekleriListele();
                 lblOgunAdi.Text = meal.MealCategory.MealCategoryName;
                 pbYemekResmi.Image = null;
             }
-
+            
             YiyecekleriListele();
 
         }
@@ -85,7 +82,6 @@ namespace BestDiet
                     meal.MealCategory = mealCategory;
                     meal.MealCategoryID = mealCategory.MealCategoryID;
                     mealService.Insert(meal);
-
                 }
                 int foodID = (int)lvYiyecekler.SelectedItems[0].Tag;
                 Food food = foodService.GetByFoodID(foodID);
@@ -121,6 +117,7 @@ namespace BestDiet
         {
             lvEklenenYiyecekler.Items.Clear();
             ListViewItem lvi;
+            mealDetails = mealDetailService.GetMealDetailsByMealID(meal.MealID);
             foreach (MealDetail item in mealDetails)
             {
                 lvi = new ListViewItem();
@@ -132,9 +129,6 @@ namespace BestDiet
                 lvEklenenYiyecekler.Items.Add(lvi);
             }
         }
-
-
-
         private void txtYiyecekAra_TextChanged(object sender, EventArgs e)
         {
             lvYiyecekler.Items.Clear();

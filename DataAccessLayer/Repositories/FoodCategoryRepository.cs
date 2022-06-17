@@ -9,14 +9,9 @@ namespace DataAccessLayer.Repositories
 {
     public class FoodCategoryRepository
     {
-        BestDietDbContext db;
-        public FoodCategoryRepository()
-        {
-            db = new BestDietDbContext();
-        }
         public List<FoodCategory> GetFoodCategories()
         {
-            return db.FoodCategories.ToList();
+            return MainRepository.db.FoodCategories.ToList();
         }
     }
 }

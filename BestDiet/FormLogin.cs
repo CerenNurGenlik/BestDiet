@@ -15,7 +15,7 @@ namespace BestDiet
 {
     public partial class FormLogin : Form
     {
-        UserService userService;
+        public static UserService userService;
         public FormLogin()
         {
             InitializeComponent();
