@@ -42,7 +42,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label1.Location = new System.Drawing.Point(25, 235);
+            this.label1.Location = new System.Drawing.Point(45, 244);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(382, 20);
@@ -100,13 +100,14 @@
             // btnKaydet
             // 
             this.btnKaydet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnKaydet.Location = new System.Drawing.Point(200, 310);
+            this.btnKaydet.Location = new System.Drawing.Point(176, 312);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(110, 50);
             this.btnKaydet.TabIndex = 29;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // FormActivityAdd
             // 
@@ -122,7 +123,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnKaydet);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormActivityAdd";
             this.Text = "FormActivityAdd";
             ((System.ComponentModel.ISupportInitialize)(this.nudKalori)).EndInit();
