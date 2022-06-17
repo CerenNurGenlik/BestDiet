@@ -61,6 +61,7 @@
     <Compile Include="EnitityConfigurations\UserConfiguration.cs" />
     <Compile Include="EnitityConfigurations\WaterConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ExerciseDetailRepository.cs" />
     <Compile Include="Repositories\ExerciseRepository.cs" />
     <Compile Include="Repositories\FoodCategoryRepository.cs" />
     <Compile Include="Repositories\FoodRepository.cs" />

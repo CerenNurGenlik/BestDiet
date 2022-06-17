@@ -16,6 +16,7 @@ namespace BestDiet
     public partial class FormUserMain : Form
     {
         User user;
+        Water water;
         MealService mealService;
         ExerciseService exerciseService;
         WaterService waterService;
@@ -24,7 +25,7 @@ namespace BestDiet
             InitializeComponent();
             user = _user;
         }
-
+        
         private void FormUserMain_Load(object sender, EventArgs e)
         {
             Helper.ClearControls(Controls);
@@ -95,7 +96,6 @@ namespace BestDiet
 
         private void lblSuEkle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
         }
     }
 }

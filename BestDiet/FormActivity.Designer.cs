@@ -35,6 +35,7 @@
             this.btnDuzenle = new System.Windows.Forms.Button();
             this.lvEklenenAktiviteler = new System.Windows.Forms.ListView();
             this.grpAlinanKalori = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblAktiviteToplamKalori = new System.Windows.Forms.Label();
             this.grpEklenenUrunler = new System.Windows.Forms.GroupBox();
             this.btnAktiviteEkle = new System.Windows.Forms.Button();
@@ -46,17 +47,16 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lvAktiviteler = new System.Windows.Forms.ListView();
             this.grpAktiviteListesi = new System.Windows.Forms.GroupBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtAktiviteAra = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.grpAlinanKalori.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grpEklenenUrunler.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.grpAktiviteListesi.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -65,7 +65,7 @@
             this.label1.Location = new System.Drawing.Point(20, 38);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 20);
+            this.label1.Size = new System.Drawing.Size(83, 17);
             this.label1.TabIndex = 27;
             this.label1.Text = "Aktivite Ara:";
             // 
@@ -120,13 +120,24 @@
             this.grpAlinanKalori.Controls.Add(this.lblAktiviteToplamKalori);
             this.grpAlinanKalori.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.grpAlinanKalori.Location = new System.Drawing.Point(482, 38);
-            this.grpAlinanKalori.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpAlinanKalori.Margin = new System.Windows.Forms.Padding(4);
             this.grpAlinanKalori.Name = "grpAlinanKalori";
-            this.grpAlinanKalori.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpAlinanKalori.Padding = new System.Windows.Forms.Padding(4);
             this.grpAlinanKalori.Size = new System.Drawing.Size(188, 128);
             this.grpAlinanKalori.TabIndex = 10;
             this.grpAlinanKalori.TabStop = false;
             this.grpAlinanKalori.Text = "Toplam Kalori";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BestDiet.Properties.Resources.Screenshot_8;
+            this.pictureBox1.Location = new System.Drawing.Point(92, 49);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(74, 71);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // lblAktiviteToplamKalori
             // 
@@ -137,7 +148,7 @@
             this.lblAktiviteToplamKalori.Location = new System.Drawing.Point(21, 60);
             this.lblAktiviteToplamKalori.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAktiviteToplamKalori.Name = "lblAktiviteToplamKalori";
-            this.lblAktiviteToplamKalori.Size = new System.Drawing.Size(50, 33);
+            this.lblAktiviteToplamKalori.Size = new System.Drawing.Size(41, 28);
             this.lblAktiviteToplamKalori.TabIndex = 3;
             this.lblAktiviteToplamKalori.Text = "560";
             // 
@@ -167,6 +178,7 @@
             this.btnAktiviteEkle.TabIndex = 28;
             this.btnAktiviteEkle.Text = "Aktivite Ekle";
             this.btnAktiviteEkle.UseVisualStyleBackColor = true;
+            this.btnAktiviteEkle.Click += new System.EventHandler(this.btnAktiviteEkle_Click);
             // 
             // dtpOgunTarihi
             // 
@@ -174,7 +186,7 @@
             this.dtpOgunTarihi.Location = new System.Drawing.Point(482, 198);
             this.dtpOgunTarihi.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.dtpOgunTarihi.Name = "dtpOgunTarihi";
-            this.dtpOgunTarihi.Size = new System.Drawing.Size(192, 27);
+            this.dtpOgunTarihi.Size = new System.Drawing.Size(192, 23);
             this.dtpOgunTarihi.TabIndex = 12;
             // 
             // btnEkle
@@ -186,6 +198,7 @@
             this.btnEkle.TabIndex = 6;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // label2
             // 
@@ -193,7 +206,7 @@
             this.label2.Location = new System.Drawing.Point(496, 271);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 20);
+            this.label2.Size = new System.Drawing.Size(126, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "Aktivite Süresi (dk)";
             // 
@@ -202,7 +215,7 @@
             this.numericUpDown1.Location = new System.Drawing.Point(539, 318);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(76, 27);
+            this.numericUpDown1.Size = new System.Drawing.Size(76, 23);
             this.numericUpDown1.TabIndex = 10;
             // 
             // columnHeader2
@@ -239,13 +252,24 @@
             this.grpAktiviteListesi.Controls.Add(this.numericUpDown1);
             this.grpAktiviteListesi.ForeColor = System.Drawing.Color.DarkGreen;
             this.grpAktiviteListesi.Location = new System.Drawing.Point(15, 89);
-            this.grpAktiviteListesi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpAktiviteListesi.Margin = new System.Windows.Forms.Padding(4);
             this.grpAktiviteListesi.Name = "grpAktiviteListesi";
-            this.grpAktiviteListesi.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpAktiviteListesi.Padding = new System.Windows.Forms.Padding(4);
             this.grpAktiviteListesi.Size = new System.Drawing.Size(719, 469);
             this.grpAktiviteListesi.TabIndex = 30;
             this.grpAktiviteListesi.TabStop = false;
             this.grpAktiviteListesi.Text = "Aktivite Listesi";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::BestDiet.Properties.Resources.Screenshot_13;
+            this.pictureBox3.Location = new System.Drawing.Point(482, 21);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(204, 168);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
             // 
             // txtAktiviteAra
             // 
@@ -253,7 +277,7 @@
             this.txtAktiviteAra.Location = new System.Drawing.Point(138, 35);
             this.txtAktiviteAra.Margin = new System.Windows.Forms.Padding(2, 6, 2, 6);
             this.txtAktiviteAra.Name = "txtAktiviteAra";
-            this.txtAktiviteAra.Size = new System.Drawing.Size(254, 27);
+            this.txtAktiviteAra.Size = new System.Drawing.Size(254, 23);
             this.txtAktiviteAra.TabIndex = 26;
             // 
             // pictureBox2
@@ -267,31 +291,9 @@
             this.pictureBox2.TabIndex = 31;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::BestDiet.Properties.Resources.Screenshot_8;
-            this.pictureBox1.Location = new System.Drawing.Point(92, 49);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(74, 71);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::BestDiet.Properties.Resources.Screenshot_13;
-            this.pictureBox3.Location = new System.Drawing.Point(482, 21);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(204, 168);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
-            // 
             // FormActivity
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(759, 909);
@@ -302,18 +304,19 @@
             this.Controls.Add(this.grpAktiviteListesi);
             this.Controls.Add(this.txtAktiviteAra);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormActivity";
             this.Text = "FormActivity";
+            this.Load += new System.EventHandler(this.FormActivity_Load);
             this.grpAlinanKalori.ResumeLayout(false);
             this.grpAlinanKalori.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.grpEklenenUrunler.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.grpAktiviteListesi.ResumeLayout(false);
             this.grpAktiviteListesi.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
