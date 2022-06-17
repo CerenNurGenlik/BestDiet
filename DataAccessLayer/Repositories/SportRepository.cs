@@ -21,9 +21,14 @@ namespace DataAccessLayer.Repositories
             return db.Sports.Where(w => w.BurningCalori == burningCalori).ToList();
         }
 
-        public List<Sport> GetSportsByIsActive(bool isActive)
+        public List<Sport> GetSports()
         {
-            return db.Sports.Where(u => u.IsActive == isActive).ToList();
+            return db.Sports.Where(u => u.IsActive == true).ToList();
+        }
+
+        public List<Sport> GetSportsAll()
+        {
+            return db.Sports.ToList();
         }
     }
 }

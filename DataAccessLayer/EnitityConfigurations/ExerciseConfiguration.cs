@@ -14,7 +14,6 @@ namespace DataAccessLayer.EnitityConfigurations
         {
             Property(ex => ex.ExerciseID).IsRequired();
             Property(ex => ex.UserID);
-            Property(ex => ex.SportID);
         }
     }
 }
