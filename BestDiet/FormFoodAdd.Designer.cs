@@ -125,6 +125,7 @@
             this.btnKaydet.TabIndex = 22;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // pbResim
             // 
@@ -177,6 +178,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormFoodAdd";
             this.Text = "FormFoodAdd";
+            this.Load += new System.EventHandler(this.FormFoodAdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudKalori)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbResim)).EndInit();
             this.ResumeLayout(false);

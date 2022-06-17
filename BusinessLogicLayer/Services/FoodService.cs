@@ -31,7 +31,7 @@ namespace BusinessLogicLayer.Services
         }
         void CheckFood(Food food)
         {
-            if (string.IsNullOrWhiteSpace(food.FoodName) || string.IsNullOrWhiteSpace(food.FoodCategory.CategoryName)) 
+            if (string.IsNullOrWhiteSpace(food.FoodName) || (food.FoodCategoryID<0)) 
                 throw new Exception("Tüm bilgileri eksiksiz giriniz..");
             else if (food.Calori < 0) 
                 throw new Exception("Kalori sıfırdan küçük olamaz..");
