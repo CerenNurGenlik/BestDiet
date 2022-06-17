@@ -36,6 +36,11 @@ namespace DataAccessLayer.Repositories
             Food deletedFood = db.Foods.Find(food.FoodID);
             deletedFood.IsActive = false;
             return db.SaveChanges() > 0;
-        }        
+        } 
+        public List<Food> GetFoodsByText(string text)
+        {
+            return db.Foods.Where(a => a.FoodName.Contains(text)).ToList();
+
+        }
     }
 }

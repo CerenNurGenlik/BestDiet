@@ -37,5 +37,10 @@ namespace DataAccessLayer.Repositories
             updatedMealDetail.Portion = mealDetail.Portion;
             return db.SaveChanges() > 0;
         }
+        public MealDetail GetMealDetailById(int mealDetailID)
+        {
+            MealDetail mealDetail = db.MealDetails.Find(mealDetailID);
+            return mealDetail;
+        }
     }
 }

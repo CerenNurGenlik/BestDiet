@@ -20,13 +20,15 @@ namespace BestDiet
         FoodService foodService;
         List<Food> foodList;
         List<MealDetail> mealDetails;
+        
 
 
         public FormMeal(Meal _meal)
         {
             InitializeComponent();
             meal = _meal;
-            foodService = new FoodService();            
+            foodService = new FoodService();  
+            mealDetailService= new MealDetailService();
         }
 
         private void FormMeal_Load(object sender, EventArgs e)
@@ -37,6 +39,7 @@ namespace BestDiet
             YiyecekleriListele();
             EklenenYiyecekleriListele();
             lblOgunAdi.Text = meal.MealCategory.MealCategoryName;
+            pbYemekResmi.Image = null;
         }
         void YiyecekleriListele()
         {
@@ -56,33 +59,36 @@ namespace BestDiet
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            int foodID = (int)lvYiyecekler.SelectedItems[0].Tag;
-            Food food=foodService.GetByFoodID(foodID);
-
-            try
+            if(lvYiyecekler.SelectedItems.Count <= 0) return;
+            else
             {
-                mealDetail = new MealDetail();
-                mealDetail.FoodID = foodID;
-                mealDetail.MealID = meal.MealID;
-                mealDetail.Quantity = Convert.ToInt32(nudUrunSayisi.Value);
-                mealDetail.Portion = Convert.ToInt32(nudPorsiyon.Value);
-                mealDetail.Calori = food.Calori;
-                mealDetail.Meal.MealTime = dtpOgunTarihi.Value;
+                int foodID = (int)lvYiyecekler.SelectedItems[0].Tag;
+                Food food = foodService.GetByFoodID(foodID);
 
-
-                if (mealDetailService.Insert(mealDetail))
+                try
                 {
-                    mealDetails.Add(mealDetail);
-                    MessageBox.Show("Yiyecekler eklendi.");
+                    mealDetail = new MealDetail();
+                    mealDetail.FoodID = foodID;
+                    mealDetail.MealID = meal.MealID;
+                    mealDetail.Quantity = Convert.ToInt32(nudUrunSayisi.Value);
+                    mealDetail.Portion = Convert.ToInt32(nudPorsiyon.Value);
+                    mealDetail.Calori = food.Calori;
+                    mealDetail.Meal.MealTime = dtpOgunTarihi.Value;
 
+
+                    if (mealDetailService.Insert(mealDetail))
+                    {
+                        mealDetails.Add(mealDetail);
+                        MessageBox.Show("Yiyecekler eklendi.");
+
+                    }
+                    else throw new Exception("Ekleme esnasında bir hata oluştu..");
                 }
-                else throw new Exception("Ekleme esnasında bir hata oluştu..");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }          
             EklenenYiyecekleriListele();
         }
 
@@ -93,7 +99,7 @@ namespace BestDiet
             foreach (MealDetail item in mealDetails)
             {
                 lvi = new ListViewItem();
-                lvi.Text = mealDetail.Food.FoodName;
+                lvi.Text = item.Food.FoodName;
                 lvi.SubItems.Add(item.Quantity.ToString());
                 lvi.SubItems.Add(item.Portion.ToString());
                 lvi.SubItems.Add(item.Calori.ToString());
@@ -102,9 +108,100 @@ namespace BestDiet
             }
         }
 
+        
+
+        private void txtYiyecekAra_TextChanged(object sender, EventArgs e)
+        {
+            lvYiyecekler.Items.Clear();
+            List<Food> foodListByText = new List<Food>();
+            foodListByText = foodService.GetFoodsByText(txtYiyecekAra.Text);
+            ListViewItem lvi;
+
+            foreach (Food item in foodListByText)
+            {
+                lvi = new ListViewItem();
+                lvi.Text = item.FoodName;
+                lvi.SubItems.Add(item.FoodCategory.CategoryName);
+                lvi.SubItems.Add(item.Calori.ToString());
+                lvi.Tag = item.FoodID;
+                lvYiyecekler.Items.Add(lvi);
+            }
+        }
+
+        private void btnDuzenle_Click(object sender, EventArgs e)
+        {
+            if (lvEklenenYiyecekler.SelectedItems.Count <= 0) return;
+            else
+            {
+                int mealDetailID = (int)lvEklenenYiyecekler.SelectedItems[0].Tag;
+                MealDetail mealDetail = mealDetailService.GetMealDetailById(mealDetailID);
+                if (mealDetail != null)
+                {
+                    mealDetail.Quantity = Convert.ToInt32(nudUrunSayisi.Value);
+                    mealDetail.Portion = nudPorsiyon.Value;
+                    mealDetail.Meal.MealTime = dtpOgunTarihi.Value;
+                    bool check = mealDetailService.Update(mealDetail);
+
+                    MessageBox.Show(check ? "Güncelleme başarılı !" : "Güncellenemedi !");
+                }
+            }                
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            if (lvEklenenYiyecekler.SelectedItems.Count <= 0) return;
+            else
+            {
+                int mealDetailID = (int)lvEklenenYiyecekler.SelectedItems[0].Tag;
+                bool check = mealDetailService.Delete(mealDetailID);
+                MessageBox.Show(check ? "Eklenen ürün silindi !" : "Silme işlemi başarısız !");
+            }            
+        }
+
         private void lvEklenenYiyecekler_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            
+            if (lvEklenenYiyecekler.SelectedItems.Count <= 0) return;
+            else
+            {
+                int mealDetailID = (int)lvEklenenYiyecekler.SelectedItems[0].Tag;
+                MealDetail mealDetail = mealDetailService.GetMealDetailById(mealDetailID);
+
+                if (mealDetail != null)
+                {
+                    dtpOgunTarihi.Value = mealDetail.Meal.MealTime;
+                    nudPorsiyon.Value = mealDetail.Portion;
+                    nudUrunSayisi.Value = mealDetail.Quantity;
+                }
+                else throw new Exception("Listeden eklenen ürünü seçiniz.");
+            }            
+        }
+
+        private void lvYiyecekler_MouseClick(object sender, MouseEventArgs e)
+        {
+            //BURAYI KONTROL ET EMİN DEĞİLİM (İMAGE DOSYA YOLU OLARAK TUTULUYOR ÇÜNKÜ !!!)
+
+            if (lvYiyecekler.SelectedItems.Count <= 0) return;
+            else
+            {
+                int foodID = (int)lvYiyecekler.SelectedItems[0].Tag;
+                Food food = foodService.GetByFoodID(foodID);
+
+                if (food.ImagePath != null)
+                {
+                    pbYemekResmi.Text = food.ImagePath;
+                }
+                else
+                {
+                    pbYemekResmi.Image = null;
+                }
+
+            }
+        }
+
+        private void btnYeniUrunEkle_Click(object sender, EventArgs e)
+        {
+            FormFoodAdd formFoodAdd = new FormFoodAdd();
+            formFoodAdd.ShowDialog();
         }
     }
 }

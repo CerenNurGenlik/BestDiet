@@ -47,7 +47,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(283, 274);
+            this.label4.Location = new System.Drawing.Point(309, 188);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 24);
             this.label4.TabIndex = 18;
@@ -57,7 +57,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label3.Location = new System.Drawing.Point(79, 274);
+            this.label3.Location = new System.Drawing.Point(58, 188);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 24);
             this.label3.TabIndex = 17;
@@ -65,7 +65,7 @@
             // 
             // nudKalori
             // 
-            this.nudKalori.Location = new System.Drawing.Point(152, 272);
+            this.nudKalori.Location = new System.Drawing.Point(178, 186);
             this.nudKalori.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nudKalori.Name = "nudKalori";
             this.nudKalori.Size = new System.Drawing.Size(125, 29);
@@ -74,7 +74,7 @@
             // txtYemekAdi
             // 
             this.txtYemekAdi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtYemekAdi.Location = new System.Drawing.Point(152, 172);
+            this.txtYemekAdi.Location = new System.Drawing.Point(138, 130);
             this.txtYemekAdi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtYemekAdi.Name = "txtYemekAdi";
             this.txtYemekAdi.Size = new System.Drawing.Size(230, 29);
@@ -83,7 +83,7 @@
             // cmbKategoriler
             // 
             this.cmbKategoriler.FormattingEnabled = true;
-            this.cmbKategoriler.Location = new System.Drawing.Point(152, 70);
+            this.cmbKategoriler.Location = new System.Drawing.Point(138, 72);
             this.cmbKategoriler.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbKategoriler.Name = "cmbKategoriler";
             this.cmbKategoriler.Size = new System.Drawing.Size(230, 32);
@@ -93,7 +93,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label2.Location = new System.Drawing.Point(43, 172);
+            this.label2.Location = new System.Drawing.Point(29, 130);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 24);
@@ -104,7 +104,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label1.Location = new System.Drawing.Point(60, 70);
+            this.label1.Location = new System.Drawing.Point(46, 72);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 24);
@@ -118,20 +118,20 @@
             // btnKaydet
             // 
             this.btnKaydet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnKaydet.Location = new System.Drawing.Point(167, 768);
+            this.btnKaydet.Location = new System.Drawing.Point(167, 550);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(110, 50);
+            this.btnKaydet.Size = new System.Drawing.Size(136, 39);
             this.btnKaydet.TabIndex = 22;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
             // 
             // pbResim
             // 
-            this.pbResim.Location = new System.Drawing.Point(111, 476);
+            this.pbResim.Location = new System.Drawing.Point(152, 339);
             this.pbResim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbResim.Name = "pbResim";
-            this.pbResim.Size = new System.Drawing.Size(230, 246);
+            this.pbResim.Size = new System.Drawing.Size(165, 146);
             this.pbResim.TabIndex = 21;
             this.pbResim.TabStop = false;
             // 
@@ -139,19 +139,19 @@
             // 
             this.txtResimYolu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtResimYolu.Enabled = false;
-            this.txtResimYolu.Location = new System.Drawing.Point(200, 381);
+            this.txtResimYolu.Location = new System.Drawing.Point(138, 269);
             this.txtResimYolu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtResimYolu.Name = "txtResimYolu";
-            this.txtResimYolu.Size = new System.Drawing.Size(182, 29);
+            this.txtResimYolu.Size = new System.Drawing.Size(230, 29);
             this.txtResimYolu.TabIndex = 20;
             // 
             // btnResimSec
             // 
             this.btnResimSec.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnResimSec.Location = new System.Drawing.Point(47, 375);
+            this.btnResimSec.Location = new System.Drawing.Point(12, 264);
             this.btnResimSec.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnResimSec.Name = "btnResimSec";
-            this.btnResimSec.Size = new System.Drawing.Size(124, 51);
+            this.btnResimSec.Size = new System.Drawing.Size(103, 40);
             this.btnResimSec.TabIndex = 19;
             this.btnResimSec.Text = "Resim Seç";
             this.btnResimSec.UseVisualStyleBackColor = true;
@@ -161,7 +161,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(449, 839);
+            this.ClientSize = new System.Drawing.Size(445, 602);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.nudKalori);

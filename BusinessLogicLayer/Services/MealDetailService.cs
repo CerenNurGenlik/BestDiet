@@ -45,6 +45,10 @@ namespace BusinessLogicLayer.Services
             CheckMealDetailId(mealDetail.MealDetailID);
             return mealDetailRepository.Update(mealDetail);
         }
-        
+        public MealDetail GetMealDetailById(int mealDetailId)
+        {
+            CheckMealDetailId(mealDetailId);
+            return mealDetailRepository.GetMealDetailById(mealDetailId);
+        }
     }
 }

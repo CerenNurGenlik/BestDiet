@@ -50,6 +50,10 @@ namespace BusinessLogicLayer.Services
         {
             CheckFoodId(foodID);
             return foodRepository.GetByFoodID(foodID);
-        }  
+        }
+        public List<Food> GetFoodsByText(string text)
+        {
+            return foodRepository.GetFoodsByText(text);
+        }
     }
 }
