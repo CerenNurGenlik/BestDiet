@@ -9,14 +9,22 @@ namespace DataAccessLayer.Repositories
 {
     public class WaterRepository
     {
-        public List<Water> GetWatersByDate(DateTime dateTime)
+        public Water GetWaterByDateAndUserName(DateTime dateTime, string userName)
         {
-            return MainRepository.db.Waters.Where(w => w.WaterDate == dateTime).ToList();
+            return MainRepository.db.Waters.Where(w => w.WaterDate == dateTime && w.UserID == userName).FirstOrDefault();
         }
 
-        public List<Water> GetWatersByQuantity(int quantity)
+        public bool AddWater(Water water)
         {
-            return MainRepository.db.Waters.Where(w => w.Quantity == quantity).ToList();
+            MainRepository.db.Waters.Add(water);
+            return MainRepository.db.SaveChanges() > 0;
         }
+        public bool UpdateWaterByWater(Water water)
+        {
+            Water updateWater = MainRepository.db.Waters.Find(water.WaterID);
+            updateWater = water;
+            return MainRepository.db.SaveChanges() > 0;
+        }
+        
     }
 }

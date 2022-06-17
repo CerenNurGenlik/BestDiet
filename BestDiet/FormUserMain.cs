@@ -25,6 +25,7 @@ namespace BestDiet
             InitializeComponent();
             user = _user;
             mealcategoryService = new MealCategoryService();
+            waterService = new WaterService();
         }
 
         private void FormUserMain_Load(object sender, EventArgs e)
@@ -48,33 +49,26 @@ namespace BestDiet
             if (user.Gender == Gender.Male) alınasıGerekenKalori = Convert.ToInt32(user.Weight * 24);
             else alınasıGerekenKalori = Convert.ToInt32(0.9 * user.Weight * 24);
 
-
         }
 
         private void lblKahvaltiEkle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
-            mealService = new MealService();
-            Meal meal = mealService.GetMealByUserIDandMealCategoryName(user.UserID, "Sabah", dtpTarih.Value.Date);
-            MealCategory mealCategory = mealcategoryService.GetMealCategoryByName("Sabah");
-            FormMeal formMeal = new FormMeal(meal, user, dtpTarih.Value.Date, mealCategory);
-            formMeal.ShowDialog();
+            MealAdd("Kahvaltı");
         }
 
         private void lblOgleEkle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            MealAdd("Öğle");
         }
 
         private void lblAperatifEkle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
-
+            MealAdd("Aperatif");
         }
 
         private void lblAksamEkle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            MealAdd("Akşam");
         }
 
         private void lblEgzersizEkle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -84,7 +78,49 @@ namespace BestDiet
 
         private void lblSuEkle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            if(nudSuLitresi.Value > 0)
+            {
+                Water water = waterService.GetWaterByDateAndUserName(dtpTarih.Value.Date, user.UserID);
+                if(water !=null)
+                {
+                    water.Quantity += (double)nudSuLitresi.Value;
+                    if (waterService.UpdateWater(water))
+                        MessageBox.Show("Su eklendi");
+                    lblSu.Text = water.Quantity.ToString();
+                }
+                else
+                {
+                    water = new Water();
+                    water.Quantity = (double)nudSuLitresi.Value;
+                    water.WaterDate = dtpTarih.Value.Date;
+                    water.User = user;
+                    if (waterService.AddWater(water))
+                        MessageBox.Show("İlk suyunuzu içtiniz afiyet olsun :)");
 
+                    lblSu.Text = water.Quantity.ToString();
+                }
+            }
+        }
+        private void MealAdd(string mealName)
+        {
+            this.Hide();
+            mealService = new MealService();
+            Meal meal = mealService.GetMealByUserIDandMealCategoryName(user.UserID, mealName, dtpTarih.Value.Date);
+            MealCategory mealCategory = mealcategoryService.GetMealCategoryByName(mealName);
+            FormMeal formMeal = new FormMeal(meal, user, dtpTarih.Value.Date, mealCategory);
+            formMeal.ShowDialog();
+            this.Show();
+        }
+
+        private void dtpTarih_ValueChanged(object sender, EventArgs e)
+        {
+            Water water = waterService.GetWaterByDateAndUserName(dtpTarih.Value.Date, user.UserID);
+            if (water != null)
+            {
+                lblSu.Text = water.Quantity.ToString();
+            }
+            else
+                lblSu.Text = "0";
         }
     }
 }

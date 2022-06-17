@@ -16,23 +16,24 @@ namespace BusinessLogicLayer.Services
             waterRepository = new WaterRepository();
         }
 
-        public List<Water> GetWatersByDate(DateTime dateTime)
+        public Water GetWaterByDateAndUserName(DateTime dateTime, string userName)
         {
-            List<Water> waterList = new List<Water>();
-            waterList = waterRepository.GetWatersByDate(dateTime);
-            return waterList;
+            return waterRepository.GetWaterByDateAndUserName(dateTime,userName);
         }
 
-        public List<Water> GetWatersByQuantity(int quantity)
+        public bool UpdateWater(Water water)
         {
-            List<Water> water = new List<Water>();
-            water = waterRepository.GetWatersByQuantity(quantity);
-            return water;
+            return waterRepository.UpdateWaterByWater(water);
         }
-
-        void CheckWaterID(int waterID)
+        
+        public bool AddWater(Water water)
         {
-            if (waterID <= 0) throw new Exception("Su eklenmemiştir.");
+            return waterRepository.AddWater(water);
+        }
+        public double GetWaterDrinked(DateTime dateTime, string userName)
+        {
+            Water _water = waterRepository.GetWaterByDateAndUserName(dateTime, userName);
+            return _water.Quantity;
         }
     }
 }

@@ -49,6 +49,9 @@
             this.btnRaporGoruntule = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.lblHedefKilo = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblKahvaltiEkle = new System.Windows.Forms.LinkLabel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -79,9 +82,8 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.dtpTarih = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblHedefKilo = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblSu = new System.Windows.Forms.Label();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -115,7 +117,7 @@
             this.label9.Location = new System.Drawing.Point(19, 47);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 24);
+            this.label9.Size = new System.Drawing.Size(34, 20);
             this.label9.TabIndex = 11;
             this.label9.Text = "Litre";
             // 
@@ -128,7 +130,7 @@
             this.label19.Location = new System.Drawing.Point(358, 154);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(31, 16);
+            this.label19.Size = new System.Drawing.Size(25, 13);
             this.label19.TabIndex = 2;
             this.label19.Text = "Yaş";
             // 
@@ -141,7 +143,7 @@
             this.label17.Location = new System.Drawing.Point(151, 153);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(114, 16);
+            this.label17.Size = new System.Drawing.Size(95, 13);
             this.label17.TabIndex = 2;
             this.label17.Text = "Vücut Kitle İndeksi";
             // 
@@ -154,7 +156,7 @@
             this.label16.Location = new System.Drawing.Point(32, 155);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(31, 16);
+            this.label16.Size = new System.Drawing.Size(25, 13);
             this.label16.TabIndex = 2;
             this.label16.Text = "Boy";
             // 
@@ -166,7 +168,7 @@
             this.label11.Location = new System.Drawing.Point(2, 111);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(412, 21);
+            this.label11.Size = new System.Drawing.Size(343, 18);
             this.label11.TabIndex = 1;
             this.label11.Text = "-------------------------------------------------------------------";
             // 
@@ -179,7 +181,7 @@
             this.lblIdealKilo.Location = new System.Drawing.Point(227, 66);
             this.lblIdealKilo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIdealKilo.Name = "lblIdealKilo";
-            this.lblIdealKilo.Size = new System.Drawing.Size(33, 29);
+            this.lblIdealKilo.Size = new System.Drawing.Size(26, 23);
             this.lblIdealKilo.TabIndex = 0;
             this.lblIdealKilo.Text = "80";
             // 
@@ -192,7 +194,7 @@
             this.lblKilo.Location = new System.Drawing.Point(122, 66);
             this.lblKilo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblKilo.Name = "lblKilo";
-            this.lblKilo.Size = new System.Drawing.Size(40, 29);
+            this.lblKilo.Size = new System.Drawing.Size(32, 23);
             this.lblKilo.TabIndex = 0;
             this.lblKilo.Text = "100";
             // 
@@ -205,7 +207,7 @@
             this.label14.Location = new System.Drawing.Point(254, 66);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(31, 29);
+            this.label14.Size = new System.Drawing.Size(24, 23);
             this.label14.TabIndex = 0;
             this.label14.Text = "kg";
             // 
@@ -218,7 +220,7 @@
             this.label12.Location = new System.Drawing.Point(157, 66);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(31, 29);
+            this.label12.Size = new System.Drawing.Size(24, 23);
             this.label12.TabIndex = 0;
             this.label12.Text = "kg";
             // 
@@ -231,7 +233,7 @@
             this.label13.Location = new System.Drawing.Point(218, 34);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(82, 26);
+            this.label13.Size = new System.Drawing.Size(68, 21);
             this.label13.TabIndex = 0;
             this.label13.Text = "İdeal Kilo";
             // 
@@ -244,7 +246,7 @@
             this.lblKitleIndeksi.Location = new System.Drawing.Point(174, 130);
             this.lblKitleIndeksi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblKitleIndeksi.Name = "lblKitleIndeksi";
-            this.lblKitleIndeksi.Size = new System.Drawing.Size(44, 21);
+            this.lblKitleIndeksi.Size = new System.Drawing.Size(35, 18);
             this.lblKitleIndeksi.TabIndex = 0;
             this.lblKitleIndeksi.Text = "29.8";
             // 
@@ -257,7 +259,7 @@
             this.label15.Location = new System.Drawing.Point(51, 134);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(28, 19);
+            this.label15.Size = new System.Drawing.Size(24, 16);
             this.label15.TabIndex = 0;
             this.label15.Text = "cm";
             // 
@@ -270,7 +272,7 @@
             this.label18.Location = new System.Drawing.Point(219, 133);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(36, 19);
+            this.label18.Size = new System.Drawing.Size(29, 16);
             this.label18.TabIndex = 0;
             this.label18.Text = "BMI";
             // 
@@ -283,7 +285,7 @@
             this.lblBoy.Location = new System.Drawing.Point(18, 131);
             this.lblBoy.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBoy.Name = "lblBoy";
-            this.lblBoy.Size = new System.Drawing.Size(37, 21);
+            this.lblBoy.Size = new System.Drawing.Size(29, 18);
             this.lblBoy.TabIndex = 0;
             this.lblBoy.Text = "185";
             // 
@@ -296,7 +298,7 @@
             this.label10.Location = new System.Drawing.Point(125, 34);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(42, 26);
+            this.label10.Size = new System.Drawing.Size(34, 21);
             this.label10.TabIndex = 0;
             this.label10.Text = "Kilo";
             // 
@@ -309,7 +311,7 @@
             this.lblEgzersizEkle.Location = new System.Drawing.Point(106, 45);
             this.lblEgzersizEkle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEgzersizEkle.Name = "lblEgzersizEkle";
-            this.lblEgzersizEkle.Size = new System.Drawing.Size(65, 42);
+            this.lblEgzersizEkle.Size = new System.Drawing.Size(53, 36);
             this.lblEgzersizEkle.TabIndex = 17;
             this.lblEgzersizEkle.TabStop = true;
             this.lblEgzersizEkle.Text = "+/-";
@@ -324,7 +326,7 @@
             this.lblSuEkle.Location = new System.Drawing.Point(105, 102);
             this.lblSuEkle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSuEkle.Name = "lblSuEkle";
-            this.lblSuEkle.Size = new System.Drawing.Size(65, 42);
+            this.lblSuEkle.Size = new System.Drawing.Size(53, 36);
             this.lblSuEkle.TabIndex = 17;
             this.lblSuEkle.TabStop = true;
             this.lblSuEkle.Text = "+/-";
@@ -339,7 +341,7 @@
             this.lblYas.Location = new System.Drawing.Point(359, 130);
             this.lblYas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblYas.Name = "lblYas";
-            this.lblYas.Size = new System.Drawing.Size(28, 21);
+            this.lblYas.Size = new System.Drawing.Size(22, 18);
             this.lblYas.TabIndex = 0;
             this.lblYas.Text = "27";
             // 
@@ -399,6 +401,45 @@
             this.pictureBox10.TabIndex = 3;
             this.pictureBox10.TabStop = false;
             // 
+            // lblHedefKilo
+            // 
+            this.lblHedefKilo.AutoSize = true;
+            this.lblHedefKilo.BackColor = System.Drawing.Color.White;
+            this.lblHedefKilo.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblHedefKilo.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblHedefKilo.Location = new System.Drawing.Point(338, 66);
+            this.lblHedefKilo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHedefKilo.Name = "lblHedefKilo";
+            this.lblHedefKilo.Size = new System.Drawing.Size(26, 23);
+            this.lblHedefKilo.TabIndex = 0;
+            this.lblHedefKilo.Text = "80";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label2.Location = new System.Drawing.Point(365, 66);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(24, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "kg";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Sitka Banner", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label1.Location = new System.Drawing.Point(325, 34);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 21);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Hedef Kilo";
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
@@ -423,7 +464,7 @@
             this.lblKahvaltiEkle.Location = new System.Drawing.Point(106, 27);
             this.lblKahvaltiEkle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblKahvaltiEkle.Name = "lblKahvaltiEkle";
-            this.lblKahvaltiEkle.Size = new System.Drawing.Size(65, 42);
+            this.lblKahvaltiEkle.Size = new System.Drawing.Size(53, 36);
             this.lblKahvaltiEkle.TabIndex = 17;
             this.lblKahvaltiEkle.TabStop = true;
             this.lblKahvaltiEkle.Text = "+/-";
@@ -449,7 +490,7 @@
             this.lblAlinanKalori.Location = new System.Drawing.Point(6, 50);
             this.lblAlinanKalori.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAlinanKalori.Name = "lblAlinanKalori";
-            this.lblAlinanKalori.Size = new System.Drawing.Size(50, 33);
+            this.lblAlinanKalori.Size = new System.Drawing.Size(41, 28);
             this.lblAlinanKalori.TabIndex = 3;
             this.lblAlinanKalori.Text = "560";
             // 
@@ -478,7 +519,7 @@
             this.lblAperatifEkle.Location = new System.Drawing.Point(104, 26);
             this.lblAperatifEkle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAperatifEkle.Name = "lblAperatifEkle";
-            this.lblAperatifEkle.Size = new System.Drawing.Size(65, 42);
+            this.lblAperatifEkle.Size = new System.Drawing.Size(53, 36);
             this.lblAperatifEkle.TabIndex = 17;
             this.lblAperatifEkle.TabStop = true;
             this.lblAperatifEkle.Text = "+/-";
@@ -504,13 +545,15 @@
             this.lblYakilanKalori.Location = new System.Drawing.Point(6, 50);
             this.lblYakilanKalori.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblYakilanKalori.Name = "lblYakilanKalori";
-            this.lblYakilanKalori.Size = new System.Drawing.Size(51, 33);
+            this.lblYakilanKalori.Size = new System.Drawing.Size(42, 28);
             this.lblYakilanKalori.TabIndex = 3;
             this.lblYakilanKalori.Text = "260";
             // 
             // groupBox8
             // 
             this.groupBox8.BackColor = System.Drawing.Color.White;
+            this.groupBox8.Controls.Add(this.lblSu);
+            this.groupBox8.Controls.Add(this.label3);
             this.groupBox8.Controls.Add(this.lblSuEkle);
             this.groupBox8.Controls.Add(this.pictureBox1);
             this.groupBox8.Controls.Add(this.nudSuLitresi);
@@ -549,7 +592,7 @@
             this.nudSuLitresi.Location = new System.Drawing.Point(67, 45);
             this.nudSuLitresi.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nudSuLitresi.Name = "nudSuLitresi";
-            this.nudSuLitresi.Size = new System.Drawing.Size(103, 29);
+            this.nudSuLitresi.Size = new System.Drawing.Size(103, 25);
             this.nudSuLitresi.TabIndex = 10;
             this.nudSuLitresi.Value = new decimal(new int[] {
             1,
@@ -581,7 +624,7 @@
             this.lblAksamEkle.Location = new System.Drawing.Point(105, 25);
             this.lblAksamEkle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAksamEkle.Name = "lblAksamEkle";
-            this.lblAksamEkle.Size = new System.Drawing.Size(65, 42);
+            this.lblAksamEkle.Size = new System.Drawing.Size(53, 36);
             this.lblAksamEkle.TabIndex = 17;
             this.lblAksamEkle.TabStop = true;
             this.lblAksamEkle.Text = "+/-";
@@ -674,7 +717,7 @@
             this.lblOgleEkle.Location = new System.Drawing.Point(106, 25);
             this.lblOgleEkle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOgleEkle.Name = "lblOgleEkle";
-            this.lblOgleEkle.Size = new System.Drawing.Size(65, 42);
+            this.lblOgleEkle.Size = new System.Drawing.Size(53, 36);
             this.lblOgleEkle.TabIndex = 17;
             this.lblOgleEkle.TabStop = true;
             this.lblOgleEkle.Text = "+/-";
@@ -752,7 +795,7 @@
             this.lblKalanKalori.Location = new System.Drawing.Point(8, 50);
             this.lblKalanKalori.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblKalanKalori.Name = "lblKalanKalori";
-            this.lblKalanKalori.Size = new System.Drawing.Size(51, 33);
+            this.lblKalanKalori.Size = new System.Drawing.Size(42, 28);
             this.lblKalanKalori.TabIndex = 3;
             this.lblKalanKalori.Text = "600";
             // 
@@ -765,7 +808,7 @@
             this.lblKullaniciAdi.Location = new System.Drawing.Point(182, 30);
             this.lblKullaniciAdi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblKullaniciAdi.Name = "lblKullaniciAdi";
-            this.lblKullaniciAdi.Size = new System.Drawing.Size(122, 26);
+            this.lblKullaniciAdi.Size = new System.Drawing.Size(99, 21);
             this.lblKullaniciAdi.TabIndex = 18;
             this.lblKullaniciAdi.Text = "KULLANICI ADI";
             // 
@@ -796,51 +839,31 @@
             this.dtpTarih.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpTarih.Location = new System.Drawing.Point(31, 373);
             this.dtpTarih.Name = "dtpTarih";
-            this.dtpTarih.Size = new System.Drawing.Size(189, 27);
+            this.dtpTarih.Size = new System.Drawing.Size(189, 23);
             this.dtpTarih.TabIndex = 32;
+            this.dtpTarih.ValueChanged += new System.EventHandler(this.dtpTarih_ValueChanged);
             // 
-            // label1
+            // label3
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Sitka Banner", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label1.Location = new System.Drawing.Point(325, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 26);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Hedef Kilo";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(79, 143);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 20);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "İçilen Su:";
             // 
-            // label2
+            // lblSu
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label2.Location = new System.Drawing.Point(365, 66);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 29);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "kg";
-            // 
-            // lblHedefKilo
-            // 
-            this.lblHedefKilo.AutoSize = true;
-            this.lblHedefKilo.BackColor = System.Drawing.Color.White;
-            this.lblHedefKilo.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblHedefKilo.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblHedefKilo.Location = new System.Drawing.Point(338, 66);
-            this.lblHedefKilo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblHedefKilo.Name = "lblHedefKilo";
-            this.lblHedefKilo.Size = new System.Drawing.Size(33, 29);
-            this.lblHedefKilo.TabIndex = 0;
-            this.lblHedefKilo.Text = "80";
+            this.lblSu.AutoSize = true;
+            this.lblSu.Location = new System.Drawing.Point(135, 143);
+            this.lblSu.Name = "lblSu";
+            this.lblSu.Size = new System.Drawing.Size(16, 20);
+            this.lblSu.TabIndex = 19;
+            this.lblSu.Text = "0";
             // 
             // FormUserMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(492, 801);
@@ -958,5 +981,7 @@
         private System.Windows.Forms.Label lblHedefKilo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblSu;
+        private System.Windows.Forms.Label label3;
     }
 }
