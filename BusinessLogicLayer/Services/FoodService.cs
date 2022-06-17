@@ -46,6 +46,10 @@ namespace BusinessLogicLayer.Services
         {
             if (foodID <= 0) throw new Exception("Yiyecek bulunamadı.");
         }
-
+        public Food GetByFoodID(int foodID)
+        {
+            CheckFoodId(foodID);
+            return foodRepository.GetByFoodID(foodID);
+        }  
     }
 }

@@ -35,5 +35,11 @@ namespace BusinessLogicLayer.Services
         {
             if (mealDetailId <= 0) throw new Exception("Öğüne ait yiyecekler bulunamadı.");
         }
+        public bool Insert(MealDetail mealDetail)
+        {
+            CheckMealDetailId(mealDetail.MealDetailID);
+            return mealDetailRepository.Insert(mealDetail);
+        }
+        
     }
 }

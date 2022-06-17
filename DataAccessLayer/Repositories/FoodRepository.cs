@@ -36,6 +36,6 @@ namespace DataAccessLayer.Repositories
             Food deletedFood = db.Foods.Find(food.FoodID);
             deletedFood.IsActive = false;
             return db.SaveChanges() > 0;
-        }
+        }        
     }
 }
