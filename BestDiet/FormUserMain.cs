@@ -31,11 +31,12 @@ namespace BestDiet
         {
             Helper.ClearControls(Controls);
             lblKullaniciAdi.Text = user.FirstName + " " + user.LastName;
+            lblHedefKilo.Text=user.TargetWeight.ToString();
             lblKilo.Text = user.Weight.ToString();
             lblBoy.Text = user.Height.ToString();
-            lblYas.Text = (DateTime.Now - user.BirthDate).ToString();
+            lblYas.Text = (DateTime.Now.Year - user.BirthDate.Year).ToString();
 
-            double vki = user.Weight / (user.Height * user.Height);
+            int vki = Convert.ToInt32(user.Weight*10000 / Math.Pow(user.Height, 2));
             lblKitleIndeksi.Text = vki.ToString();
 
             int idealKilo;

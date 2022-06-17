@@ -79,6 +79,9 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.dtpTarih = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblHedefKilo = new System.Windows.Forms.Label();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -135,7 +138,7 @@
             this.label17.BackColor = System.Drawing.Color.White;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label17.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label17.Location = new System.Drawing.Point(151, 154);
+            this.label17.Location = new System.Drawing.Point(151, 153);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(114, 16);
@@ -173,7 +176,7 @@
             this.lblIdealKilo.BackColor = System.Drawing.Color.White;
             this.lblIdealKilo.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblIdealKilo.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblIdealKilo.Location = new System.Drawing.Point(328, 73);
+            this.lblIdealKilo.Location = new System.Drawing.Point(227, 66);
             this.lblIdealKilo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIdealKilo.Name = "lblIdealKilo";
             this.lblIdealKilo.Size = new System.Drawing.Size(33, 29);
@@ -186,7 +189,7 @@
             this.lblKilo.BackColor = System.Drawing.Color.White;
             this.lblKilo.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblKilo.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblKilo.Location = new System.Drawing.Point(31, 73);
+            this.lblKilo.Location = new System.Drawing.Point(122, 66);
             this.lblKilo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblKilo.Name = "lblKilo";
             this.lblKilo.Size = new System.Drawing.Size(40, 29);
@@ -199,7 +202,7 @@
             this.label14.BackColor = System.Drawing.Color.White;
             this.label14.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label14.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label14.Location = new System.Drawing.Point(355, 73);
+            this.label14.Location = new System.Drawing.Point(254, 66);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(31, 29);
@@ -212,7 +215,7 @@
             this.label12.BackColor = System.Drawing.Color.White;
             this.label12.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label12.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label12.Location = new System.Drawing.Point(66, 73);
+            this.label12.Location = new System.Drawing.Point(157, 66);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(31, 29);
@@ -225,12 +228,12 @@
             this.label13.BackColor = System.Drawing.Color.White;
             this.label13.Font = new System.Drawing.Font("Sitka Banner", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label13.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label13.Location = new System.Drawing.Point(292, 41);
+            this.label13.Location = new System.Drawing.Point(218, 34);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(109, 26);
+            this.label13.Size = new System.Drawing.Size(82, 26);
             this.label13.TabIndex = 0;
-            this.label13.Text = "İdeal Kilonuz";
+            this.label13.Text = "İdeal Kilo";
             // 
             // lblKitleIndeksi
             // 
@@ -238,7 +241,7 @@
             this.lblKitleIndeksi.BackColor = System.Drawing.Color.White;
             this.lblKitleIndeksi.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblKitleIndeksi.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblKitleIndeksi.Location = new System.Drawing.Point(174, 131);
+            this.lblKitleIndeksi.Location = new System.Drawing.Point(174, 130);
             this.lblKitleIndeksi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblKitleIndeksi.Name = "lblKitleIndeksi";
             this.lblKitleIndeksi.Size = new System.Drawing.Size(44, 21);
@@ -264,7 +267,7 @@
             this.label18.BackColor = System.Drawing.Color.White;
             this.label18.Font = new System.Drawing.Font("Sitka Small", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label18.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label18.Location = new System.Drawing.Point(219, 134);
+            this.label18.Location = new System.Drawing.Point(219, 133);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(36, 19);
@@ -290,7 +293,7 @@
             this.label10.BackColor = System.Drawing.Color.White;
             this.label10.Font = new System.Drawing.Font("Sitka Banner", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label10.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label10.Location = new System.Drawing.Point(34, 41);
+            this.label10.Location = new System.Drawing.Point(125, 34);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(42, 26);
@@ -361,10 +364,13 @@
             this.groupBox6.Controls.Add(this.label17);
             this.groupBox6.Controls.Add(this.label16);
             this.groupBox6.Controls.Add(this.label11);
+            this.groupBox6.Controls.Add(this.lblHedefKilo);
             this.groupBox6.Controls.Add(this.lblIdealKilo);
+            this.groupBox6.Controls.Add(this.label2);
             this.groupBox6.Controls.Add(this.lblKilo);
             this.groupBox6.Controls.Add(this.label14);
             this.groupBox6.Controls.Add(this.label12);
+            this.groupBox6.Controls.Add(this.label1);
             this.groupBox6.Controls.Add(this.label13);
             this.groupBox6.Controls.Add(this.lblYas);
             this.groupBox6.Controls.Add(this.lblKitleIndeksi);
@@ -385,10 +391,10 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = global::BestDiet.Properties.Resources.Screenshot_121;
-            this.pictureBox10.Location = new System.Drawing.Point(159, 17);
+            this.pictureBox10.Location = new System.Drawing.Point(9, 25);
             this.pictureBox10.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(104, 91);
+            this.pictureBox10.Size = new System.Drawing.Size(92, 83);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 3;
             this.pictureBox10.TabStop = false;
@@ -793,12 +799,51 @@
             this.dtpTarih.Size = new System.Drawing.Size(189, 27);
             this.dtpTarih.TabIndex = 32;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Sitka Banner", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label1.Location = new System.Drawing.Point(325, 34);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 26);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Hedef Kilo";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label2.Location = new System.Drawing.Point(365, 66);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 29);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "kg";
+            // 
+            // lblHedefKilo
+            // 
+            this.lblHedefKilo.AutoSize = true;
+            this.lblHedefKilo.BackColor = System.Drawing.Color.White;
+            this.lblHedefKilo.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblHedefKilo.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblHedefKilo.Location = new System.Drawing.Point(338, 66);
+            this.lblHedefKilo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHedefKilo.Name = "lblHedefKilo";
+            this.lblHedefKilo.Size = new System.Drawing.Size(33, 29);
+            this.lblHedefKilo.TabIndex = 0;
+            this.lblHedefKilo.Text = "80";
+            // 
             // FormUserMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(498, 801);
+            this.ClientSize = new System.Drawing.Size(492, 801);
             this.Controls.Add(this.dtpTarih);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox12);
@@ -910,5 +955,8 @@
         private System.Windows.Forms.Label lblKalanKalori;
         private System.Windows.Forms.Label lblKullaniciAdi;
         private System.Windows.Forms.DateTimePicker dtpTarih;
+        private System.Windows.Forms.Label lblHedefKilo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
