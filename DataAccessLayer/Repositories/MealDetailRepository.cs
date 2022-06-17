@@ -29,5 +29,13 @@ namespace DataAccessLayer.Repositories
             db.MealDetails.Add(mealDetail);
             return db.SaveChanges() > 0;
         }
+        public bool Update(MealDetail mealDetail)
+        {
+            MealDetail updatedMealDetail = db.MealDetails.Find(mealDetail.MealDetailID);
+            updatedMealDetail.Quantity = mealDetail.Quantity;
+            updatedMealDetail.Meal.MealTime = mealDetail.Meal.MealTime;
+            updatedMealDetail.Portion = mealDetail.Portion;
+            return db.SaveChanges() > 0;
+        }
     }
 }

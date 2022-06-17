@@ -290,6 +290,7 @@
             this.lvEklenenYiyecekler.TabIndex = 7;
             this.lvEklenenYiyecekler.UseCompatibleStateImageBehavior = false;
             this.lvEklenenYiyecekler.View = System.Windows.Forms.View.Details;
+            this.lvEklenenYiyecekler.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvEklenenYiyecekler_MouseDoubleClick);
             // 
             // columnHeader3
             // 

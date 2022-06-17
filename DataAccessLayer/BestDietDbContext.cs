@@ -23,7 +23,8 @@ namespace DataAccessLayer
         public DbSet<FoodCategory>  FoodCategories { get; set; }
         public DbSet<Meal> Meals { get; set; }
         public DbSet<Food> Foods { get; set; }
-        public DbSet<Exercise> ExerciseDetails { get; set; }
+        public DbSet<Exercise> Exercises { get; set; }
+        public DbSet<ExerciseDetail> ExerciseDetails { get; set; }
         public DbSet<MealDetail> MealDetails { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

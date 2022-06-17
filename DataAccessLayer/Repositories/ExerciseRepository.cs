@@ -18,7 +18,11 @@ namespace DataAccessLayer.Repositories
 
         public List<Exercise> GetExercisesByDate(DateTime dateTime)
         {
-            return db.ExerciseDetails.Where(m => m.ExerciseDate == dateTime).ToList();
+            return db.Exercises.Where(m => m.ExerciseDate == dateTime).ToList();
+        }
+        public Exercise GetExercise(string userID,DateTime dateTime)
+        {
+            return db.Exercises.Where(a => a.UserID == userID && a.ExerciseDate == dateTime).FirstOrDefault();
         }
     }
 }

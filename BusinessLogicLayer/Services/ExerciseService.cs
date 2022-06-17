@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.Services
 {
-    class ExerciseService
+    public class ExerciseService
     {
         ExerciseRepository exerciseRepository;
         public ExerciseService()
@@ -22,5 +22,10 @@ namespace BusinessLogicLayer.Services
             exerciseList = exerciseRepository.GetExercisesByDate(dateTime);
             return exerciseList;
         }
+        public Exercise GetExercise(string userID, DateTime dateTime)
+        {            
+            Exercise exercise = exerciseRepository.GetExercise(userID, dateTime);
+            return exercise;
+        }        
     }
 }

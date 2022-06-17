@@ -40,6 +40,11 @@ namespace BusinessLogicLayer.Services
             CheckMealDetailId(mealDetail.MealDetailID);
             return mealDetailRepository.Insert(mealDetail);
         }
+        public bool Update(MealDetail mealDetail)
+        {
+            CheckMealDetailId(mealDetail.MealDetailID);
+            return mealDetailRepository.Update(mealDetail);
+        }
         
     }
 }

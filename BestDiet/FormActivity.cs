@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model.Entites;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace BestDiet
 {
     public partial class FormActivity : Form
     {
-        public FormActivity()
+        Exercise exercise;
+        public FormActivity(Exercise _exercise)
         {
             InitializeComponent();
+            exercise = _exercise;
         }
     }
 }

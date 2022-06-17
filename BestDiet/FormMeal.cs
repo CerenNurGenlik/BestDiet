@@ -19,7 +19,7 @@ namespace BestDiet
         MealDetailService mealDetailService;
         FoodService foodService;
         List<Food> foodList;
-        List<MealDetail> mealDetails = new List<MealDetail>();
+        List<MealDetail> mealDetails;
 
 
         public FormMeal(Meal _meal)
@@ -33,7 +33,9 @@ namespace BestDiet
         {
             Helper.ClearControls(Controls);
             foodList = foodService.GetFoods();
+            mealDetails = mealDetailService.GetFoodsByMeal(meal.UserID, meal.MealCategoryID, meal.MealTime);
             YiyecekleriListele();
+            EklenenYiyecekleriListele();
             lblOgunAdi.Text = meal.MealCategory.MealCategoryName;
         }
         void YiyecekleriListele()
@@ -56,17 +58,34 @@ namespace BestDiet
         {
             int foodID = (int)lvYiyecekler.SelectedItems[0].Tag;
             Food food=foodService.GetByFoodID(foodID);
-            
-            mealDetail=new MealDetail();
-            mealDetail.FoodID = foodID;
-            mealDetail.MealID = meal.MealID;
-            mealDetail.Quantity = Convert.ToInt32(nudUrunSayisi.Value); 
-            mealDetail.Portion = Convert.ToInt32(nudPorsiyon.Value);
-            mealDetail.Calori = food.Calori;
-            mealDetail.Meal.MealTime = dtpOgunTarihi.Value;
-            mealDetails.Add(mealDetail);
+
+            try
+            {
+                mealDetail = new MealDetail();
+                mealDetail.FoodID = foodID;
+                mealDetail.MealID = meal.MealID;
+                mealDetail.Quantity = Convert.ToInt32(nudUrunSayisi.Value);
+                mealDetail.Portion = Convert.ToInt32(nudPorsiyon.Value);
+                mealDetail.Calori = food.Calori;
+                mealDetail.Meal.MealTime = dtpOgunTarihi.Value;
+
+
+                if (mealDetailService.Insert(mealDetail))
+                {
+                    mealDetails.Add(mealDetail);
+                    MessageBox.Show("Yiyecekler eklendi.");
+
+                }
+                else throw new Exception("Ekleme esnasında bir hata oluştu..");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
             EklenenYiyecekleriListele();
         }
+
         void EklenenYiyecekleriListele()
         {
             lvEklenenYiyecekler.Items.Clear();
@@ -81,6 +100,11 @@ namespace BestDiet
                 lvi.Tag = item.MealDetailID;
                 lvEklenenYiyecekler.Items.Add(lvi);
             }
+        }
+
+        private void lvEklenenYiyecekler_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            
         }
     }
 }

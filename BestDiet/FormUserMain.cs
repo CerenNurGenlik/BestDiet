@@ -17,6 +17,8 @@ namespace BestDiet
     {
         User user;
         MealService mealService;
+        ExerciseService exerciseService;
+        WaterService waterService;
         public FormUserMain(User _user)
         {
             InitializeComponent();
@@ -84,7 +86,11 @@ namespace BestDiet
 
         private void lblEgzersizEkle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           
+            this.Hide();
+            exerciseService = new ExerciseService();
+            Exercise exercise = exerciseService.GetExercise(user.UserID,dtpTarih.Value);
+            FormActivity formActivity = new FormActivity(exercise);
+            formActivity.ShowDialog();
         }
 
         private void lblSuEkle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
