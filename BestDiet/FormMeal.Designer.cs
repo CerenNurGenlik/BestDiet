@@ -147,16 +147,32 @@
             // 
             // nudPorsiyon
             // 
-            this.nudPorsiyon.Location = new System.Drawing.Point(647, 256);
+            this.nudPorsiyon.DecimalPlaces = 2;
+            this.nudPorsiyon.Increment = new decimal(new int[] {
+            25,
+            0,
+            0,
+            131072});
+            this.nudPorsiyon.Location = new System.Drawing.Point(637, 256);
             this.nudPorsiyon.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.nudPorsiyon.Minimum = new decimal(new int[] {
+            25,
+            0,
+            0,
+            131072});
             this.nudPorsiyon.Name = "nudPorsiyon";
-            this.nudPorsiyon.Size = new System.Drawing.Size(61, 27);
+            this.nudPorsiyon.Size = new System.Drawing.Size(71, 27);
             this.nudPorsiyon.TabIndex = 1;
+            this.nudPorsiyon.Value = new decimal(new int[] {
+            25,
+            0,
+            0,
+            131072});
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(543, 211);
+            this.label2.Location = new System.Drawing.Point(533, 209);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 20);
@@ -165,16 +181,26 @@
             // 
             // nudUrunSayisi
             // 
-            this.nudUrunSayisi.Location = new System.Drawing.Point(647, 209);
+            this.nudUrunSayisi.Location = new System.Drawing.Point(637, 209);
             this.nudUrunSayisi.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.nudUrunSayisi.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudUrunSayisi.Name = "nudUrunSayisi";
-            this.nudUrunSayisi.Size = new System.Drawing.Size(61, 27);
+            this.nudUrunSayisi.Size = new System.Drawing.Size(71, 27);
             this.nudUrunSayisi.TabIndex = 0;
+            this.nudUrunSayisi.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(568, 259);
+            this.label3.Location = new System.Drawing.Point(554, 258);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 20);

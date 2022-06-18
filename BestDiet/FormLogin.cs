@@ -57,7 +57,8 @@ namespace BestDiet
                             formAdmin.ShowDialog();
                             this.Show();
                             break;
-                    }    
+                    }
+                    Helper.ClearControls(Controls);
                 }
 
             }
