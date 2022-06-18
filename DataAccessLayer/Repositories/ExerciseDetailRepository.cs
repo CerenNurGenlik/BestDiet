@@ -13,6 +13,11 @@ namespace DataAccessLayer.Repositories
         {
             return MainRepository.db.ExerciseDetails.Where(a => a.ExerciseID == exerciseID).ToList();
         }
+        public List<ExerciseDetail> GetExerciseDetailsBetweenDate(string userID,DateTime dateTime,DateTime dateTime2)
+        {
+            return MainRepository.db.ExerciseDetails.Where(a => a.Exercise.UserID == userID && a.Exercise.ExerciseDate>=dateTime && a.Exercise.ExerciseDate<=dateTime2).ToList();
+        }
+
         public List<ExerciseDetail> GetExerciseDetailsByUserId(string userID)
         {
             return MainRepository.db.ExerciseDetails.Where(a => a.Exercise.UserID==userID).ToList();

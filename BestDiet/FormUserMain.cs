@@ -167,5 +167,13 @@ namespace BestDiet
             else
                 lblSu.Text = "0";
         }
+
+        private void btnRaporGoruntule_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormReport formReport = new FormReport(user);
+            formReport.ShowDialog();
+            this.Show();
+        }
     }
 }

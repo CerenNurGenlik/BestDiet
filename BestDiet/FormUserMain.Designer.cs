@@ -358,6 +358,7 @@
             this.btnRaporGoruntule.TabIndex = 29;
             this.btnRaporGoruntule.Text = "Rapor Görüntüle";
             this.btnRaporGoruntule.UseVisualStyleBackColor = false;
+            this.btnRaporGoruntule.Click += new System.EventHandler(this.btnRaporGoruntule_Click);
             // 
             // groupBox6
             // 

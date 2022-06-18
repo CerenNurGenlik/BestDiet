@@ -20,6 +20,10 @@ namespace BusinessLogicLayer.Services
         {
             return waterRepository.GetWaterByDateAndUserName(dateTime,userName);
         }
+        public List<Water> GetWaterByBetweenDate(DateTime dateTime, DateTime dateTime2, string userName)
+        {
+            return waterRepository.GetWaterByBetweenDate(dateTime,dateTime2,userName);
+        }
 
         public bool UpdateWater(Water water)
         {

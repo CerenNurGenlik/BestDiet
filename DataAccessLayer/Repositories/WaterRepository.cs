@@ -13,6 +13,10 @@ namespace DataAccessLayer.Repositories
         {
             return MainRepository.db.Waters.Where(w => w.WaterDate == dateTime && w.UserID == userName).FirstOrDefault();
         }
+        public List<Water> GetWaterByBetweenDate(DateTime dateTime,DateTime dateTime2, string userName)
+        {
+            return MainRepository.db.Waters.Where(w => w.WaterDate >= dateTime && w.WaterDate <= dateTime2 && w.UserID == userName).ToList();
+        }
 
         public bool AddWater(Water water)
         {

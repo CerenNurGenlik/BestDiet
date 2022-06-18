@@ -18,6 +18,10 @@ namespace DataAccessLayer.Repositories
         {
             return MainRepository.db.MealDetails.Where(a => a.Meal.UserID == userID && a.Meal.MealTime==dateTime).ToList();
         }
+        public List<MealDetail> GetMealDetailsBetweenDate(string userID, DateTime dateTime,DateTime dateTime2)
+        {
+            return MainRepository.db.MealDetails.Where(a => a.Meal.UserID == userID && a.Meal.MealTime >=dateTime && a.Meal.MealTime<=dateTime2).ToList();
+        }
         public bool Delete(int mealDetailId)
         {
             MealDetail mealDetail= MainRepository.db.MealDetails.Where(a => a.MealDetailID == mealDetailId).FirstOrDefault();

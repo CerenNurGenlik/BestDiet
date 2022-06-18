@@ -27,6 +27,10 @@ namespace BusinessLogicLayer.Services
         {
             return mealDetailRepository.GetMealDetailsByUserId(userID,dateTime);
         }
+        public List<MealDetail> GetMealDetailsBetweenDate(string userID, DateTime dateTime, DateTime dateTime2)
+        {
+            return mealDetailRepository.GetMealDetailsBetweenDate(userID,dateTime,dateTime2);
+        }
         public int GetSumCalori(List<MealDetail> mealDetails)
         {
             int sum= 0;

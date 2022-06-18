@@ -18,6 +18,10 @@ namespace BusinessLogicLayer.Services
             exerciseRepository = new ExerciseRepository();
             exerciseDetailRepository = new ExerciseDetailRepository();
         }
+        public List<ExerciseDetail> GetExerciseDetailsBetweenDate(string userID,DateTime dateTime,DateTime dateTime2)
+        {
+            return exerciseDetailRepository.GetExerciseDetailsBetweenDate(userID,dateTime,dateTime2);
+        }
 
         public List<ExerciseDetail> GetSportsByExercise (string userID,  DateTime dateTime)
         {
