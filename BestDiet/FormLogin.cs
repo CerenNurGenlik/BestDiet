@@ -20,6 +20,10 @@ namespace BestDiet
         {
             InitializeComponent();
         }
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+            txtSifre.PasswordChar = '*';
+        }
 
         private void lnkKayitOl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -68,5 +72,6 @@ namespace BestDiet
 
             }
         }
+
     }
 }

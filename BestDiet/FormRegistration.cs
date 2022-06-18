@@ -21,6 +21,11 @@ namespace BestDiet
             InitializeComponent();
             userService = new UserService();
         }
+        private void FormRegistration_Load(object sender, EventArgs e)
+        {
+            txtSifre.PasswordChar = '*';
+            txtSifreTekrar.PasswordChar = '*';
+        }
 
         private void btnKaydol_Click(object sender, EventArgs e)
         {
@@ -34,6 +39,16 @@ namespace BestDiet
             {
                 MessageBox.Show("Şifre tekrarı hatalı");
                 return;
+            }
+            if(string.IsNullOrWhiteSpace(txtSifre.Text) || lblSifre.Text == "Zayıf")
+            {
+                MessageBox.Show("Şifre yeterince güçlü değil!!!");
+                return;
+            }
+            if(!txtEmail.Text.Contains("@"))
+            {
+                MessageBox.Show("Geçerli bir mail adresi giriniz");
+                return ;
             }
             try 
             {
@@ -58,6 +73,54 @@ namespace BestDiet
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }
+        }
+
+        private void txtSifre_TextChanged(object sender, EventArgs e)
+        {
+            bool isPasswordOk = false;
+            bool characterExist = false;
+            bool numberExist = false;
+            int length = txtSifre.Text.Trim().Length;
+            if (length<1)
+            {
+                lblSifre.Text = string.Empty;
+            }
+            else if(length < 5)
+            {
+                lblSifre.Text = "Zayıf";
+                lblSifre.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblSifre.Text = "Orta";
+                lblSifre.ForeColor = Color.Orange;
+
+                string characters = @"%!@#$%^&*()?/>.<,:;'\|}]{[_~`+=-" + "\"";
+                char[] charactersArray = characters.ToCharArray();
+                char[] numbers = new char[] {'1','2','3','4','5','6','7','8','9','0'};
+                foreach(char c in charactersArray)
+                {
+                    if(txtSifre.Text.Contains(c))
+                        characterExist = true;
+                }
+                foreach(char c in numbers)
+                {
+                    if (txtSifre.Text.Contains(c))
+                        numberExist = true;
+                }
+            }
+
+            if(characterExist || numberExist )
+            {
+                lblSifre.Text = "Güçlü";
+                lblSifre.ForeColor = Color.LightGreen;
+                isPasswordOk = true;
+            }
+            if(isPasswordOk && length>10)
+            {
+                lblSifre.Text = "Çok Güçlü";
+                lblSifre.ForeColor = Color.DarkGreen;
+            }
         }
     }
 }
