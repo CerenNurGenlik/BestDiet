@@ -9,10 +9,13 @@ namespace DataAccessLayer.Repositories
 {
     public class FoodRepository
     {
-        
-        public List<Food> GetFoods()
+        public List<Food> GetActiveFoods()
         {
-            return MainRepository.db.Foods.Where(a => !a.IsActive).ToList();
+            return MainRepository.db.Foods.Where(a => a.IsActive).ToList();
+        }
+        public List<Food> GetFoodsAll()
+        {
+            return MainRepository.db.Foods.ToList();
         }
         public List<Food> GetFoodsByCategory(int foodCategoryID)
         {
@@ -36,7 +39,13 @@ namespace DataAccessLayer.Repositories
         public List<Food> GetFoodsByText(string text)
         {
             return MainRepository.db.Foods.Where(a => a.FoodName.Contains(text)).ToList();
+        }
 
+        public bool UpdateFood(Food food) 
+        {
+            Food updateFood = MainRepository.db.Foods.Find(food.FoodID);
+            updateFood = food;
+            return MainRepository.db.SaveChanges() > 0;
         }
     }
 }

@@ -22,7 +22,6 @@ namespace BusinessLogicLayer.Services
             caloriList = sportRepository.GetCaloriesByQuantity(burningCalori);
             return caloriList;
         }
-
         public List<Sport> GetSports()
         {
             List<Sport> sportList = new List<Sport>();

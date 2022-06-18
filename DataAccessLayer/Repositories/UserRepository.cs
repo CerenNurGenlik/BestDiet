@@ -36,5 +36,9 @@ namespace DataAccessLayer.Repositories
             MainRepository.db.Users.Add(user);
             return MainRepository.db.SaveChanges() > 0;
         }
+        public List<User> GetUsers()
+        {
+            return MainRepository.db.Users.Where(u=> u.UserType == UserType.User).ToList();
+        }
     }
 }

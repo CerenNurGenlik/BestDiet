@@ -15,32 +15,54 @@ namespace BestDiet
     public partial class FormFoodAdd : Form
     {
         FoodService foodService;
-        FoodCategoryService foodCategoryService;        
+        FoodCategoryService foodCategoryService;
+        int foodId = 0;
         public FormFoodAdd()
         {
             InitializeComponent();
             foodService = new FoodService();
             foodCategoryService = new FoodCategoryService();
         }
+        public FormFoodAdd(int _foodID)
+        {
+            InitializeComponent();
+            foodService = new FoodService();
+            foodCategoryService = new FoodCategoryService();
+            foodId = _foodID;
+        }
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            
-            try
+            if(foodId == 0)
             {
-                Food food = new Food();
-                food.FoodName = txtYemekAdi.Text;
-                food.Calori = Convert.ToInt32(nudKalori.Value);
-                food.FoodCategoryID = Convert.ToInt32(cmbKategoriler.SelectedValue);
-                food.ImagePath = txtResimYolu.Text;
-                if (foodService.Insert(food)) MessageBox.Show("Yeni yemek eklendi");                
-                else throw new Exception("Yemek ekleme esnasında bir hata oluştu :(");
+                try
+                {
+                    Food food = new Food();
+                    food.FoodName = txtYemekAdi.Text;
+                    food.Calori = Convert.ToInt32(nudKalori.Value);
+                    food.FoodCategoryID = Convert.ToInt32(cmbKategoriler.SelectedValue);
+                    food.ImagePath = txtResimYolu.Text;
+                    food.IsActive = true;
+                    if (foodService.Insert(food)) MessageBox.Show("Yeni yemek eklendi");
+                    else throw new Exception("Yemek ekleme esnasında bir hata oluştu :(");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
-            }
+                Food food = foodService.GetByFoodID(foodId);
 
+                food.FoodName = txtYemekAdi.Text.Trim();
+                food.Calori = (int)nudKalori.Value;
+                food.ImagePath = txtResimYolu.Text.Trim();
+                food.FoodCategoryID = (int)cmbKategoriler.SelectedValue;
+                if (foodService.Update(food))
+                    MessageBox.Show("Başarıyla güncellendi");
+            }
+            this.Close();
         }
 
         private void FormFoodAdd_Load(object sender, EventArgs e)
@@ -48,7 +70,20 @@ namespace BestDiet
             List<FoodCategory> foodCategories = foodCategoryService.GetFoodCategories();
             cmbKategoriler.DataSource = foodCategories;
             cmbKategoriler.ValueMember = "FoodCategoryID"; 
-            cmbKategoriler.DisplayMember = "CategoryName"; 
+            cmbKategoriler.DisplayMember = "CategoryName";
+
+            if(foodId != 0)
+            {
+                FillForm();
+            }
+        }
+        private void FillForm()
+        {
+            Food food = foodService.GetByFoodID(foodId);
+            cmbKategoriler.Text = food.FoodCategory.CategoryName;
+            txtYemekAdi.Text = food.FoodName;
+            nudKalori.Value = food.Calori;
+            txtResimYolu.Text = food.ImagePath;
         }
     }
 }

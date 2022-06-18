@@ -28,7 +28,7 @@ namespace BusinessLogicLayer.Services
             if (string.IsNullOrWhiteSpace(user.FirstName) || string.IsNullOrWhiteSpace(user.LastName))
                 throw new Exception("İsim yada Soyisim boş olamaz!");
             else if (user.BirthDate > DateTime.Now.AddYears(-6))
-                throw new Exception("Kullnıcı 6 yaşından küçük olamaz!");
+                throw new Exception("Kullanıcı 6 yaşından küçük olamaz!");
             else if (user.Height < 100 || user.Height > 240)
                 throw new Exception("Kullanıcı boyu 100cm den az, 240cm den fazla olamaz!");
             else if (user.Weight < 40 || user.Weight > 400)
@@ -39,6 +39,16 @@ namespace BusinessLogicLayer.Services
                 throw new Exception("Şifre boş olamaz");
             
             return userRepository.InsertUser(user);
+        }
+        public List<User> GetUsers()
+        {
+            return userRepository.GetUsers();
+        }
+
+        public int GetAge(string userID)
+        {
+            User user = GetUserByUserName(userID);
+            return DateTime.Now.Year - user.BirthDate.Year;
         }
     }
 }

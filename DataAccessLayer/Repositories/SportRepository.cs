@@ -17,10 +17,9 @@ namespace DataAccessLayer.Repositories
         {
             return MainRepository.db.Sports.Find(sportID);
         }
-
         public List<Sport> GetSports()
         {
-            return MainRepository.db.Sports.Where(u => !u.IsActive == true).ToList();
+            return MainRepository.db.Sports.Where(u => u.IsActive == true).ToList();
         }
 
         public List<Sport> GetSportsAll()

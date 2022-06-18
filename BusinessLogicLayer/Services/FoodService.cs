@@ -17,11 +17,16 @@ namespace BusinessLogicLayer.Services
             foodRepository = new FoodRepository();
             
         }
-
-        public List<Food> GetFoods()
+        public List<Food> GetActiveFoods()
         {
             List<Food> foodList = new List<Food>();
-            foodList = foodRepository.GetFoods();
+            foodList = foodRepository.GetActiveFoods();
+            return foodList;
+        }
+        public List<Food> GetFoodsAll()
+        {
+            List<Food> foodList = new List<Food>();
+            foodList = foodRepository.GetFoodsAll();
             return foodList;
         }        
         public bool Insert(Food food)
@@ -54,6 +59,22 @@ namespace BusinessLogicLayer.Services
         public List<Food> GetFoodsByText(string text)
         {
             return foodRepository.GetFoodsByText(text);
+        }
+        public bool DoActiveByFoodID(int foodID)
+        {
+            Food food = GetByFoodID(foodID);
+            food.IsActive = true;
+            return foodRepository.UpdateFood(food);
+        }
+        public bool DoPassiveByFoodID(int foodID)
+        {
+            Food food = GetByFoodID(foodID);
+            food.IsActive = false;
+            return foodRepository.UpdateFood(food);
+        }
+        public bool Update(Food food)
+        {
+            return foodRepository.UpdateFood(food);
         }
     }
 }

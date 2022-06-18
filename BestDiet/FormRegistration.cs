@@ -48,10 +48,11 @@ namespace BestDiet
                 user.TargetWeight = (double)nudHedefKilo.Value;
                 user.Password = txtSifre.Text;
                 user.UserType = UserType.User;
+                user.IsActive = true;
                 if (userService.InsertUser(user))
                 {
                     MessageBox.Show("Kayıt başarılı ! ! !");
-
+                    this.Close();
                 }
                 else throw new Exception("Kayıt esnasında bir hata oluştu :(");
             }

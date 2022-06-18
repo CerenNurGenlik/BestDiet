@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.btnRaporlar = new System.Windows.Forms.Button();
-            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lvAktivite = new System.Windows.Forms.ListView();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.txtKullaniciAra = new System.Windows.Forms.TextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lvKullanici = new System.Windows.Forms.ListView();
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnAktiviteGuncelle = new System.Windows.Forms.Button();
@@ -80,35 +80,6 @@
             this.btnRaporlar.Text = "Raporlar";
             this.btnRaporlar.UseVisualStyleBackColor = false;
             // 
-            // columnHeader13
-            // 
-            this.columnHeader13.DisplayIndex = 4;
-            this.columnHeader13.Text = "Hedef Kilo";
-            this.columnHeader13.Width = 94;
-            // 
-            // columnHeader12
-            // 
-            this.columnHeader12.DisplayIndex = 7;
-            this.columnHeader12.Text = "Favori Aktivite";
-            this.columnHeader12.Width = 130;
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.DisplayIndex = 6;
-            this.columnHeader11.Text = "Favori Yiyecek";
-            this.columnHeader11.Width = 140;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.DisplayIndex = 5;
-            this.columnHeader10.Text = "Boy";
-            this.columnHeader10.Width = 63;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Kilo";
-            this.columnHeader9.Width = 62;
-            // 
             // lvAktivite
             // 
             this.lvAktivite.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -132,27 +103,10 @@
             // columnHeader5
             // 
             this.columnHeader5.Text = "Kalori";
-            this.columnHeader5.Width = 79;
             // 
             // columnHeader15
             // 
             this.columnHeader15.Text = "Durum";
-            this.columnHeader15.Width = 84;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Yaş";
-            this.columnHeader8.Width = 62;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Soyad";
-            this.columnHeader7.Width = 111;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Ad";
-            this.columnHeader6.Width = 107;
             // 
             // label1
             // 
@@ -160,7 +114,7 @@
             this.label1.Location = new System.Drawing.Point(616, 38);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 20);
+            this.label1.Size = new System.Drawing.Size(34, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Ara:";
             // 
@@ -169,41 +123,79 @@
             this.txtKullaniciAra.Location = new System.Drawing.Point(680, 35);
             this.txtKullaniciAra.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtKullaniciAra.Name = "txtKullaniciAra";
-            this.txtKullaniciAra.Size = new System.Drawing.Size(173, 27);
+            this.txtKullaniciAra.Size = new System.Drawing.Size(173, 23);
             this.txtKullaniciAra.TabIndex = 1;
             // 
-            // listView1
+            // lvKullanici
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11,
-            this.columnHeader12,
-            this.columnHeader13,
-            this.columnHeader16});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(6, 88);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(847, 290);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvKullanici.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader17,
+            this.columnHeader18,
+            this.columnHeader19,
+            this.columnHeader20,
+            this.columnHeader21,
+            this.columnHeader22,
+            this.columnHeader23,
+            this.columnHeader24,
+            this.columnHeader25});
+            this.lvKullanici.HideSelection = false;
+            this.lvKullanici.Location = new System.Drawing.Point(6, 88);
+            this.lvKullanici.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.lvKullanici.Name = "lvKullanici";
+            this.lvKullanici.Size = new System.Drawing.Size(847, 290);
+            this.lvKullanici.TabIndex = 0;
+            this.lvKullanici.UseCompatibleStateImageBehavior = false;
+            this.lvKullanici.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader16
+            // columnHeader17
             // 
-            this.columnHeader16.Text = "Durum";
-            this.columnHeader16.Width = 70;
+            this.columnHeader17.Text = "Ad";
+            this.columnHeader17.Width = 120;
+            // 
+            // columnHeader18
+            // 
+            this.columnHeader18.Text = "Soyad";
+            this.columnHeader18.Width = 120;
+            // 
+            // columnHeader19
+            // 
+            this.columnHeader19.Text = "Yaş";
+            // 
+            // columnHeader20
+            // 
+            this.columnHeader20.Text = "Boy";
+            // 
+            // columnHeader21
+            // 
+            this.columnHeader21.Text = "Kilo";
+            // 
+            // columnHeader22
+            // 
+            this.columnHeader22.Text = "Hedef Kilo";
+            this.columnHeader22.Width = 100;
+            // 
+            // columnHeader23
+            // 
+            this.columnHeader23.Text = "Favori Yiyecek";
+            this.columnHeader23.Width = 120;
+            // 
+            // columnHeader24
+            // 
+            this.columnHeader24.Text = "Favori Aktivite";
+            this.columnHeader24.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader24.Width = 120;
+            // 
+            // columnHeader25
+            // 
+            this.columnHeader25.Text = "Durum";
+            this.columnHeader25.Width = 100;
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.txtKullaniciAra);
-            this.groupBox3.Controls.Add(this.listView1);
+            this.groupBox3.Controls.Add(this.lvKullanici);
             this.groupBox3.ForeColor = System.Drawing.Color.DarkGreen;
             this.groupBox3.Location = new System.Drawing.Point(14, 364);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
@@ -220,7 +212,7 @@
             this.label3.Location = new System.Drawing.Point(76, 36);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 20);
+            this.label3.Size = new System.Drawing.Size(34, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Ara:";
             // 
@@ -260,7 +252,7 @@
             this.label2.Location = new System.Drawing.Point(120, 38);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 20);
+            this.label2.Size = new System.Drawing.Size(34, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ara:";
             // 
@@ -282,30 +274,31 @@
             // 
             // columnHeader1
             // 
+            this.columnHeader1.DisplayIndex = 1;
             this.columnHeader1.Text = "Kategori";
             this.columnHeader1.Width = 131;
             // 
             // columnHeader2
             // 
+            this.columnHeader2.DisplayIndex = 0;
             this.columnHeader2.Text = "Yemek";
             this.columnHeader2.Width = 104;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Kalori";
-            this.columnHeader3.Width = 105;
+            this.columnHeader3.Width = 50;
             // 
             // columnHeader14
             // 
             this.columnHeader14.Text = "Durum";
-            this.columnHeader14.Width = 79;
             // 
             // txtYemekAra
             // 
             this.txtYemekAra.Location = new System.Drawing.Point(164, 35);
             this.txtYemekAra.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtYemekAra.Name = "txtYemekAra";
-            this.txtYemekAra.Size = new System.Drawing.Size(173, 27);
+            this.txtYemekAra.Size = new System.Drawing.Size(173, 23);
             this.txtYemekAra.TabIndex = 1;
             // 
             // btnYemekGüncelle
@@ -318,6 +311,7 @@
             this.btnYemekGüncelle.TabIndex = 1;
             this.btnYemekGüncelle.Text = "Güncelle";
             this.btnYemekGüncelle.UseVisualStyleBackColor = true;
+            this.btnYemekGüncelle.Click += new System.EventHandler(this.btnYemekGüncelle_Click);
             // 
             // btnYemekSil
             // 
@@ -329,6 +323,7 @@
             this.btnYemekSil.TabIndex = 1;
             this.btnYemekSil.Text = "Sil";
             this.btnYemekSil.UseVisualStyleBackColor = true;
+            this.btnYemekSil.Click += new System.EventHandler(this.btnYemekSil_Click);
             // 
             // btnYemekEkle
             // 
@@ -340,13 +335,14 @@
             this.btnYemekEkle.TabIndex = 1;
             this.btnYemekEkle.Text = "Ekle";
             this.btnYemekEkle.UseVisualStyleBackColor = true;
+            this.btnYemekEkle.Click += new System.EventHandler(this.btnYemekEkle_Click);
             // 
             // txtAktiviteAra
             // 
             this.txtAktiviteAra.Location = new System.Drawing.Point(120, 32);
             this.txtAktiviteAra.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtAktiviteAra.Name = "txtAktiviteAra";
-            this.txtAktiviteAra.Size = new System.Drawing.Size(173, 27);
+            this.txtAktiviteAra.Size = new System.Drawing.Size(173, 23);
             this.txtAktiviteAra.TabIndex = 1;
             // 
             // btnAktiviteSil
@@ -392,7 +388,7 @@
             // 
             // FormAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(907, 834);
@@ -404,6 +400,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAdmin";
             this.Text = "FormAdmin";
+            this.Load += new System.EventHandler(this.FormAdmin_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.grpYemekler.ResumeLayout(false);
@@ -417,22 +414,13 @@
         #endregion
 
         private System.Windows.Forms.Button btnRaporlar;
-        private System.Windows.Forms.ColumnHeader columnHeader13;
-        private System.Windows.Forms.ColumnHeader columnHeader12;
-        private System.Windows.Forms.ColumnHeader columnHeader11;
-        private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ListView lvAktivite;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader15;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtKullaniciAra;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.ListView lvKullanici;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAktiviteGuncelle;
@@ -451,5 +439,14 @@
         private System.Windows.Forms.Button btnAktiviteSil;
         private System.Windows.Forms.Button btnAktiviteEkle;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.ColumnHeader columnHeader18;
+        private System.Windows.Forms.ColumnHeader columnHeader19;
+        private System.Windows.Forms.ColumnHeader columnHeader20;
+        private System.Windows.Forms.ColumnHeader columnHeader21;
+        private System.Windows.Forms.ColumnHeader columnHeader22;
+        private System.Windows.Forms.ColumnHeader columnHeader23;
+        private System.Windows.Forms.ColumnHeader columnHeader24;
+        private System.Windows.Forms.ColumnHeader columnHeader25;
     }
 }

@@ -28,6 +28,7 @@ namespace BestDiet
                 Sport sport = new Sport();
                 sport.SportName = txtAktiviteAdi.Text;
                 sport.BurningCalori = Convert.ToInt32(nudKalori.Value);
+                sport.IsActive = true;
                 
                 if (sportService.Insert(sport)) MessageBox.Show("Yeni aktivite eklendi");
                 else throw new Exception("Aktivite ekleme esnasında bir hata oluştu :(");

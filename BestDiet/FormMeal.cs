@@ -40,7 +40,7 @@ namespace BestDiet
         private void FormMeal_Load(object sender, EventArgs e)
         {
             Helper.ClearControls(Controls);
-            foodList = foodService.GetFoods();
+            foodList = foodService.GetActiveFoods();
             lblOgunAdi.Text = mealCategory.MealCategoryName;
             
 
