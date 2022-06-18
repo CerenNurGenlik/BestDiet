@@ -47,17 +47,20 @@ namespace BestDiet
             int idealKilo;
             if (user.Gender == Gender.Male) idealKilo = (int)(50 + (2.3) * ((user.Height - 152.4) / 2.54));
             else idealKilo = (int)(45.5 + (2.3) * ((user.Height - 152.4) / 2.54));
-            lblIdealKilo.Text = idealKilo.ToString();
-
-            int alınasıGerekenKalori;
-            if (user.Gender == Gender.Male) alınasıGerekenKalori = Convert.ToInt32(user.Weight * 24);
-            else alınasıGerekenKalori = Convert.ToInt32(0.9 * user.Weight * 24);
-
-
+            lblIdealKilo.Text = idealKilo.ToString();           
 
             AlinanToplamKaloriyiGetir();
             YakilanToplamKaloriyiGetir();
+            KalanKaloriyiGetir();
 
+        }
+
+        private void KalanKaloriyiGetir()
+        {
+            int alınasıGerekenKalori;
+            if (user.Gender == Gender.Male) alınasıGerekenKalori = Convert.ToInt32(user.Weight * 24);
+            else alınasıGerekenKalori = Convert.ToInt32(0.9 * user.Weight * 24);
+            lblKalanKalori.Text = (alınasıGerekenKalori - alinanToplamKalori).ToString();
         }
 
         private void YakilanToplamKaloriyiGetir()
@@ -67,34 +70,40 @@ namespace BestDiet
             lblYakilanKalori.Text = exerciseDetailService.GetSumCalori(exerciseDetails).ToString();
         }
 
+        int alinanToplamKalori;
         private void AlinanToplamKaloriyiGetir()
         {
             List<MealDetail> mealDetails = mealdetailService.GetMealDetailsByUserId(user.UserID,dtpTarih.Value.Date);
-            lblAlinanKalori.Text = mealdetailService.GetSumCalori(mealDetails).ToString();
+            alinanToplamKalori = mealdetailService.GetSumCalori(mealDetails);
+            lblAlinanKalori.Text = alinanToplamKalori.ToString();
         }
 
         private void lblKahvaltiEkle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MealAdd("Sabah");
             AlinanToplamKaloriyiGetir();
+            KalanKaloriyiGetir();
         }
 
         private void lblOgleEkle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MealAdd("Öğle");
             AlinanToplamKaloriyiGetir();
+            KalanKaloriyiGetir();
         }
 
         private void lblAperatifEkle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MealAdd("Aperatif");
             AlinanToplamKaloriyiGetir();
+            KalanKaloriyiGetir();
         }
 
         private void lblAksamEkle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MealAdd("Akşam");
             AlinanToplamKaloriyiGetir();
+            KalanKaloriyiGetir();
         }
 
         private void lblEgzersizEkle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -149,6 +158,7 @@ namespace BestDiet
         {
             AlinanToplamKaloriyiGetir();
             YakilanToplamKaloriyiGetir();
+            KalanKaloriyiGetir();
             Water water = waterService.GetWaterByDateAndUserName(dtpTarih.Value.Date, user.UserID);
             if (water != null)
             {
