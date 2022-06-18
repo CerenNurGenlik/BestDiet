@@ -51,5 +51,6 @@ namespace DataAccessLayer.Repositories
             updateUser.IsActive = user.IsActive;
             return MainRepository.db.SaveChanges() > 0;
         }
+
     }
 }

@@ -43,6 +43,11 @@ namespace BestDiet
                 }
                 else
                 {
+                    if(user.IsActive == false)
+                    {
+                        MessageBox.Show("Admin onayı gerekiyor!!!\nLütfen yetkiliyle iletişime geçiniz.");
+                        return;
+                    }
                     switch(user.UserType)
                     {
                         case UserType.User:
