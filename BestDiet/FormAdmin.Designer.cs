@@ -105,7 +105,7 @@
             this.label1.Location = new System.Drawing.Point(859, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 17);
+            this.label1.Size = new System.Drawing.Size(40, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Ara:";
             // 
@@ -114,7 +114,7 @@
             this.txtKullaniciAra.Location = new System.Drawing.Point(903, 28);
             this.txtKullaniciAra.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtKullaniciAra.Name = "txtKullaniciAra";
-            this.txtKullaniciAra.Size = new System.Drawing.Size(173, 23);
+            this.txtKullaniciAra.Size = new System.Drawing.Size(173, 27);
             this.txtKullaniciAra.TabIndex = 0;
             this.txtKullaniciAra.TextChanged += new System.EventHandler(this.txtKullaniciAra_TextChanged);
             // 
@@ -212,7 +212,7 @@
             this.label3.Location = new System.Drawing.Point(181, 33);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 17);
+            this.label3.Size = new System.Drawing.Size(40, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Ara:";
             // 
@@ -265,7 +265,7 @@
             this.label2.Location = new System.Drawing.Point(240, 36);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 17);
+            this.label2.Size = new System.Drawing.Size(40, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ara:";
             // 
@@ -310,7 +310,7 @@
             this.txtYemekAra.Location = new System.Drawing.Point(284, 33);
             this.txtYemekAra.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtYemekAra.Name = "txtYemekAra";
-            this.txtYemekAra.Size = new System.Drawing.Size(173, 23);
+            this.txtYemekAra.Size = new System.Drawing.Size(173, 27);
             this.txtYemekAra.TabIndex = 0;
             this.txtYemekAra.TextChanged += new System.EventHandler(this.txtYemekAra_TextChanged);
             // 
@@ -343,7 +343,7 @@
             this.txtAktiviteAra.Location = new System.Drawing.Point(225, 28);
             this.txtAktiviteAra.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtAktiviteAra.Name = "txtAktiviteAra";
-            this.txtAktiviteAra.Size = new System.Drawing.Size(173, 23);
+            this.txtAktiviteAra.Size = new System.Drawing.Size(173, 27);
             this.txtAktiviteAra.TabIndex = 0;
             this.txtAktiviteAra.TextChanged += new System.EventHandler(this.txtAktiviteAra_TextChanged);
             // 
@@ -404,7 +404,7 @@
             // 
             // FormAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1110, 834);
@@ -415,6 +415,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAdmin";
             this.Load += new System.EventHandler(this.FormAdmin_Load);
             this.groupBox3.ResumeLayout(false);

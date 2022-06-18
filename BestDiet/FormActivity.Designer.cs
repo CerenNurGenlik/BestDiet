@@ -160,9 +160,9 @@
             this.lblAktiviteToplamKalori.Location = new System.Drawing.Point(19, 38);
             this.lblAktiviteToplamKalori.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAktiviteToplamKalori.Name = "lblAktiviteToplamKalori";
-            this.lblAktiviteToplamKalori.Size = new System.Drawing.Size(50, 33);
+            this.lblAktiviteToplamKalori.Size = new System.Drawing.Size(27, 33);
             this.lblAktiviteToplamKalori.TabIndex = 3;
-            this.lblAktiviteToplamKalori.Text = "560";
+            this.lblAktiviteToplamKalori.Text = "0";
             // 
             // grpEklenenUrunler
             // 
@@ -322,6 +322,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormActivity";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormActivity";
             this.Load += new System.EventHandler(this.FormActivity_Load);
             this.grpAlinanKalori.ResumeLayout(false);

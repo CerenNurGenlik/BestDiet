@@ -168,10 +168,9 @@
             this.label11.Location = new System.Drawing.Point(2, 111);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(502, 21);
+            this.label11.Size = new System.Drawing.Size(418, 21);
             this.label11.TabIndex = 1;
-            this.label11.Text = "---------------------------------------------------------------------------------" +
-    "-";
+            this.label11.Text = "--------------------------------------------------------------------";
             // 
             // lblIdealKilo
             // 
@@ -492,9 +491,9 @@
             this.lblAlinanKalori.Location = new System.Drawing.Point(6, 50);
             this.lblAlinanKalori.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAlinanKalori.Name = "lblAlinanKalori";
-            this.lblAlinanKalori.Size = new System.Drawing.Size(50, 33);
+            this.lblAlinanKalori.Size = new System.Drawing.Size(27, 33);
             this.lblAlinanKalori.TabIndex = 3;
-            this.lblAlinanKalori.Text = "560";
+            this.lblAlinanKalori.Text = "0";
             // 
             // groupBox5
             // 
@@ -547,9 +546,9 @@
             this.lblYakilanKalori.Location = new System.Drawing.Point(6, 50);
             this.lblYakilanKalori.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblYakilanKalori.Name = "lblYakilanKalori";
-            this.lblYakilanKalori.Size = new System.Drawing.Size(51, 33);
+            this.lblYakilanKalori.Size = new System.Drawing.Size(27, 33);
             this.lblYakilanKalori.TabIndex = 3;
-            this.lblYakilanKalori.Text = "260";
+            this.lblYakilanKalori.Text = "0";
             // 
             // groupBox8
             // 
@@ -815,9 +814,9 @@
             this.lblKalanKalori.Location = new System.Drawing.Point(8, 50);
             this.lblKalanKalori.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblKalanKalori.Name = "lblKalanKalori";
-            this.lblKalanKalori.Size = new System.Drawing.Size(51, 33);
+            this.lblKalanKalori.Size = new System.Drawing.Size(27, 33);
             this.lblKalanKalori.TabIndex = 3;
-            this.lblKalanKalori.Text = "600";
+            this.lblKalanKalori.Text = "0";
             // 
             // lblKullaniciAdi
             // 
@@ -887,6 +886,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormUserMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormUserMain";
             this.Load += new System.EventHandler(this.FormUserMain_Load);
             this.groupBox6.ResumeLayout(false);

@@ -44,7 +44,7 @@
             this.label1.ForeColor = System.Drawing.Color.DarkGreen;
             this.label1.Location = new System.Drawing.Point(34, 296);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 18);
+            this.label1.Size = new System.Drawing.Size(113, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kullanıcı Adı:";
             // 
@@ -54,7 +54,7 @@
             this.label2.ForeColor = System.Drawing.Color.DarkGreen;
             this.label2.Location = new System.Drawing.Point(100, 380);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 18);
+            this.label2.Size = new System.Drawing.Size(52, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Şifre:";
             // 
@@ -76,7 +76,7 @@
             this.lnkKayitOl.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lnkKayitOl.Location = new System.Drawing.Point(208, 555);
             this.lnkKayitOl.Name = "lnkKayitOl";
-            this.lnkKayitOl.Size = new System.Drawing.Size(59, 18);
+            this.lnkKayitOl.Size = new System.Drawing.Size(73, 22);
             this.lnkKayitOl.TabIndex = 3;
             this.lnkKayitOl.TabStop = true;
             this.lnkKayitOl.Text = "Kayıt Ol";
@@ -89,7 +89,7 @@
             this.txtKullaniciAdi.Location = new System.Drawing.Point(165, 296);
             this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
-            this.txtKullaniciAdi.Size = new System.Drawing.Size(249, 24);
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(249, 28);
             this.txtKullaniciAdi.TabIndex = 0;
             // 
             // txtSifre
@@ -99,7 +99,7 @@
             this.txtSifre.Location = new System.Drawing.Point(165, 377);
             this.txtSifre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(249, 24);
+            this.txtSifre.Size = new System.Drawing.Size(249, 28);
             this.txtSifre.TabIndex = 1;
             // 
             // pictureBox1
@@ -114,7 +114,7 @@
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(500, 603);
@@ -128,6 +128,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

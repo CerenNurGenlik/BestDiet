@@ -21,6 +21,8 @@ namespace BestDiet
         MealCategoryService mealcategoryService;
         MealDetailService mealdetailService;
         ExerciseDetailService exerciseDetailService;
+        FoodService foodService;
+        SportService sportService;
         public FormReport(User _user)
         {
             InitializeComponent();
@@ -29,6 +31,8 @@ namespace BestDiet
             waterService = new WaterService();
             mealdetailService = new MealDetailService();
             exerciseDetailService = new ExerciseDetailService();
+            foodService = new FoodService();
+            sportService = new SportService();
         }
 
         private void btnListele_Click(object sender, EventArgs e)
@@ -37,10 +41,12 @@ namespace BestDiet
             AktiviteListesiDoldur();
             YemekListesiDoldur();
             SuListesiniDoldur();
+            KalorileriYazdir();
 
         }
         private void SuListesiniDoldur()
         {
+            lvSu.Items.Clear();
             List<Water> waters = waterService.GetWaterByBetweenDate(dtpTarih.Value.Date, dtpTarih2.Value.Date, user.UserID);
             ListViewItem lvi3;
             if (waters == null)
@@ -99,6 +105,22 @@ namespace BestDiet
                 lvi2.SubItems.Add(item.Meal.MealTime.ToString("d"));
                 lvOgunler.Items.Add(lvi2);
             }
+        }
+
+        private void FormReport_Load(object sender, EventArgs e)
+        {
+            lblFavoriYiyecek.Text = foodService.GetFavoriteFoodName(user.UserID);
+            lblFavoriAktivite.Text = sportService.GetFavoriteSportByUserID(user.UserID); 
+        }
+
+        private void KalorileriYazdir()
+        {
+            List<ExerciseDetail> exerciseDetails = exerciseDetailService.GetExerciseDetailsBetweenDate(user.UserID, dtpTarih.Value.Date, dtpTarih2.Value.Date);
+
+            List<MealDetail> mealDetails = mealdetailService.GetMealDetailsBetweenDate(user.UserID, dtpTarih.Value.Date, dtpTarih2.Value.Date);
+
+            lblToplamKalori.Text = mealdetailService.GetSumCalori(mealDetails).ToString();
+            lblYakilanKalori.Text = exerciseDetailService.GetSumCalori(exerciseDetails).ToString();
         }
     }
 }

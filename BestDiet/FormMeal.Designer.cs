@@ -162,7 +162,7 @@
             0,
             131072});
             this.nudPorsiyon.Name = "nudPorsiyon";
-            this.nudPorsiyon.Size = new System.Drawing.Size(71, 23);
+            this.nudPorsiyon.Size = new System.Drawing.Size(71, 27);
             this.nudPorsiyon.TabIndex = 1;
             this.nudPorsiyon.Value = new decimal(new int[] {
             25,
@@ -176,7 +176,7 @@
             this.label2.Location = new System.Drawing.Point(533, 209);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 17);
+            this.label2.Size = new System.Drawing.Size(100, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Ürün Sayısı:";
             // 
@@ -190,7 +190,7 @@
             0,
             0});
             this.nudUrunSayisi.Name = "nudUrunSayisi";
-            this.nudUrunSayisi.Size = new System.Drawing.Size(71, 23);
+            this.nudUrunSayisi.Size = new System.Drawing.Size(71, 27);
             this.nudUrunSayisi.TabIndex = 0;
             this.nudUrunSayisi.Value = new decimal(new int[] {
             1,
@@ -204,7 +204,7 @@
             this.label3.Location = new System.Drawing.Point(554, 258);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 17);
+            this.label3.Size = new System.Drawing.Size(79, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Porsiyon:";
             // 
@@ -262,9 +262,9 @@
             this.lblToplamKalori.ForeColor = System.Drawing.Color.DarkGreen;
             this.lblToplamKalori.Location = new System.Drawing.Point(17, 48);
             this.lblToplamKalori.Name = "lblToplamKalori";
-            this.lblToplamKalori.Size = new System.Drawing.Size(41, 28);
+            this.lblToplamKalori.Size = new System.Drawing.Size(27, 33);
             this.lblToplamKalori.TabIndex = 3;
-            this.lblToplamKalori.Text = "560";
+            this.lblToplamKalori.Text = "0";
             // 
             // grpAlinanKalori
             // 
@@ -340,7 +340,7 @@
             this.label1.Location = new System.Drawing.Point(213, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 17);
+            this.label1.Size = new System.Drawing.Size(102, 20);
             this.label1.TabIndex = 21;
             this.label1.Text = "Yiyecek Ara:";
             // 
@@ -350,7 +350,7 @@
             this.txtYiyecekAra.Location = new System.Drawing.Point(321, 23);
             this.txtYiyecekAra.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.txtYiyecekAra.Name = "txtYiyecekAra";
-            this.txtYiyecekAra.Size = new System.Drawing.Size(204, 23);
+            this.txtYiyecekAra.Size = new System.Drawing.Size(204, 27);
             this.txtYiyecekAra.TabIndex = 0;
             this.txtYiyecekAra.TextChanged += new System.EventHandler(this.txtYiyecekAra_TextChanged);
             // 
@@ -361,13 +361,13 @@
             this.lblOgunAdi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lblOgunAdi.Location = new System.Drawing.Point(568, 23);
             this.lblOgunAdi.Name = "lblOgunAdi";
-            this.lblOgunAdi.Size = new System.Drawing.Size(111, 26);
+            this.lblOgunAdi.Size = new System.Drawing.Size(141, 32);
             this.lblOgunAdi.TabIndex = 26;
             this.lblOgunAdi.Text = "Öğün Adı";
             // 
             // FormMeal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(783, 734);
@@ -381,6 +381,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMeal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMeal";
             this.Load += new System.EventHandler(this.FormMeal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

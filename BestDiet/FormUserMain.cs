@@ -52,6 +52,7 @@ namespace BestDiet
             AlinanToplamKaloriyiGetir();
             YakilanToplamKaloriyiGetir();
             KalanKaloriyiGetir();
+            SuGetir();
 
         }
 
@@ -159,6 +160,12 @@ namespace BestDiet
             AlinanToplamKaloriyiGetir();
             YakilanToplamKaloriyiGetir();
             KalanKaloriyiGetir();
+            SuGetir();
+
+
+        }
+        private void SuGetir()
+        {
             Water water = waterService.GetWaterByDateAndUserName(dtpTarih.Value.Date, user.UserID);
             if (water != null)
             {
