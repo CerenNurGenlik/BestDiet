@@ -205,8 +205,6 @@ namespace BestDiet
 
         private void lvYiyecekler_MouseClick(object sender, MouseEventArgs e)
         {
-            //BURAYI KONTROL ET EMİN DEĞİLİM (İMAGE DOSYA YOLU OLARAK TUTULUYOR ÇÜNKÜ !!!)
-
             if (lvYiyecekler.SelectedItems.Count <= 0) return;
             else
             {
@@ -215,16 +213,14 @@ namespace BestDiet
 
                 if (food.ImagePath != null)
                 {
-                    pbYemekResmi.Text = food.ImagePath;
+                    pbYemekResmi.ImageLocation = food.ImagePath;
                 }
                 else
                 {
                     pbYemekResmi.Image = null;
                 }
-
             }
         }
-
         private void btnYeniUrunEkle_Click(object sender, EventArgs e)
         {
             FormFoodAdd formFoodAdd = new FormFoodAdd();

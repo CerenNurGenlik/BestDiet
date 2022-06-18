@@ -49,7 +49,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(309, 188);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 24);
+            this.label4.Size = new System.Drawing.Size(29, 20);
             this.label4.TabIndex = 18;
             this.label4.Text = "kcal";
             // 
@@ -59,7 +59,7 @@
             this.label3.ForeColor = System.Drawing.Color.DarkGreen;
             this.label3.Location = new System.Drawing.Point(58, 188);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 24);
+            this.label3.Size = new System.Drawing.Size(44, 20);
             this.label3.TabIndex = 17;
             this.label3.Text = "Kalori:";
             // 
@@ -73,7 +73,7 @@
             0,
             0});
             this.nudKalori.Name = "nudKalori";
-            this.nudKalori.Size = new System.Drawing.Size(125, 29);
+            this.nudKalori.Size = new System.Drawing.Size(125, 25);
             this.nudKalori.TabIndex = 2;
             // 
             // txtYemekAdi
@@ -82,7 +82,7 @@
             this.txtYemekAdi.Location = new System.Drawing.Point(138, 130);
             this.txtYemekAdi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtYemekAdi.Name = "txtYemekAdi";
-            this.txtYemekAdi.Size = new System.Drawing.Size(230, 29);
+            this.txtYemekAdi.Size = new System.Drawing.Size(230, 25);
             this.txtYemekAdi.TabIndex = 1;
             // 
             // cmbKategoriler
@@ -91,7 +91,7 @@
             this.cmbKategoriler.Location = new System.Drawing.Point(138, 72);
             this.cmbKategoriler.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbKategoriler.Name = "cmbKategoriler";
-            this.cmbKategoriler.Size = new System.Drawing.Size(230, 32);
+            this.cmbKategoriler.Size = new System.Drawing.Size(230, 28);
             this.cmbKategoriler.TabIndex = 0;
             // 
             // label2
@@ -101,7 +101,7 @@
             this.label2.Location = new System.Drawing.Point(29, 130);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 24);
+            this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 13;
             this.label2.Text = "Yemek Adı:";
             // 
@@ -112,7 +112,7 @@
             this.label1.Location = new System.Drawing.Point(46, 72);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 24);
+            this.label1.Size = new System.Drawing.Size(57, 20);
             this.label1.TabIndex = 12;
             this.label1.Text = "Kategori:";
             // 
@@ -138,6 +138,7 @@
             this.pbResim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbResim.Name = "pbResim";
             this.pbResim.Size = new System.Drawing.Size(165, 146);
+            this.pbResim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbResim.TabIndex = 21;
             this.pbResim.TabStop = false;
             // 
@@ -148,7 +149,7 @@
             this.txtResimYolu.Location = new System.Drawing.Point(138, 269);
             this.txtResimYolu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtResimYolu.Name = "txtResimYolu";
-            this.txtResimYolu.Size = new System.Drawing.Size(230, 29);
+            this.txtResimYolu.Size = new System.Drawing.Size(230, 25);
             this.txtResimYolu.TabIndex = 3;
             // 
             // btnResimSec
@@ -161,10 +162,11 @@
             this.btnResimSec.TabIndex = 3;
             this.btnResimSec.Text = "Resim Seç";
             this.btnResimSec.UseVisualStyleBackColor = true;
+            this.btnResimSec.Click += new System.EventHandler(this.btnResimSec_Click);
             // 
             // FormFoodAdd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(445, 602);

@@ -85,5 +85,12 @@ namespace BestDiet
             nudKalori.Value = food.Calori;
             txtResimYolu.Text = food.ImagePath;
         }
+
+        private void btnResimSec_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            pbResim.ImageLocation = openFileDialog1.FileName;
+            txtResimYolu.Text = openFileDialog1.FileName;
+        }
     }
 }
