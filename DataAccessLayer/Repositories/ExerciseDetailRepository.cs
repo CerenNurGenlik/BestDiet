@@ -47,5 +47,13 @@ namespace DataAccessLayer.Repositories
             ExerciseDetail exerciseDetail = MainRepository.db.ExerciseDetails.Find(exercesiDetailId);
             return exerciseDetail;
         }
+
+        public int GetFavoriteSportIDByUserID(string userID)
+        {
+            var exerciseDetail = MainRepository.db.ExerciseDetails.Where(ed=> ed.Exercise.UserID == userID).GroupBy(ed => ed.SportID).Select(ed => new { SportID = ed.Key, AmountOfExercise = ed.Count() }).OrderByDescending(x => x.AmountOfExercise).Take(1).FirstOrDefault();
+            if (exerciseDetail == null)
+                return 0;
+            return exerciseDetail.SportID;
+        }
     }
 }

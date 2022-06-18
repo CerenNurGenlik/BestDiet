@@ -213,8 +213,8 @@ namespace BestDiet
                     lvi.SubItems.Add(user.Height.ToString());
                     lvi.SubItems.Add(user.Weight.ToString());
                     lvi.SubItems.Add(user.TargetWeight.ToString());
-                    lvi.SubItems.Add("Favori Yiyecek");
-                    lvi.SubItems.Add("Favori Aktivite");
+                    lvi.SubItems.Add(foodService.GetFavoriteFoodName(user.UserID));
+                    lvi.SubItems.Add(sportService.GetFavoriteSportByUserID(user.UserID));
                     lvi.SubItems.Add(user.IsActive ? "Aktif" : "Pasif");
                     lvi.Tag = user.UserID;
                     lvKullanici.Items.Add(lvi);

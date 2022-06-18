@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnRaporlar = new System.Windows.Forms.Button();
             this.lvAktivite = new System.Windows.Forms.ListView();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -69,18 +68,6 @@
             this.grpYemekler.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnRaporlar
-            // 
-            this.btnRaporlar.BackColor = System.Drawing.Color.White;
-            this.btnRaporlar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnRaporlar.Location = new System.Drawing.Point(896, 775);
-            this.btnRaporlar.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.btnRaporlar.Name = "btnRaporlar";
-            this.btnRaporlar.Size = new System.Drawing.Size(194, 44);
-            this.btnRaporlar.TabIndex = 6;
-            this.btnRaporlar.Text = "Raporlar";
-            this.btnRaporlar.UseVisualStyleBackColor = false;
             // 
             // lvAktivite
             // 
@@ -422,7 +409,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1110, 834);
             this.Controls.Add(this.btnKullaniciAktifPasif);
-            this.Controls.Add(this.btnRaporlar);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.grpYemekler);
             this.Controls.Add(this.groupBox2);
@@ -442,8 +428,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnRaporlar;
         private System.Windows.Forms.ListView lvAktivite;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;

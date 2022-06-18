@@ -11,11 +11,12 @@ namespace BusinessLogicLayer.Services
     public class FoodService
     {
         FoodRepository foodRepository;
+        MealDetailRepository mealDetailRepository;
         
         public FoodService()
         {
             foodRepository = new FoodRepository();
-            
+            mealDetailRepository = new MealDetailRepository();
         }
         public List<Food> GetActiveFoods()
         {
@@ -75,6 +76,14 @@ namespace BusinessLogicLayer.Services
         public bool Update(Food food)
         {
             return foodRepository.UpdateFood(food);
+        }
+        public string GetFavoriteFoodName(string userID)
+        {
+            int foodID = mealDetailRepository.GetFavoriteFoodID(userID);
+            if (foodID == 0)
+                return "Yok";
+            Food food = foodRepository.GetByFoodID(foodID);
+            return food.FoodName;
         }
     }
 }

@@ -11,9 +11,11 @@ namespace BusinessLogicLayer.Services
     public class SportService
     {
         SportRepository sportRepository;
+        ExerciseDetailRepository exerciseDetailRepository;
         public SportService()
         {
             sportRepository = new SportRepository();
+            exerciseDetailRepository = new ExerciseDetailRepository();
         }
 
         public List<Sport> GetCaloriesByQuantity(int burningCalori)
@@ -86,6 +88,14 @@ namespace BusinessLogicLayer.Services
             Sport sport = GetBySportID(sportID);
             sport.IsActive = true;
             return Update(sport);
+        }
+        public string GetFavoriteSportByUserID(string userID)
+        {
+            int sportID = exerciseDetailRepository.GetFavoriteSportIDByUserID(userID);
+            if (sportID == 0)
+                return "Yok";
+            Sport sport = sportRepository.GetBySportID(sportID);
+            return sport.SportName;
         }
     }
 }

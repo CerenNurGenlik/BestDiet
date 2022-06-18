@@ -20,6 +20,10 @@ namespace BestDiet
         {
             InitializeComponent();
         }
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+            txtSifre.PasswordChar = '*';
+        }
 
         private void lnkKayitOl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -43,6 +47,11 @@ namespace BestDiet
                 }
                 else
                 {
+                    if(user.IsActive == false)
+                    {
+                        MessageBox.Show("Admin onayı gerekiyor!!!\nLütfen yetkiliyle iletişime geçiniz.");
+                        return;
+                    }
                     switch(user.UserType)
                     {
                         case UserType.User:
@@ -63,5 +72,6 @@ namespace BestDiet
 
             }
         }
+
     }
 }

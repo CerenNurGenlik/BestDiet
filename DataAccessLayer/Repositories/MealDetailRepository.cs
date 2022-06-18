@@ -46,5 +46,12 @@ namespace DataAccessLayer.Repositories
             MealDetail mealDetail = MainRepository.db.MealDetails.Find(mealDetailID);
             return mealDetail;
         }
+        public int GetFavoriteFoodID(string userID)
+        {
+            var mealDetail = MainRepository.db.MealDetails.Where(md=> md.Meal.UserID == userID).GroupBy(md=> md.FoodID).Select(md => new {FoodID = md.Key,AmountOfFodd = md.Count()}).OrderByDescending(x=> x.AmountOfFodd).Take(1).FirstOrDefault();
+            if (mealDetail == null)
+                return 0;
+            return mealDetail.FoodID;
+        }
     }
 }
