@@ -20,7 +20,7 @@ namespace DataAccessLayer.Repositories
 
         public List<Sport> GetSports()
         {
-            return MainRepository.db.Sports.Where(u => u.IsActive == true).ToList();
+            return MainRepository.db.Sports.Where(u => !u.IsActive == true).ToList();
         }
 
         public List<Sport> GetSportsAll()
@@ -38,6 +38,11 @@ namespace DataAccessLayer.Repositories
             Sport deletedSport = MainRepository.db.Sports.Find(sport.SportID);
             deletedSport.IsActive = false;
             return MainRepository.db.SaveChanges() > 0;
+        }
+        public List<Sport> GetSportsByText(string text)
+        {
+            return MainRepository.db.Sports.Where(a => a.SportName.Contains(text)).ToList();
+
         }
     }
 }

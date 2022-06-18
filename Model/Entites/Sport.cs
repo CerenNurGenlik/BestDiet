@@ -11,7 +11,7 @@ namespace Model.Entites
     {
         public Sport()
         {
-            Exercises = new HashSet<Exercise>();
+            ExerciseDetails = new HashSet<ExerciseDetail>();
         }
         public int SportID { get; set; }
         public string SportName { get; set; }
@@ -19,6 +19,6 @@ namespace Model.Entites
         [DefaultValue(true)]
         public bool IsActive { get; set; }
 
-        public virtual ICollection<Exercise> Exercises { get; set; }
+        public virtual ICollection<ExerciseDetail> ExerciseDetails { get; set; }
     }
 }

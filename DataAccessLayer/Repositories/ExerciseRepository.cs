@@ -17,5 +17,10 @@ namespace DataAccessLayer.Repositories
         {
             return MainRepository.db.Exercises.Where(a => a.UserID == userID && a.ExerciseDate == dateTime).FirstOrDefault();
         }
+        public bool Insert(Exercise exercise)
+        {
+            MainRepository.db.Exercises.Add(exercise);
+            return MainRepository.db.SaveChanges() > 0;
+        }
     }
 }

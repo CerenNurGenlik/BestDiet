@@ -62,9 +62,9 @@
             this.lblYakilanKalori = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.lblSu = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.nudSuLitresi = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lblAksamEkle = new System.Windows.Forms.LinkLabel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -114,7 +114,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.White;
             this.label9.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label9.Location = new System.Drawing.Point(19, 47);
+            this.label9.Location = new System.Drawing.Point(87, 72);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(40, 24);
@@ -323,7 +323,7 @@
             this.lblSuEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblSuEkle.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lblSuEkle.LinkColor = System.Drawing.Color.DarkGreen;
-            this.lblSuEkle.Location = new System.Drawing.Point(105, 102);
+            this.lblSuEkle.Location = new System.Drawing.Point(105, 115);
             this.lblSuEkle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSuEkle.Name = "lblSuEkle";
             this.lblSuEkle.Size = new System.Drawing.Size(65, 42);
@@ -553,10 +553,10 @@
             // 
             this.groupBox8.BackColor = System.Drawing.Color.White;
             this.groupBox8.Controls.Add(this.lblSu);
-            this.groupBox8.Controls.Add(this.label3);
             this.groupBox8.Controls.Add(this.lblSuEkle);
             this.groupBox8.Controls.Add(this.pictureBox1);
             this.groupBox8.Controls.Add(this.nudSuLitresi);
+            this.groupBox8.Controls.Add(this.label3);
             this.groupBox8.Controls.Add(this.label9);
             this.groupBox8.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox8.Location = new System.Drawing.Point(265, 552);
@@ -571,20 +571,13 @@
             // lblSu
             // 
             this.lblSu.AutoSize = true;
-            this.lblSu.Location = new System.Drawing.Point(151, 143);
+            this.lblSu.Font = new System.Drawing.Font("Sitka Banner", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSu.ForeColor = System.Drawing.Color.Blue;
+            this.lblSu.Location = new System.Drawing.Point(127, 20);
             this.lblSu.Name = "lblSu";
-            this.lblSu.Size = new System.Drawing.Size(19, 24);
+            this.lblSu.Size = new System.Drawing.Size(27, 33);
             this.lblSu.TabIndex = 19;
             this.lblSu.Text = "0";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(79, 143);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 24);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "İçilen Su:";
             // 
             // pictureBox1
             // 
@@ -607,16 +600,28 @@
             0,
             0,
             65536});
-            this.nudSuLitresi.Location = new System.Drawing.Point(67, 45);
+            this.nudSuLitresi.Location = new System.Drawing.Point(131, 72);
             this.nudSuLitresi.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nudSuLitresi.Name = "nudSuLitresi";
-            this.nudSuLitresi.Size = new System.Drawing.Size(103, 29);
+            this.nudSuLitresi.Size = new System.Drawing.Size(55, 29);
             this.nudSuLitresi.TabIndex = 10;
             this.nudSuLitresi.Value = new decimal(new int[] {
             1,
             0,
             0,
             65536});
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(4, 27);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(120, 24);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "İçilen Su Miktarı:";
             // 
             // groupBox4
             // 

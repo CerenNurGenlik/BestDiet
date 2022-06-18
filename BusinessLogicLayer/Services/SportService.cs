@@ -67,5 +67,10 @@ namespace BusinessLogicLayer.Services
             return sportRepository.GetBySportID(sportID);
 
         }
+        public List<Sport> GetFoodsByText(string text)
+        {
+            return sportRepository.GetSportsByText(text);
+
+        }
     }
 }

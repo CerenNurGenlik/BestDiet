@@ -26,6 +26,12 @@ namespace BusinessLogicLayer.Services
         {            
             Exercise exercise = exerciseRepository.GetExercise(userID, dateTime);
             return exercise;
-        }        
+        }
+        public bool Insert(Exercise exercise)
+        {
+            return exerciseRepository.Insert(exercise);
+            
+        }
+
     }
 }

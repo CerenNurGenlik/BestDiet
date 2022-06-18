@@ -34,7 +34,6 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.dtpOgunTarihi = new System.Windows.Forms.DateTimePicker();
             this.pbYemekResmi = new System.Windows.Forms.PictureBox();
             this.btnEkle = new System.Windows.Forms.Button();
             this.nudPorsiyon = new System.Windows.Forms.NumericUpDown();
@@ -79,7 +78,6 @@
             // grpUrunListesi
             // 
             this.grpUrunListesi.Controls.Add(this.lvYiyecekler);
-            this.grpUrunListesi.Controls.Add(this.dtpOgunTarihi);
             this.grpUrunListesi.Controls.Add(this.pbYemekResmi);
             this.grpUrunListesi.Controls.Add(this.btnEkle);
             this.grpUrunListesi.Controls.Add(this.nudPorsiyon);
@@ -98,8 +96,8 @@
             // 
             this.lvYiyecekler.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader5});
+            this.columnHeader5,
+            this.columnHeader2});
             this.lvYiyecekler.FullRowSelect = true;
             this.lvYiyecekler.HideSelection = false;
             this.lvYiyecekler.Location = new System.Drawing.Point(5, 30);
@@ -118,24 +116,13 @@
             // 
             // columnHeader2
             // 
-            this.columnHeader2.DisplayIndex = 2;
             this.columnHeader2.Text = "Kalori (kcal)";
             this.columnHeader2.Width = 110;
             // 
             // columnHeader5
             // 
-            this.columnHeader5.DisplayIndex = 1;
             this.columnHeader5.Text = "Kategori";
             this.columnHeader5.Width = 139;
-            // 
-            // dtpOgunTarihi
-            // 
-            this.dtpOgunTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpOgunTarihi.Location = new System.Drawing.Point(555, 188);
-            this.dtpOgunTarihi.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.dtpOgunTarihi.Name = "dtpOgunTarihi";
-            this.dtpOgunTarihi.Size = new System.Drawing.Size(154, 27);
-            this.dtpOgunTarihi.TabIndex = 12;
             // 
             // pbYemekResmi
             // 
@@ -148,7 +135,8 @@
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(555, 330);
+            this.btnEkle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnEkle.Location = new System.Drawing.Point(558, 312);
             this.btnEkle.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(150, 37);
@@ -159,7 +147,7 @@
             // 
             // nudPorsiyon
             // 
-            this.nudPorsiyon.Location = new System.Drawing.Point(647, 282);
+            this.nudPorsiyon.Location = new System.Drawing.Point(647, 256);
             this.nudPorsiyon.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.nudPorsiyon.Name = "nudPorsiyon";
             this.nudPorsiyon.Size = new System.Drawing.Size(61, 27);
@@ -168,7 +156,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(543, 237);
+            this.label2.Location = new System.Drawing.Point(543, 211);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 20);
@@ -177,7 +165,7 @@
             // 
             // nudUrunSayisi
             // 
-            this.nudUrunSayisi.Location = new System.Drawing.Point(647, 235);
+            this.nudUrunSayisi.Location = new System.Drawing.Point(647, 209);
             this.nudUrunSayisi.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.nudUrunSayisi.Name = "nudUrunSayisi";
             this.nudUrunSayisi.Size = new System.Drawing.Size(61, 27);
@@ -186,7 +174,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(568, 285);
+            this.label3.Location = new System.Drawing.Point(568, 259);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 20);
@@ -207,6 +195,7 @@
             // 
             // btnSil
             // 
+            this.btnSil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnSil.Location = new System.Drawing.Point(555, 206);
             this.btnSil.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.btnSil.Name = "btnSil";
@@ -218,6 +207,7 @@
             // 
             // btnDuzenle
             // 
+            this.btnDuzenle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnDuzenle.Location = new System.Drawing.Point(555, 144);
             this.btnDuzenle.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.btnDuzenle.Name = "btnDuzenle";
@@ -340,11 +330,11 @@
             // lblOgunAdi
             // 
             this.lblOgunAdi.AutoSize = true;
-            this.lblOgunAdi.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblOgunAdi.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblOgunAdi.Location = new System.Drawing.Point(571, 26);
+            this.lblOgunAdi.Font = new System.Drawing.Font("Sitka Banner Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblOgunAdi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblOgunAdi.Location = new System.Drawing.Point(568, 23);
             this.lblOgunAdi.Name = "lblOgunAdi";
-            this.lblOgunAdi.Size = new System.Drawing.Size(71, 24);
+            this.lblOgunAdi.Size = new System.Drawing.Size(121, 40);
             this.lblOgunAdi.TabIndex = 26;
             this.lblOgunAdi.Text = "Öğün Adı";
             // 
@@ -389,7 +379,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.DateTimePicker dtpOgunTarihi;
         private System.Windows.Forms.PictureBox pbYemekResmi;
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.NumericUpDown nudPorsiyon;

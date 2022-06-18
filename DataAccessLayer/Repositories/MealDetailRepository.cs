@@ -14,6 +14,10 @@ namespace DataAccessLayer.Repositories
         {
             return MainRepository.db.MealDetails.Where(a => a.MealID == mealID).ToList();
         }
+        public List<MealDetail> GetMealDetailsByUserId(string userID)
+        {
+            return MainRepository.db.MealDetails.Where(a => a.Meal.UserID == userID).ToList();
+        }
         public bool Delete(int mealDetailId)
         {
             MealDetail mealDetail= MainRepository.db.MealDetails.Where(a => a.MealDetailID == mealDetailId).FirstOrDefault();

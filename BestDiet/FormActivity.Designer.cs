@@ -39,10 +39,9 @@
             this.lblAktiviteToplamKalori = new System.Windows.Forms.Label();
             this.grpEklenenUrunler = new System.Windows.Forms.GroupBox();
             this.btnAktiviteEkle = new System.Windows.Forms.Button();
-            this.dtpOgunTarihi = new System.Windows.Forms.DateTimePicker();
             this.btnEkle = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nudMinute = new System.Windows.Forms.NumericUpDown();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lvAktiviteler = new System.Windows.Forms.ListView();
@@ -51,10 +50,11 @@
             this.txtAktiviteAra = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.grpAlinanKalori.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grpEklenenUrunler.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMinute)).BeginInit();
             this.grpAktiviteListesi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -74,12 +74,12 @@
             // columnHeader4
             // 
             this.columnHeader4.Text = "Kalori (kcal)";
-            this.columnHeader4.Width = 98;
+            this.columnHeader4.Width = 115;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Aktivite Adı";
-            this.columnHeader3.Width = 230;
+            this.columnHeader3.Width = 199;
             // 
             // btnSil
             // 
@@ -90,6 +90,7 @@
             this.btnSil.TabIndex = 9;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnDuzenle
             // 
@@ -100,12 +101,15 @@
             this.btnDuzenle.TabIndex = 8;
             this.btnDuzenle.Text = "Düzenle";
             this.btnDuzenle.UseVisualStyleBackColor = true;
+            this.btnDuzenle.Click += new System.EventHandler(this.btnDuzenle_Click);
             // 
             // lvEklenenAktiviteler
             // 
             this.lvEklenenAktiviteler.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader3,
-            this.columnHeader4});
+            this.columnHeader4,
+            this.columnHeader5});
+            this.lvEklenenAktiviteler.FullRowSelect = true;
             this.lvEklenenAktiviteler.HideSelection = false;
             this.lvEklenenAktiviteler.Location = new System.Drawing.Point(11, 30);
             this.lvEklenenAktiviteler.Margin = new System.Windows.Forms.Padding(2, 6, 2, 6);
@@ -114,6 +118,7 @@
             this.lvEklenenAktiviteler.TabIndex = 7;
             this.lvEklenenAktiviteler.UseCompatibleStateImageBehavior = false;
             this.lvEklenenAktiviteler.View = System.Windows.Forms.View.Details;
+            this.lvEklenenAktiviteler.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvEklenenAktiviteler_MouseDoubleClick);
             // 
             // grpAlinanKalori
             // 
@@ -122,9 +127,9 @@
             this.grpAlinanKalori.Controls.Add(this.lblAktiviteToplamKalori);
             this.grpAlinanKalori.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.grpAlinanKalori.Location = new System.Drawing.Point(530, 30);
-            this.grpAlinanKalori.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpAlinanKalori.Margin = new System.Windows.Forms.Padding(4);
             this.grpAlinanKalori.Name = "grpAlinanKalori";
-            this.grpAlinanKalori.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpAlinanKalori.Padding = new System.Windows.Forms.Padding(4);
             this.grpAlinanKalori.Size = new System.Drawing.Size(188, 98);
             this.grpAlinanKalori.TabIndex = 10;
             this.grpAlinanKalori.TabStop = false;
@@ -134,7 +139,7 @@
             // 
             this.pictureBox1.Image = global::BestDiet.Properties.Resources.Screenshot_8;
             this.pictureBox1.Location = new System.Drawing.Point(91, 27);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -182,15 +187,6 @@
             this.btnAktiviteEkle.UseVisualStyleBackColor = true;
             this.btnAktiviteEkle.Click += new System.EventHandler(this.btnAktiviteEkle_Click);
             // 
-            // dtpOgunTarihi
-            // 
-            this.dtpOgunTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpOgunTarihi.Location = new System.Drawing.Point(523, 183);
-            this.dtpOgunTarihi.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
-            this.dtpOgunTarihi.Name = "dtpOgunTarihi";
-            this.dtpOgunTarihi.Size = new System.Drawing.Size(192, 27);
-            this.dtpOgunTarihi.TabIndex = 12;
-            // 
             // btnEkle
             // 
             this.btnEkle.Location = new System.Drawing.Point(552, 302);
@@ -205,20 +201,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(543, 223);
+            this.label2.Location = new System.Drawing.Point(543, 200);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(150, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Aktivite Süresi (dk)";
             // 
-            // numericUpDown1
+            // nudMinute
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(581, 255);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(76, 27);
-            this.numericUpDown1.TabIndex = 10;
+            this.nudMinute.Location = new System.Drawing.Point(581, 232);
+            this.nudMinute.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
+            this.nudMinute.Name = "nudMinute";
+            this.nudMinute.Size = new System.Drawing.Size(76, 27);
+            this.nudMinute.TabIndex = 10;
             // 
             // columnHeader2
             // 
@@ -235,6 +231,7 @@
             this.lvAktiviteler.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
+            this.lvAktiviteler.FullRowSelect = true;
             this.lvAktiviteler.HideSelection = false;
             this.lvAktiviteler.Location = new System.Drawing.Point(6, 22);
             this.lvAktiviteler.Margin = new System.Windows.Forms.Padding(2, 6, 2, 6);
@@ -248,15 +245,14 @@
             // 
             this.grpAktiviteListesi.Controls.Add(this.pictureBox3);
             this.grpAktiviteListesi.Controls.Add(this.lvAktiviteler);
-            this.grpAktiviteListesi.Controls.Add(this.dtpOgunTarihi);
             this.grpAktiviteListesi.Controls.Add(this.btnEkle);
             this.grpAktiviteListesi.Controls.Add(this.label2);
-            this.grpAktiviteListesi.Controls.Add(this.numericUpDown1);
+            this.grpAktiviteListesi.Controls.Add(this.nudMinute);
             this.grpAktiviteListesi.ForeColor = System.Drawing.Color.DarkGreen;
             this.grpAktiviteListesi.Location = new System.Drawing.Point(14, 69);
-            this.grpAktiviteListesi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpAktiviteListesi.Margin = new System.Windows.Forms.Padding(4);
             this.grpAktiviteListesi.Name = "grpAktiviteListesi";
-            this.grpAktiviteListesi.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpAktiviteListesi.Padding = new System.Windows.Forms.Padding(4);
             this.grpAktiviteListesi.Size = new System.Drawing.Size(742, 375);
             this.grpAktiviteListesi.TabIndex = 30;
             this.grpAktiviteListesi.TabStop = false;
@@ -266,7 +262,7 @@
             // 
             this.pictureBox3.Image = global::BestDiet.Properties.Resources.Screenshot_13;
             this.pictureBox3.Location = new System.Drawing.Point(559, 28);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(134, 130);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -281,12 +277,13 @@
             this.txtAktiviteAra.Name = "txtAktiviteAra";
             this.txtAktiviteAra.Size = new System.Drawing.Size(186, 27);
             this.txtAktiviteAra.TabIndex = 26;
+            this.txtAktiviteAra.TextChanged += new System.EventHandler(this.txtAktiviteAra_TextChanged);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::BestDiet.Properties.Resources.Screenshot_12;
             this.pictureBox2.Location = new System.Drawing.Point(685, 4);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(84, 68);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -304,6 +301,11 @@
             this.label3.TabIndex = 27;
             this.label3.Text = "Aktivite Ekranı";
             // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Aktivite Süresi(dk)";
+            this.columnHeader5.Width = 155;
+            // 
             // FormActivity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -318,7 +320,7 @@
             this.Controls.Add(this.grpAktiviteListesi);
             this.Controls.Add(this.txtAktiviteAra);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormActivity";
             this.Text = "FormActivity";
             this.Load += new System.EventHandler(this.FormActivity_Load);
@@ -326,7 +328,7 @@
             this.grpAlinanKalori.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.grpEklenenUrunler.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMinute)).EndInit();
             this.grpAktiviteListesi.ResumeLayout(false);
             this.grpAktiviteListesi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -350,10 +352,9 @@
         private System.Windows.Forms.Label lblAktiviteToplamKalori;
         private System.Windows.Forms.GroupBox grpEklenenUrunler;
         private System.Windows.Forms.Button btnAktiviteEkle;
-        private System.Windows.Forms.DateTimePicker dtpOgunTarihi;
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nudMinute;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -361,5 +362,6 @@
         private System.Windows.Forms.GroupBox grpAktiviteListesi;
         private System.Windows.Forms.TextBox txtAktiviteAra;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }

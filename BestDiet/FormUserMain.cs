@@ -20,24 +20,28 @@ namespace BestDiet
         ExerciseService exerciseService;
         WaterService waterService;
         MealCategoryService mealcategoryService;
+        MealDetailService mealdetailService;
+        ExerciseDetailService exerciseDetailService;
         public FormUserMain(User _user)
         {
             InitializeComponent();
             user = _user;
             mealcategoryService = new MealCategoryService();
             waterService = new WaterService();
+            mealdetailService = new MealDetailService();
+            exerciseDetailService = new ExerciseDetailService();
         }
 
         private void FormUserMain_Load(object sender, EventArgs e)
         {
             Helper.ClearControls(Controls);
             lblKullaniciAdi.Text = user.FirstName + " " + user.LastName;
-            lblHedefKilo.Text=user.TargetWeight.ToString();
+            lblHedefKilo.Text = user.TargetWeight.ToString();
             lblKilo.Text = user.Weight.ToString();
             lblBoy.Text = user.Height.ToString();
             lblYas.Text = (DateTime.Now.Year - user.BirthDate.Year).ToString();
 
-            int vki = Convert.ToInt32(user.Weight*10000 / Math.Pow(user.Height, 2));
+            int vki = Convert.ToInt32(user.Weight * 10000 / Math.Pow(user.Height, 2));
             lblKitleIndeksi.Text = vki.ToString();
 
             int idealKilo;
@@ -49,31 +53,59 @@ namespace BestDiet
             if (user.Gender == Gender.Male) alınasıGerekenKalori = Convert.ToInt32(user.Weight * 24);
             else alınasıGerekenKalori = Convert.ToInt32(0.9 * user.Weight * 24);
 
+
+
+            AlinanToplamKaloriyiGetir();
+            YakilanToplamKaloriyiGetir();
+
+        }
+
+        private void YakilanToplamKaloriyiGetir()
+        {
+            List<ExerciseDetail> exerciseDetails = exerciseDetailService.GetExerciseDetailsByUserId(user.UserID);
+            lblYakilanKalori.Text = exerciseDetailService.GetSumCalori(exerciseDetails).ToString();
+        }
+
+        private void AlinanToplamKaloriyiGetir()
+        {
+            List<MealDetail> mealDetails = mealdetailService.GetMealDetailsByUserId(user.UserID);
+            lblAlinanKalori.Text = mealdetailService.GetSumCalori(mealDetails).ToString();
         }
 
         private void lblKahvaltiEkle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MealAdd("Kahvaltı");
+            MealAdd("Sabah");
+            AlinanToplamKaloriyiGetir();
         }
 
         private void lblOgleEkle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MealAdd("Öğle");
+            AlinanToplamKaloriyiGetir();
         }
 
         private void lblAperatifEkle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MealAdd("Aperatif");
+            AlinanToplamKaloriyiGetir();
         }
 
         private void lblAksamEkle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MealAdd("Akşam");
+            AlinanToplamKaloriyiGetir();
         }
 
         private void lblEgzersizEkle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            
+            this.Hide();
+            exerciseService = new ExerciseService();
+            Exercise exercise = exerciseService.GetExercise(user.UserID, dtpTarih.Value.Date);
+            FormActivity formActivity = new FormActivity(exercise, user, dtpTarih.Value.Date);
+            formActivity.ShowDialog();
+            this.Show();
+            YakilanToplamKaloriyiGetir();
         }
 
         private void lblSuEkle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

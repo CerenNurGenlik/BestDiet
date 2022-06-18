@@ -12,7 +12,7 @@ namespace DataAccessLayer
 {
     public class BestDietDbContext : DbContext
     {
-        public BestDietDbContext() : base(@"Data Source=DESKTOP-46Q3ART\MSSQLKD10;Initial Catalog=030_BestDietDB;User=sa;Password=123456")
+        public BestDietDbContext() : base("Data Source=.;Initial Catalog=BestDietDB;Integrated Security=true;")
         {
             Database.SetInitializer(new BestDietStrategy());
         }

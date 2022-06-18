@@ -13,6 +13,11 @@ namespace DataAccessLayer.Repositories
         {
             return MainRepository.db.ExerciseDetails.Where(a => a.ExerciseID == exerciseID).ToList();
         }
+        public List<ExerciseDetail> GetExerciseDetailsByUserId(string userID)
+        {
+            return MainRepository.db.ExerciseDetails.Where(a => a.Exercise.UserID==userID).ToList();
+        }
+
         public bool Delete(int exerciseDetailId)
         {
             ExerciseDetail exerciseDetail = MainRepository.db.ExerciseDetails.Where(a => a.ExerciseDetailID == exerciseDetailId).FirstOrDefault();
@@ -31,6 +36,11 @@ namespace DataAccessLayer.Repositories
             updatedExerciseDetail.Minute = exerciseDetail.Minute;
 
             return MainRepository.db.SaveChanges() > 0;
+        }
+        public ExerciseDetail GetExerciseDetailById(int exercesiDetailId)
+        {
+            ExerciseDetail exerciseDetail = MainRepository.db.ExerciseDetails.Find(exercesiDetailId);
+            return exerciseDetail;
         }
     }
 }

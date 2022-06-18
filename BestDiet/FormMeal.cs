@@ -15,6 +15,7 @@ namespace BestDiet
     public partial class FormMeal : Form
     {
         Meal meal;
+        Food food;
         User user;
         MealCategory mealCategory;
         DateTime dateTime;
@@ -40,12 +41,15 @@ namespace BestDiet
         {
             Helper.ClearControls(Controls);
             foodList = foodService.GetFoods();
+            lblOgunAdi.Text = mealCategory.MealCategoryName;
+            
 
             if (meal != null)
             {
-                mealDetails = mealDetailService.GetMealDetailsByMealID(meal.MealID);
+
+                mealDetails = mealDetailService.GetMealDetailsByMealID(meal.MealID);                
                 EklenenYiyecekleriListele();
-                lblOgunAdi.Text = meal.MealCategory.MealCategoryName;
+                
                 pbYemekResmi.Image = null;
             }
             
@@ -67,7 +71,7 @@ namespace BestDiet
             }
         }
 
-
+        
         private void btnEkle_Click(object sender, EventArgs e)
         {
             if (lvYiyecekler.SelectedItems.Count <= 0) return;
@@ -84,7 +88,7 @@ namespace BestDiet
                     mealService.Insert(meal);
                 }
                 int foodID = (int)lvYiyecekler.SelectedItems[0].Tag;
-                Food food = foodService.GetByFoodID(foodID);
+                food = foodService.GetByFoodID(foodID);
 
                 try
                 {
@@ -93,7 +97,7 @@ namespace BestDiet
                     mealDetail.Meal = meal;
                     mealDetail.Quantity = Convert.ToInt32(nudUrunSayisi.Value);
                     mealDetail.Portion = Convert.ToInt32(nudPorsiyon.Value);
-                    mealDetail.Calori = food.Calori;
+                    mealDetail.Calori = food.Calori*mealDetail.Quantity*Convert.ToInt32(mealDetail.Portion);
 
 
 
@@ -118,6 +122,7 @@ namespace BestDiet
             lvEklenenYiyecekler.Items.Clear();
             ListViewItem lvi;
             mealDetails = mealDetailService.GetMealDetailsByMealID(meal.MealID);
+            lblToplamKalori.Text = mealDetailService.GetSumCalori(meal.MealID).ToString();
             foreach (MealDetail item in mealDetails)
             {
                 lvi = new ListViewItem();
@@ -158,12 +163,15 @@ namespace BestDiet
                 {
                     mealDetail.Quantity = Convert.ToInt32(nudUrunSayisi.Value);
                     mealDetail.Portion = nudPorsiyon.Value;
-                    mealDetail.Meal.MealTime = dtpOgunTarihi.Value;
+                    mealDetail.Meal.MealTime = dateTime.Date;
+                    mealDetail.Calori = food.Calori * mealDetail.Quantity * Convert.ToInt32(mealDetail.Portion);
                     bool check = mealDetailService.Update(mealDetail);
+
 
                     MessageBox.Show(check ? "Güncelleme başarılı !" : "Güncellenemedi !");
                 }
             }
+            EklenenYiyecekleriListele();
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -175,6 +183,7 @@ namespace BestDiet
                 bool check = mealDetailService.Delete(mealDetailID);
                 MessageBox.Show(check ? "Eklenen ürün silindi !" : "Silme işlemi başarısız !");
             }
+            EklenenYiyecekleriListele();
         }
 
         private void lvEklenenYiyecekler_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -186,8 +195,7 @@ namespace BestDiet
                 MealDetail mealDetail = mealDetailService.GetMealDetailById(mealDetailID);
 
                 if (mealDetail != null)
-                {
-                    dtpOgunTarihi.Value = mealDetail.Meal.MealTime;
+                {                    
                     nudPorsiyon.Value = mealDetail.Portion;
                     nudUrunSayisi.Value = mealDetail.Quantity;
                 }

@@ -27,10 +27,37 @@ namespace BusinessLogicLayer.Services
 
             return exerciseDetails;
         }
+        public List<ExerciseDetail> GetExerciseDetailsByUserId(string userID)
+        {
+            return exerciseDetailRepository.GetExerciseDetailsByUserId(userID);
+        }
+        public int GetSumCalori(string userID,DateTime dateTime)
+        {
+            Exercise exercise = exerciseRepository.GetExercise(userID, dateTime);
+            List<ExerciseDetail> exerciseDetails = exerciseDetailRepository.GetExerciseDetails(exercise.ExerciseID);
+            int sum= 0;
+            foreach (ExerciseDetail item in exerciseDetails)
+            {
+                sum += item.BurningCalori;
+            }
+            return sum;
+        }
+        public int GetSumCalori(List<ExerciseDetail> exerciseDetails)
+        {
+            
+            int sum = 0;
+            foreach (ExerciseDetail item in exerciseDetails)
+            {
+                sum += item.BurningCalori;
+            }
+            return sum;
+        }
+
+
 
         void CheckExerciseDetailId(int exerciseDetailId)
         {
-            if (exerciseDetailId <= 0) throw new Exception("Egzersiz bulunamadı");
+            //if (exerciseDetailId <= 0) throw new Exception("Egzersiz bulunamadı");
         }
 
         public bool Delete(int exerciseDetailID)
@@ -48,6 +75,10 @@ namespace BusinessLogicLayer.Services
         {
             CheckExerciseDetailId(exerciseDetail.ExerciseDetailID);
             return exerciseDetailRepository.Update(exerciseDetail);
+        }
+        public ExerciseDetail GetExerciseDetailById(int exercesiDetailId)
+        {
+            return exerciseDetailRepository.GetExerciseDetailById(exercesiDetailId);
         }
     }
 }

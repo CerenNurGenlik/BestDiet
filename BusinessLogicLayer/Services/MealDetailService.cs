@@ -23,6 +23,31 @@ namespace BusinessLogicLayer.Services
         {
             return mealDetailRepository.GetMealDeteailsByMealId(mealID);
         }
+        public List<MealDetail> GetMealDetailsByUserId(string userID)
+        {
+            return mealDetailRepository.GetMealDetailsByUserId(userID);
+        }
+        public int GetSumCalori(List<MealDetail> mealDetails)
+        {
+            int sum= 0;
+            foreach (MealDetail item in mealDetails)
+            {
+                sum += item.Calori;
+            }
+            return sum;
+
+        }
+        public int GetSumCalori(int mealID)
+        {
+            List<MealDetail> mealDetails=GetMealDetailsByMealID(mealID);
+            int sum = 0;
+            foreach (MealDetail item in mealDetails)
+            {
+                sum += item.Calori;
+            }
+            return sum;
+
+        }
         public bool Delete(int mealDetailID)
         {
             CheckMealDetailId(mealDetailID);
