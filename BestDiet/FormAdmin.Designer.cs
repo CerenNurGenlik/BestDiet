@@ -63,6 +63,7 @@
             this.btnAktiviteSil = new System.Windows.Forms.Button();
             this.btnAktiviteEkle = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox3.SuspendLayout();
             this.grpYemekler.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -72,7 +73,7 @@
             // 
             this.btnRaporlar.BackColor = System.Drawing.Color.White;
             this.btnRaporlar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnRaporlar.Location = new System.Drawing.Point(694, 775);
+            this.btnRaporlar.Location = new System.Drawing.Point(896, 775);
             this.btnRaporlar.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.btnRaporlar.Name = "btnRaporlar";
             this.btnRaporlar.Size = new System.Drawing.Size(194, 44);
@@ -87,10 +88,10 @@
             this.columnHeader5,
             this.columnHeader15});
             this.lvAktivite.HideSelection = false;
-            this.lvAktivite.Location = new System.Drawing.Point(4, 68);
+            this.lvAktivite.Location = new System.Drawing.Point(13, 64);
             this.lvAktivite.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.lvAktivite.Name = "lvAktivite";
-            this.lvAktivite.Size = new System.Drawing.Size(289, 255);
+            this.lvAktivite.Size = new System.Drawing.Size(385, 271);
             this.lvAktivite.TabIndex = 0;
             this.lvAktivite.UseCompatibleStateImageBehavior = false;
             this.lvAktivite.View = System.Windows.Forms.View.Details;
@@ -103,27 +104,29 @@
             // columnHeader5
             // 
             this.columnHeader5.Text = "Kalori";
+            this.columnHeader5.Width = 83;
             // 
             // columnHeader15
             // 
             this.columnHeader15.Text = "Durum";
+            this.columnHeader15.Width = 105;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(616, 38);
+            this.label1.Location = new System.Drawing.Point(859, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 17);
+            this.label1.Size = new System.Drawing.Size(40, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Ara:";
             // 
             // txtKullaniciAra
             // 
-            this.txtKullaniciAra.Location = new System.Drawing.Point(680, 35);
+            this.txtKullaniciAra.Location = new System.Drawing.Point(903, 28);
             this.txtKullaniciAra.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtKullaniciAra.Name = "txtKullaniciAra";
-            this.txtKullaniciAra.Size = new System.Drawing.Size(173, 23);
+            this.txtKullaniciAra.Size = new System.Drawing.Size(173, 27);
             this.txtKullaniciAra.TabIndex = 1;
             // 
             // lvKullanici
@@ -131,6 +134,7 @@
             this.lvKullanici.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader17,
             this.columnHeader18,
+            this.columnHeader6,
             this.columnHeader19,
             this.columnHeader20,
             this.columnHeader21,
@@ -139,10 +143,10 @@
             this.columnHeader24,
             this.columnHeader25});
             this.lvKullanici.HideSelection = false;
-            this.lvKullanici.Location = new System.Drawing.Point(6, 88);
+            this.lvKullanici.Location = new System.Drawing.Point(6, 70);
             this.lvKullanici.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.lvKullanici.Name = "lvKullanici";
-            this.lvKullanici.Size = new System.Drawing.Size(847, 290);
+            this.lvKullanici.Size = new System.Drawing.Size(1070, 308);
             this.lvKullanici.TabIndex = 0;
             this.lvKullanici.UseCompatibleStateImageBehavior = false;
             this.lvKullanici.View = System.Windows.Forms.View.Details;
@@ -150,20 +154,22 @@
             // columnHeader17
             // 
             this.columnHeader17.Text = "Ad";
-            this.columnHeader17.Width = 120;
+            this.columnHeader17.Width = 130;
             // 
             // columnHeader18
             // 
             this.columnHeader18.Text = "Soyad";
-            this.columnHeader18.Width = 120;
+            this.columnHeader18.Width = 131;
             // 
             // columnHeader19
             // 
             this.columnHeader19.Text = "Yaş";
+            this.columnHeader19.Width = 54;
             // 
             // columnHeader20
             // 
             this.columnHeader20.Text = "Boy";
+            this.columnHeader20.Width = 44;
             // 
             // columnHeader21
             // 
@@ -172,23 +178,23 @@
             // columnHeader22
             // 
             this.columnHeader22.Text = "Hedef Kilo";
-            this.columnHeader22.Width = 100;
+            this.columnHeader22.Width = 112;
             // 
             // columnHeader23
             // 
             this.columnHeader23.Text = "Favori Yiyecek";
-            this.columnHeader23.Width = 120;
+            this.columnHeader23.Width = 128;
             // 
             // columnHeader24
             // 
             this.columnHeader24.Text = "Favori Aktivite";
             this.columnHeader24.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader24.Width = 120;
+            this.columnHeader24.Width = 131;
             // 
             // columnHeader25
             // 
             this.columnHeader25.Text = "Durum";
-            this.columnHeader25.Width = 100;
+            this.columnHeader25.Width = 112;
             // 
             // groupBox3
             // 
@@ -201,7 +207,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.groupBox3.Size = new System.Drawing.Size(874, 403);
+            this.groupBox3.Size = new System.Drawing.Size(1080, 403);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Kullanıcılar";
@@ -209,17 +215,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(76, 36);
+            this.label3.Location = new System.Drawing.Point(181, 33);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 17);
+            this.label3.Size = new System.Drawing.Size(40, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Ara:";
             // 
             // btnAktiviteGuncelle
             // 
             this.btnAktiviteGuncelle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnAktiviteGuncelle.Location = new System.Drawing.Point(315, 228);
+            this.btnAktiviteGuncelle.Location = new System.Drawing.Point(416, 241);
             this.btnAktiviteGuncelle.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.btnAktiviteGuncelle.Name = "btnAktiviteGuncelle";
             this.btnAktiviteGuncelle.Size = new System.Drawing.Size(80, 37);
@@ -241,7 +247,7 @@
             this.grpYemekler.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.grpYemekler.Name = "grpYemekler";
             this.grpYemekler.Padding = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.grpYemekler.Size = new System.Drawing.Size(447, 343);
+            this.grpYemekler.Size = new System.Drawing.Size(569, 343);
             this.grpYemekler.TabIndex = 5;
             this.grpYemekler.TabStop = false;
             this.grpYemekler.Text = "Yemekler";
@@ -249,62 +255,62 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(120, 38);
+            this.label2.Location = new System.Drawing.Point(240, 36);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 17);
+            this.label2.Size = new System.Drawing.Size(40, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ara:";
             // 
             // lvYemek
             // 
             this.lvYemek.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
             this.columnHeader2,
+            this.columnHeader1,
             this.columnHeader3,
             this.columnHeader14});
             this.lvYemek.HideSelection = false;
             this.lvYemek.Location = new System.Drawing.Point(5, 74);
             this.lvYemek.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.lvYemek.Name = "lvYemek";
-            this.lvYemek.Size = new System.Drawing.Size(332, 249);
+            this.lvYemek.Size = new System.Drawing.Size(452, 261);
             this.lvYemek.TabIndex = 0;
             this.lvYemek.UseCompatibleStateImageBehavior = false;
             this.lvYemek.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.DisplayIndex = 1;
             this.columnHeader1.Text = "Kategori";
-            this.columnHeader1.Width = 131;
+            this.columnHeader1.Width = 130;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.DisplayIndex = 0;
             this.columnHeader2.Text = "Yemek";
-            this.columnHeader2.Width = 104;
+            this.columnHeader2.Width = 150;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Kalori";
-            this.columnHeader3.Width = 50;
+            this.columnHeader3.Width = 70;
             // 
             // columnHeader14
             // 
             this.columnHeader14.Text = "Durum";
+            this.columnHeader14.Width = 85;
             // 
             // txtYemekAra
             // 
-            this.txtYemekAra.Location = new System.Drawing.Point(164, 35);
+            this.txtYemekAra.Location = new System.Drawing.Point(284, 33);
             this.txtYemekAra.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtYemekAra.Name = "txtYemekAra";
-            this.txtYemekAra.Size = new System.Drawing.Size(173, 23);
+            this.txtYemekAra.Size = new System.Drawing.Size(173, 27);
             this.txtYemekAra.TabIndex = 1;
+            this.txtYemekAra.TextChanged += new System.EventHandler(this.txtYemekAra_TextChanged);
             // 
             // btnYemekGüncelle
             // 
             this.btnYemekGüncelle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnYemekGüncelle.Location = new System.Drawing.Point(350, 228);
+            this.btnYemekGüncelle.Location = new System.Drawing.Point(475, 230);
             this.btnYemekGüncelle.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.btnYemekGüncelle.Name = "btnYemekGüncelle";
             this.btnYemekGüncelle.Size = new System.Drawing.Size(80, 37);
@@ -316,7 +322,7 @@
             // btnYemekSil
             // 
             this.btnYemekSil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnYemekSil.Location = new System.Drawing.Point(350, 169);
+            this.btnYemekSil.Location = new System.Drawing.Point(475, 171);
             this.btnYemekSil.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.btnYemekSil.Name = "btnYemekSil";
             this.btnYemekSil.Size = new System.Drawing.Size(80, 37);
@@ -328,7 +334,7 @@
             // btnYemekEkle
             // 
             this.btnYemekEkle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnYemekEkle.Location = new System.Drawing.Point(350, 110);
+            this.btnYemekEkle.Location = new System.Drawing.Point(475, 112);
             this.btnYemekEkle.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.btnYemekEkle.Name = "btnYemekEkle";
             this.btnYemekEkle.Size = new System.Drawing.Size(80, 37);
@@ -339,16 +345,17 @@
             // 
             // txtAktiviteAra
             // 
-            this.txtAktiviteAra.Location = new System.Drawing.Point(120, 32);
+            this.txtAktiviteAra.Location = new System.Drawing.Point(225, 28);
             this.txtAktiviteAra.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtAktiviteAra.Name = "txtAktiviteAra";
-            this.txtAktiviteAra.Size = new System.Drawing.Size(173, 23);
+            this.txtAktiviteAra.Size = new System.Drawing.Size(173, 27);
             this.txtAktiviteAra.TabIndex = 1;
+            this.txtAktiviteAra.TextChanged += new System.EventHandler(this.txtAktiviteAra_TextChanged);
             // 
             // btnAktiviteSil
             // 
             this.btnAktiviteSil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnAktiviteSil.Location = new System.Drawing.Point(315, 169);
+            this.btnAktiviteSil.Location = new System.Drawing.Point(416, 182);
             this.btnAktiviteSil.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.btnAktiviteSil.Name = "btnAktiviteSil";
             this.btnAktiviteSil.Size = new System.Drawing.Size(80, 37);
@@ -359,7 +366,7 @@
             // btnAktiviteEkle
             // 
             this.btnAktiviteEkle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnAktiviteEkle.Location = new System.Drawing.Point(315, 110);
+            this.btnAktiviteEkle.Location = new System.Drawing.Point(416, 123);
             this.btnAktiviteEkle.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.btnAktiviteEkle.Name = "btnAktiviteEkle";
             this.btnAktiviteEkle.Size = new System.Drawing.Size(80, 37);
@@ -377,21 +384,26 @@
             this.groupBox2.Controls.Add(this.btnAktiviteSil);
             this.groupBox2.Controls.Add(this.btnAktiviteEkle);
             this.groupBox2.ForeColor = System.Drawing.Color.DarkGreen;
-            this.groupBox2.Location = new System.Drawing.Point(472, 13);
+            this.groupBox2.Location = new System.Drawing.Point(584, 13);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.groupBox2.Size = new System.Drawing.Size(416, 343);
+            this.groupBox2.Size = new System.Drawing.Size(510, 343);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Aktiviteler";
             // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Kullanıcı Adı";
+            this.columnHeader6.Width = 162;
+            // 
             // FormAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(907, 834);
+            this.ClientSize = new System.Drawing.Size(1110, 834);
             this.Controls.Add(this.btnRaporlar);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.grpYemekler);
@@ -448,5 +460,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader23;
         private System.Windows.Forms.ColumnHeader columnHeader24;
         private System.Windows.Forms.ColumnHeader columnHeader25;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }

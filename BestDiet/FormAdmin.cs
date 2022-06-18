@@ -72,6 +72,7 @@ namespace BestDiet
                 ListViewItem lvi = new ListViewItem();
                 lvi.Text = user.FirstName;
                 lvi.SubItems.Add(user.LastName);
+                lvi.SubItems.Add(user.UserID);
                 lvi.SubItems.Add(userService.GetAge(user.UserID).ToString());
                 lvi.SubItems.Add(user.Height.ToString());
                 lvi.SubItems.Add(user.Weight.ToString());
@@ -110,6 +111,43 @@ namespace BestDiet
             FormFoodAdd formFoodAdd = new FormFoodAdd((int)lvYemek.SelectedItems[0].Tag);
             formFoodAdd.ShowDialog();
             FillFoods();
+        }
+
+        private void txtYemekAra_TextChanged(object sender, EventArgs e)
+        {
+            lvYemek.Items.Clear();
+            List<Food> foodListByText = new List<Food>();
+            foodListByText = foodService.GetFoodsByText(txtYemekAra.Text);
+            ListViewItem lvi;
+
+            foreach (Food item in foodListByText)
+            {
+                lvi = new ListViewItem();
+                lvi.Text = item.FoodName;
+                lvi.SubItems.Add(item.FoodCategory.CategoryName);
+                lvi.SubItems.Add(item.Calori.ToString());
+                lvi.SubItems.Add(item.IsActive.ToString());
+                lvi.Tag = item.FoodID;
+                lvYemek.Items.Add(lvi);
+            }
+        }
+
+        private void txtAktiviteAra_TextChanged(object sender, EventArgs e)
+        {
+            lvAktivite.Items.Clear();
+            List<Sport> sports = new List<Sport>();
+            sports = sportService.GetFoodsByText(txtAktiviteAra.Text);
+            ListViewItem lvi;
+
+            foreach (Sport item in sports)
+            {
+                lvi = new ListViewItem();
+                lvi.Text = item.SportName;
+                lvi.SubItems.Add(item.BurningCalori.ToString());
+                lvi.SubItems.Add(item.IsActive.ToString());
+                lvi.Tag = item.SportID;
+                lvAktivite.Items.Add(lvi);
+            }
         }
     }
 }
