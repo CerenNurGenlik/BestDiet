@@ -34,6 +34,7 @@
             this.btnSil = new System.Windows.Forms.Button();
             this.btnDuzenle = new System.Windows.Forms.Button();
             this.lvEklenenAktiviteler = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.grpAlinanKalori = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblAktiviteToplamKalori = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@
             this.txtAktiviteAra = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.grpAlinanKalori.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grpEklenenUrunler.SuspendLayout();
@@ -87,7 +87,7 @@
             this.btnSil.Margin = new System.Windows.Forms.Padding(2, 6, 2, 6);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(141, 40);
-            this.btnSil.TabIndex = 9;
+            this.btnSil.TabIndex = 1;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
@@ -98,7 +98,7 @@
             this.btnDuzenle.Margin = new System.Windows.Forms.Padding(2, 6, 2, 6);
             this.btnDuzenle.Name = "btnDuzenle";
             this.btnDuzenle.Size = new System.Drawing.Size(141, 40);
-            this.btnDuzenle.TabIndex = 8;
+            this.btnDuzenle.TabIndex = 0;
             this.btnDuzenle.Text = "Düzenle";
             this.btnDuzenle.UseVisualStyleBackColor = true;
             this.btnDuzenle.Click += new System.EventHandler(this.btnDuzenle_Click);
@@ -119,6 +119,11 @@
             this.lvEklenenAktiviteler.UseCompatibleStateImageBehavior = false;
             this.lvEklenenAktiviteler.View = System.Windows.Forms.View.Details;
             this.lvEklenenAktiviteler.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvEklenenAktiviteler_MouseDoubleClick);
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Aktivite Süresi(dk)";
+            this.columnHeader5.Width = 155;
             // 
             // grpAlinanKalori
             // 
@@ -171,7 +176,7 @@
             this.grpEklenenUrunler.Name = "grpEklenenUrunler";
             this.grpEklenenUrunler.Padding = new System.Windows.Forms.Padding(2, 6, 2, 6);
             this.grpEklenenUrunler.Size = new System.Drawing.Size(742, 265);
-            this.grpEklenenUrunler.TabIndex = 29;
+            this.grpEklenenUrunler.TabIndex = 1;
             this.grpEklenenUrunler.TabStop = false;
             this.grpEklenenUrunler.Text = "Eklenen Aktiviteler";
             // 
@@ -182,7 +187,7 @@
             this.btnAktiviteEkle.Margin = new System.Windows.Forms.Padding(2, 6, 2, 6);
             this.btnAktiviteEkle.Name = "btnAktiviteEkle";
             this.btnAktiviteEkle.Size = new System.Drawing.Size(165, 32);
-            this.btnAktiviteEkle.TabIndex = 28;
+            this.btnAktiviteEkle.TabIndex = 2;
             this.btnAktiviteEkle.Text = "Aktivite Ekle";
             this.btnAktiviteEkle.UseVisualStyleBackColor = true;
             this.btnAktiviteEkle.Click += new System.EventHandler(this.btnAktiviteEkle_Click);
@@ -193,7 +198,7 @@
             this.btnEkle.Margin = new System.Windows.Forms.Padding(2, 6, 2, 6);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(141, 40);
-            this.btnEkle.TabIndex = 6;
+            this.btnEkle.TabIndex = 1;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
@@ -214,7 +219,7 @@
             this.nudMinute.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.nudMinute.Name = "nudMinute";
             this.nudMinute.Size = new System.Drawing.Size(76, 27);
-            this.nudMinute.TabIndex = 10;
+            this.nudMinute.TabIndex = 0;
             // 
             // columnHeader2
             // 
@@ -254,7 +259,7 @@
             this.grpAktiviteListesi.Name = "grpAktiviteListesi";
             this.grpAktiviteListesi.Padding = new System.Windows.Forms.Padding(4);
             this.grpAktiviteListesi.Size = new System.Drawing.Size(742, 375);
-            this.grpAktiviteListesi.TabIndex = 30;
+            this.grpAktiviteListesi.TabIndex = 0;
             this.grpAktiviteListesi.TabStop = false;
             this.grpAktiviteListesi.Text = "Aktivite Listesi";
             // 
@@ -276,7 +281,7 @@
             this.txtAktiviteAra.Margin = new System.Windows.Forms.Padding(2, 6, 2, 6);
             this.txtAktiviteAra.Name = "txtAktiviteAra";
             this.txtAktiviteAra.Size = new System.Drawing.Size(186, 27);
-            this.txtAktiviteAra.TabIndex = 26;
+            this.txtAktiviteAra.TabIndex = 0;
             this.txtAktiviteAra.TextChanged += new System.EventHandler(this.txtAktiviteAra_TextChanged);
             // 
             // pictureBox2
@@ -300,11 +305,6 @@
             this.label3.Size = new System.Drawing.Size(115, 20);
             this.label3.TabIndex = 27;
             this.label3.Text = "Aktivite Ekranı";
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Aktivite Süresi(dk)";
-            this.columnHeader5.Width = 155;
             // 
             // FormActivity
             // 

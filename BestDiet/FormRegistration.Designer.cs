@@ -67,7 +67,7 @@
             this.btnKaydol.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnKaydol.Name = "btnKaydol";
             this.btnKaydol.Size = new System.Drawing.Size(100, 43);
-            this.btnKaydol.TabIndex = 34;
+            this.btnKaydol.TabIndex = 11;
             this.btnKaydol.Text = "Kaydol";
             this.btnKaydol.UseVisualStyleBackColor = true;
             this.btnKaydol.Click += new System.EventHandler(this.btnKaydol_Click);
@@ -106,7 +106,7 @@
             this.txtSifreTekrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSifreTekrar.Name = "txtSifreTekrar";
             this.txtSifreTekrar.Size = new System.Drawing.Size(194, 29);
-            this.txtSifreTekrar.TabIndex = 30;
+            this.txtSifreTekrar.TabIndex = 10;
             // 
             // txtSifre
             // 
@@ -115,7 +115,7 @@
             this.txtSifre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(194, 29);
-            this.txtSifre.TabIndex = 29;
+            this.txtSifre.TabIndex = 9;
             // 
             // nudHedefKilo
             // 
@@ -130,7 +130,7 @@
             0});
             this.nudHedefKilo.Name = "nudHedefKilo";
             this.nudHedefKilo.Size = new System.Drawing.Size(160, 29);
-            this.nudHedefKilo.TabIndex = 28;
+            this.nudHedefKilo.TabIndex = 8;
             // 
             // nudKilo
             // 
@@ -145,7 +145,7 @@
             0});
             this.nudKilo.Name = "nudKilo";
             this.nudKilo.Size = new System.Drawing.Size(160, 29);
-            this.nudKilo.TabIndex = 27;
+            this.nudKilo.TabIndex = 7;
             // 
             // nudBoy
             // 
@@ -160,7 +160,7 @@
             0});
             this.nudBoy.Name = "nudBoy";
             this.nudBoy.Size = new System.Drawing.Size(160, 29);
-            this.nudBoy.TabIndex = 26;
+            this.nudBoy.TabIndex = 6;
             // 
             // dtpDogumTarihi
             // 
@@ -171,7 +171,7 @@
             this.dtpDogumTarihi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpDogumTarihi.Name = "dtpDogumTarihi";
             this.dtpDogumTarihi.Size = new System.Drawing.Size(194, 29);
-            this.dtpDogumTarihi.TabIndex = 25;
+            this.dtpDogumTarihi.TabIndex = 5;
             // 
             // rdbKadin
             // 
@@ -181,7 +181,7 @@
             this.rdbKadin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdbKadin.Name = "rdbKadin";
             this.rdbKadin.Size = new System.Drawing.Size(69, 28);
-            this.rdbKadin.TabIndex = 24;
+            this.rdbKadin.TabIndex = 4;
             this.rdbKadin.Text = "Kadın";
             this.rdbKadin.UseVisualStyleBackColor = true;
             // 
@@ -194,7 +194,7 @@
             this.rdbErkek.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdbErkek.Name = "rdbErkek";
             this.rdbErkek.Size = new System.Drawing.Size(69, 28);
-            this.rdbErkek.TabIndex = 23;
+            this.rdbErkek.TabIndex = 3;
             this.rdbErkek.TabStop = true;
             this.rdbErkek.Text = "Erkek";
             this.rdbErkek.UseVisualStyleBackColor = true;
@@ -206,7 +206,7 @@
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(194, 29);
-            this.txtEmail.TabIndex = 22;
+            this.txtEmail.TabIndex = 2;
             // 
             // txtSoyisim
             // 
@@ -215,7 +215,7 @@
             this.txtSoyisim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSoyisim.Name = "txtSoyisim";
             this.txtSoyisim.Size = new System.Drawing.Size(194, 29);
-            this.txtSoyisim.TabIndex = 21;
+            this.txtSoyisim.TabIndex = 1;
             // 
             // txtIsim
             // 
@@ -224,7 +224,7 @@
             this.txtIsim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtIsim.Name = "txtIsim";
             this.txtIsim.Size = new System.Drawing.Size(194, 29);
-            this.txtIsim.TabIndex = 20;
+            this.txtIsim.TabIndex = 0;
             // 
             // label10
             // 

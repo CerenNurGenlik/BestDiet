@@ -62,7 +62,7 @@ namespace BestDiet
 
         private void YakilanToplamKaloriyiGetir()
         {
-            List<ExerciseDetail> exerciseDetails = exerciseDetailService.GetExerciseDetailsByUserId(user.UserID);
+            List<ExerciseDetail> exerciseDetails = exerciseDetailService.GetSportsByExercise(user.UserID, dtpTarih.Value.Date);
             lblYakilanKalori.Text = exerciseDetailService.GetSumCalori(exerciseDetails).ToString();
         }
 

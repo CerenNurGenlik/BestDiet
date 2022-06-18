@@ -76,7 +76,7 @@
             this.nudKalori.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.nudKalori.Name = "nudKalori";
             this.nudKalori.Size = new System.Drawing.Size(145, 27);
-            this.nudKalori.TabIndex = 26;
+            this.nudKalori.TabIndex = 1;
             // 
             // txtAktiviteAdi
             // 
@@ -84,7 +84,7 @@
             this.txtAktiviteAdi.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.txtAktiviteAdi.Name = "txtAktiviteAdi";
             this.txtAktiviteAdi.Size = new System.Drawing.Size(230, 27);
-            this.txtAktiviteAdi.TabIndex = 25;
+            this.txtAktiviteAdi.TabIndex = 0;
             // 
             // label2
             // 
@@ -104,7 +104,7 @@
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(110, 50);
-            this.btnKaydet.TabIndex = 29;
+            this.btnKaydet.TabIndex = 2;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);

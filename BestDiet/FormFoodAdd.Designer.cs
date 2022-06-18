@@ -49,7 +49,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(309, 188);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 20);
+            this.label4.Size = new System.Drawing.Size(35, 24);
             this.label4.TabIndex = 18;
             this.label4.Text = "kcal";
             // 
@@ -59,7 +59,7 @@
             this.label3.ForeColor = System.Drawing.Color.DarkGreen;
             this.label3.Location = new System.Drawing.Point(58, 188);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 20);
+            this.label3.Size = new System.Drawing.Size(53, 24);
             this.label3.TabIndex = 17;
             this.label3.Text = "Kalori:";
             // 
@@ -73,8 +73,8 @@
             0,
             0});
             this.nudKalori.Name = "nudKalori";
-            this.nudKalori.Size = new System.Drawing.Size(125, 25);
-            this.nudKalori.TabIndex = 16;
+            this.nudKalori.Size = new System.Drawing.Size(125, 29);
+            this.nudKalori.TabIndex = 2;
             // 
             // txtYemekAdi
             // 
@@ -82,8 +82,8 @@
             this.txtYemekAdi.Location = new System.Drawing.Point(138, 130);
             this.txtYemekAdi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtYemekAdi.Name = "txtYemekAdi";
-            this.txtYemekAdi.Size = new System.Drawing.Size(230, 25);
-            this.txtYemekAdi.TabIndex = 15;
+            this.txtYemekAdi.Size = new System.Drawing.Size(230, 29);
+            this.txtYemekAdi.TabIndex = 1;
             // 
             // cmbKategoriler
             // 
@@ -91,8 +91,8 @@
             this.cmbKategoriler.Location = new System.Drawing.Point(138, 72);
             this.cmbKategoriler.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbKategoriler.Name = "cmbKategoriler";
-            this.cmbKategoriler.Size = new System.Drawing.Size(230, 28);
-            this.cmbKategoriler.TabIndex = 14;
+            this.cmbKategoriler.Size = new System.Drawing.Size(230, 32);
+            this.cmbKategoriler.TabIndex = 0;
             // 
             // label2
             // 
@@ -101,7 +101,7 @@
             this.label2.Location = new System.Drawing.Point(29, 130);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 20);
+            this.label2.Size = new System.Drawing.Size(82, 24);
             this.label2.TabIndex = 13;
             this.label2.Text = "Yemek Adı:";
             // 
@@ -112,7 +112,7 @@
             this.label1.Location = new System.Drawing.Point(46, 72);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 20);
+            this.label1.Size = new System.Drawing.Size(69, 24);
             this.label1.TabIndex = 12;
             this.label1.Text = "Kategori:";
             // 
@@ -127,7 +127,7 @@
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(136, 39);
-            this.btnKaydet.TabIndex = 22;
+            this.btnKaydet.TabIndex = 4;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
@@ -148,8 +148,8 @@
             this.txtResimYolu.Location = new System.Drawing.Point(138, 269);
             this.txtResimYolu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtResimYolu.Name = "txtResimYolu";
-            this.txtResimYolu.Size = new System.Drawing.Size(230, 25);
-            this.txtResimYolu.TabIndex = 20;
+            this.txtResimYolu.Size = new System.Drawing.Size(230, 29);
+            this.txtResimYolu.TabIndex = 3;
             // 
             // btnResimSec
             // 
@@ -158,13 +158,13 @@
             this.btnResimSec.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnResimSec.Name = "btnResimSec";
             this.btnResimSec.Size = new System.Drawing.Size(103, 40);
-            this.btnResimSec.TabIndex = 19;
+            this.btnResimSec.TabIndex = 3;
             this.btnResimSec.Text = "Resim Seç";
             this.btnResimSec.UseVisualStyleBackColor = true;
             // 
             // FormFoodAdd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(445, 602);

@@ -32,8 +32,8 @@
             this.grpUrunListesi = new System.Windows.Forms.GroupBox();
             this.lvYiyecekler = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pbYemekResmi = new System.Windows.Forms.PictureBox();
             this.btnEkle = new System.Windows.Forms.Button();
             this.nudPorsiyon = new System.Windows.Forms.NumericUpDown();
@@ -88,7 +88,7 @@
             this.grpUrunListesi.Location = new System.Drawing.Point(28, 77);
             this.grpUrunListesi.Name = "grpUrunListesi";
             this.grpUrunListesi.Size = new System.Drawing.Size(743, 375);
-            this.grpUrunListesi.TabIndex = 24;
+            this.grpUrunListesi.TabIndex = 1;
             this.grpUrunListesi.TabStop = false;
             this.grpUrunListesi.Text = "Yiyecek Listesi";
             // 
@@ -114,15 +114,15 @@
             this.columnHeader1.Text = "Ürün Adı";
             this.columnHeader1.Width = 188;
             // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Kalori (kcal)";
-            this.columnHeader2.Width = 110;
-            // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Kategori";
             this.columnHeader5.Width = 139;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Kalori (kcal)";
+            this.columnHeader2.Width = 110;
             // 
             // pbYemekResmi
             // 
@@ -140,7 +140,7 @@
             this.btnEkle.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(150, 37);
-            this.btnEkle.TabIndex = 6;
+            this.btnEkle.TabIndex = 2;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
@@ -151,7 +151,7 @@
             this.nudPorsiyon.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.nudPorsiyon.Name = "nudPorsiyon";
             this.nudPorsiyon.Size = new System.Drawing.Size(61, 27);
-            this.nudPorsiyon.TabIndex = 10;
+            this.nudPorsiyon.TabIndex = 1;
             // 
             // label2
             // 
@@ -169,7 +169,7 @@
             this.nudUrunSayisi.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.nudUrunSayisi.Name = "nudUrunSayisi";
             this.nudUrunSayisi.Size = new System.Drawing.Size(61, 27);
-            this.nudUrunSayisi.TabIndex = 10;
+            this.nudUrunSayisi.TabIndex = 0;
             // 
             // label3
             // 
@@ -188,7 +188,7 @@
             this.btnYeniUrunEkle.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.btnYeniUrunEkle.Name = "btnYeniUrunEkle";
             this.btnYeniUrunEkle.Size = new System.Drawing.Size(165, 32);
-            this.btnYeniUrunEkle.TabIndex = 22;
+            this.btnYeniUrunEkle.TabIndex = 3;
             this.btnYeniUrunEkle.Text = "Yeni Ürün Ekle";
             this.btnYeniUrunEkle.UseVisualStyleBackColor = true;
             this.btnYeniUrunEkle.Click += new System.EventHandler(this.btnYeniUrunEkle_Click);
@@ -200,7 +200,7 @@
             this.btnSil.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(154, 39);
-            this.btnSil.TabIndex = 9;
+            this.btnSil.TabIndex = 1;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
@@ -212,7 +212,7 @@
             this.btnDuzenle.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.btnDuzenle.Name = "btnDuzenle";
             this.btnDuzenle.Size = new System.Drawing.Size(154, 39);
-            this.btnDuzenle.TabIndex = 8;
+            this.btnDuzenle.TabIndex = 0;
             this.btnDuzenle.Text = "Düzenle";
             this.btnDuzenle.UseVisualStyleBackColor = true;
             this.btnDuzenle.Click += new System.EventHandler(this.btnDuzenle_Click);
@@ -264,7 +264,7 @@
             this.grpEklenenUrunler.Name = "grpEklenenUrunler";
             this.grpEklenenUrunler.Padding = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.grpEklenenUrunler.Size = new System.Drawing.Size(743, 253);
-            this.grpEklenenUrunler.TabIndex = 23;
+            this.grpEklenenUrunler.TabIndex = 2;
             this.grpEklenenUrunler.TabStop = false;
             this.grpEklenenUrunler.Text = "Eklenen Yiyecekler";
             // 
@@ -324,7 +324,7 @@
             this.txtYiyecekAra.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.txtYiyecekAra.Name = "txtYiyecekAra";
             this.txtYiyecekAra.Size = new System.Drawing.Size(204, 27);
-            this.txtYiyecekAra.TabIndex = 20;
+            this.txtYiyecekAra.TabIndex = 0;
             this.txtYiyecekAra.TextChanged += new System.EventHandler(this.txtYiyecekAra_TextChanged);
             // 
             // lblOgunAdi
