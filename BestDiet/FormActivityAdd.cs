@@ -15,28 +15,51 @@ namespace BestDiet
     public partial class FormActivityAdd : Form
     {
         SportService sportService;
+        int activityID=0;
         public FormActivityAdd()
         {
             InitializeComponent();
             sportService = new SportService();
         }
+        public FormActivityAdd(int _activityID)
+        {
+            InitializeComponent();
+            sportService = new SportService();
+            activityID = _activityID;
+        }
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            try
+            if(activityID == 0)
             {
-                Sport sport = new Sport();
-                sport.SportName = txtAktiviteAdi.Text;
-                sport.BurningCalori = Convert.ToInt32(nudKalori.Value);
-                sport.IsActive = true;
-                
-                if (sportService.Insert(sport)) MessageBox.Show("Yeni aktivite eklendi");
-                else throw new Exception("Aktivite ekleme esnasında bir hata oluştu :(");
+                try
+                {
+                    Sport sport = new Sport();
+                    sport.SportName = txtAktiviteAdi.Text;
+                    sport.BurningCalori = Convert.ToInt32(nudKalori.Value);
+                    sport.IsActive = true;
+
+                    if (sportService.Insert(sport)) MessageBox.Show("Yeni aktivite eklendi");
+                    else throw new Exception("Aktivite ekleme esnasında bir hata oluştu :(");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                Sport sport = sportService.GetBySportID(activityID);
+                if (sport != null)
+                {
+                    sport.SportName=txtAktiviteAdi.Text;
+                    sport.BurningCalori = (int)nudKalori.Value;
+                    if (sportService.Update(sport))
+                        MessageBox.Show("Başarıyla güncellendi");
+                    else MessageBox.Show("Güncellenirken bir hata oluştu");
+                }
             }
+            
         }
     }
 }

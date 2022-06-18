@@ -50,6 +50,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnAktiviteGuncelle = new System.Windows.Forms.Button();
             this.grpYemekler = new System.Windows.Forms.GroupBox();
+            this.btnYemekAkitfPasif = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lvYemek = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -58,12 +59,12 @@
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtYemekAra = new System.Windows.Forms.TextBox();
             this.btnYemekGüncelle = new System.Windows.Forms.Button();
-            this.btnYemekSil = new System.Windows.Forms.Button();
             this.btnYemekEkle = new System.Windows.Forms.Button();
             this.txtAktiviteAra = new System.Windows.Forms.TextBox();
-            this.btnAktiviteSil = new System.Windows.Forms.Button();
             this.btnAktiviteEkle = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnAktiviteAktifPasif = new System.Windows.Forms.Button();
+            this.btnKullaniciAktifPasif = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.grpYemekler.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -117,7 +118,7 @@
             this.label1.Location = new System.Drawing.Point(859, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 20);
+            this.label1.Size = new System.Drawing.Size(34, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Ara:";
             // 
@@ -126,8 +127,9 @@
             this.txtKullaniciAra.Location = new System.Drawing.Point(903, 28);
             this.txtKullaniciAra.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtKullaniciAra.Name = "txtKullaniciAra";
-            this.txtKullaniciAra.Size = new System.Drawing.Size(173, 27);
+            this.txtKullaniciAra.Size = new System.Drawing.Size(173, 23);
             this.txtKullaniciAra.TabIndex = 0;
+            this.txtKullaniciAra.TextChanged += new System.EventHandler(this.txtKullaniciAra_TextChanged);
             // 
             // lvKullanici
             // 
@@ -223,7 +225,7 @@
             this.label3.Location = new System.Drawing.Point(181, 33);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 20);
+            this.label3.Size = new System.Drawing.Size(34, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Ara:";
             // 
@@ -237,15 +239,16 @@
             this.btnAktiviteGuncelle.TabIndex = 3;
             this.btnAktiviteGuncelle.Text = "Güncelle";
             this.btnAktiviteGuncelle.UseVisualStyleBackColor = true;
+            this.btnAktiviteGuncelle.Click += new System.EventHandler(this.btnAktiviteGuncelle_Click);
             // 
             // grpYemekler
             // 
             this.grpYemekler.BackColor = System.Drawing.Color.White;
+            this.grpYemekler.Controls.Add(this.btnYemekAkitfPasif);
             this.grpYemekler.Controls.Add(this.label2);
             this.grpYemekler.Controls.Add(this.lvYemek);
             this.grpYemekler.Controls.Add(this.txtYemekAra);
             this.grpYemekler.Controls.Add(this.btnYemekGüncelle);
-            this.grpYemekler.Controls.Add(this.btnYemekSil);
             this.grpYemekler.Controls.Add(this.btnYemekEkle);
             this.grpYemekler.ForeColor = System.Drawing.Color.DarkGreen;
             this.grpYemekler.Location = new System.Drawing.Point(11, 13);
@@ -257,13 +260,25 @@
             this.grpYemekler.TabStop = false;
             this.grpYemekler.Text = "Yemekler";
             // 
+            // btnYemekAkitfPasif
+            // 
+            this.btnYemekAkitfPasif.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnYemekAkitfPasif.Location = new System.Drawing.Point(475, 170);
+            this.btnYemekAkitfPasif.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.btnYemekAkitfPasif.Name = "btnYemekAkitfPasif";
+            this.btnYemekAkitfPasif.Size = new System.Drawing.Size(80, 37);
+            this.btnYemekAkitfPasif.TabIndex = 4;
+            this.btnYemekAkitfPasif.Text = "Aktif/Pasif";
+            this.btnYemekAkitfPasif.UseVisualStyleBackColor = true;
+            this.btnYemekAkitfPasif.Click += new System.EventHandler(this.btnYemekAkitfPasif_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(240, 36);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 20);
+            this.label2.Size = new System.Drawing.Size(34, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ara:";
             // 
@@ -308,7 +323,7 @@
             this.txtYemekAra.Location = new System.Drawing.Point(284, 33);
             this.txtYemekAra.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtYemekAra.Name = "txtYemekAra";
-            this.txtYemekAra.Size = new System.Drawing.Size(173, 27);
+            this.txtYemekAra.Size = new System.Drawing.Size(173, 23);
             this.txtYemekAra.TabIndex = 0;
             this.txtYemekAra.TextChanged += new System.EventHandler(this.txtYemekAra_TextChanged);
             // 
@@ -323,18 +338,6 @@
             this.btnYemekGüncelle.Text = "Güncelle";
             this.btnYemekGüncelle.UseVisualStyleBackColor = true;
             this.btnYemekGüncelle.Click += new System.EventHandler(this.btnYemekGüncelle_Click);
-            // 
-            // btnYemekSil
-            // 
-            this.btnYemekSil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnYemekSil.Location = new System.Drawing.Point(475, 171);
-            this.btnYemekSil.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.btnYemekSil.Name = "btnYemekSil";
-            this.btnYemekSil.Size = new System.Drawing.Size(80, 37);
-            this.btnYemekSil.TabIndex = 2;
-            this.btnYemekSil.Text = "Sil";
-            this.btnYemekSil.UseVisualStyleBackColor = true;
-            this.btnYemekSil.Click += new System.EventHandler(this.btnYemekSil_Click);
             // 
             // btnYemekEkle
             // 
@@ -353,20 +356,9 @@
             this.txtAktiviteAra.Location = new System.Drawing.Point(225, 28);
             this.txtAktiviteAra.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtAktiviteAra.Name = "txtAktiviteAra";
-            this.txtAktiviteAra.Size = new System.Drawing.Size(173, 27);
+            this.txtAktiviteAra.Size = new System.Drawing.Size(173, 23);
             this.txtAktiviteAra.TabIndex = 0;
             this.txtAktiviteAra.TextChanged += new System.EventHandler(this.txtAktiviteAra_TextChanged);
-            // 
-            // btnAktiviteSil
-            // 
-            this.btnAktiviteSil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnAktiviteSil.Location = new System.Drawing.Point(416, 182);
-            this.btnAktiviteSil.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.btnAktiviteSil.Name = "btnAktiviteSil";
-            this.btnAktiviteSil.Size = new System.Drawing.Size(80, 37);
-            this.btnAktiviteSil.TabIndex = 2;
-            this.btnAktiviteSil.Text = "Sil";
-            this.btnAktiviteSil.UseVisualStyleBackColor = true;
             // 
             // btnAktiviteEkle
             // 
@@ -378,15 +370,16 @@
             this.btnAktiviteEkle.TabIndex = 1;
             this.btnAktiviteEkle.Text = "Ekle";
             this.btnAktiviteEkle.UseVisualStyleBackColor = true;
+            this.btnAktiviteEkle.Click += new System.EventHandler(this.btnAktiviteEkle_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.lvAktivite);
+            this.groupBox2.Controls.Add(this.btnAktiviteAktifPasif);
             this.groupBox2.Controls.Add(this.btnAktiviteGuncelle);
             this.groupBox2.Controls.Add(this.txtAktiviteAra);
-            this.groupBox2.Controls.Add(this.btnAktiviteSil);
             this.groupBox2.Controls.Add(this.btnAktiviteEkle);
             this.groupBox2.ForeColor = System.Drawing.Color.DarkGreen;
             this.groupBox2.Location = new System.Drawing.Point(584, 13);
@@ -398,12 +391,37 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Aktiviteler";
             // 
+            // btnAktiviteAktifPasif
+            // 
+            this.btnAktiviteAktifPasif.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAktiviteAktifPasif.Location = new System.Drawing.Point(416, 181);
+            this.btnAktiviteAktifPasif.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.btnAktiviteAktifPasif.Name = "btnAktiviteAktifPasif";
+            this.btnAktiviteAktifPasif.Size = new System.Drawing.Size(80, 37);
+            this.btnAktiviteAktifPasif.TabIndex = 3;
+            this.btnAktiviteAktifPasif.Text = "Aktif/Pasif";
+            this.btnAktiviteAktifPasif.UseVisualStyleBackColor = true;
+            this.btnAktiviteAktifPasif.Click += new System.EventHandler(this.btnAktiviteAktifPasif_Click);
+            // 
+            // btnKullaniciAktifPasif
+            // 
+            this.btnKullaniciAktifPasif.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnKullaniciAktifPasif.Location = new System.Drawing.Point(14, 779);
+            this.btnKullaniciAktifPasif.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.btnKullaniciAktifPasif.Name = "btnKullaniciAktifPasif";
+            this.btnKullaniciAktifPasif.Size = new System.Drawing.Size(80, 37);
+            this.btnKullaniciAktifPasif.TabIndex = 5;
+            this.btnKullaniciAktifPasif.Text = "Aktif/Pasif";
+            this.btnKullaniciAktifPasif.UseVisualStyleBackColor = true;
+            this.btnKullaniciAktifPasif.Click += new System.EventHandler(this.btnKullaniciAktifPasif_Click);
+            // 
             // FormAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1110, 834);
+            this.Controls.Add(this.btnKullaniciAktifPasif);
             this.Controls.Add(this.btnRaporlar);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.grpYemekler);
@@ -445,10 +463,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader14;
         private System.Windows.Forms.TextBox txtYemekAra;
         private System.Windows.Forms.Button btnYemekGüncelle;
-        private System.Windows.Forms.Button btnYemekSil;
         private System.Windows.Forms.Button btnYemekEkle;
         private System.Windows.Forms.TextBox txtAktiviteAra;
-        private System.Windows.Forms.Button btnAktiviteSil;
         private System.Windows.Forms.Button btnAktiviteEkle;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ColumnHeader columnHeader17;
@@ -461,5 +477,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader24;
         private System.Windows.Forms.ColumnHeader columnHeader25;
         private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.Button btnAktiviteAktifPasif;
+        private System.Windows.Forms.Button btnYemekAkitfPasif;
+        private System.Windows.Forms.Button btnKullaniciAktifPasif;
     }
 }

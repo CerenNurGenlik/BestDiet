@@ -50,5 +50,23 @@ namespace BusinessLogicLayer.Services
             User user = GetUserByUserName(userID);
             return DateTime.Now.Year - user.BirthDate.Year;
         }
+
+        public List<User> GetUsersByText(string text)
+        {
+            return userRepository.GetUserByText(text);
+        }
+
+        public bool DoPassiveByUserID(string userID)
+        {
+            User user = GetUserByUserName(userID);
+            user.IsActive = false;
+            return userRepository.Update(user);
+        }
+        public bool DoActiveByUserID(string userID)
+        {
+            User user = GetUserByUserName(userID);
+            user.IsActive = true;
+            return userRepository.Update(user);
+        }
     }
 }

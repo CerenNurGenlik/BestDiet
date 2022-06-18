@@ -40,5 +40,16 @@ namespace DataAccessLayer.Repositories
         {
             return MainRepository.db.Users.Where(u=> u.UserType == UserType.User).ToList();
         }
+        public List<User> GetUserByText(string text)
+        {
+            return MainRepository.db.Users.Where(u => (u.FirstName.Contains(text) || u.LastName.Contains(text))&& u.UserType==UserType.User).ToList();
+        }
+
+        public bool Update(User user)
+        {
+            User updateUser= GetUserByUserName(user.UserID);
+            updateUser.IsActive = user.IsActive;
+            return MainRepository.db.SaveChanges() > 0;
+        }
     }
 }

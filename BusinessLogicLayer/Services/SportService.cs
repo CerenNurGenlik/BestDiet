@@ -64,12 +64,28 @@ namespace BusinessLogicLayer.Services
         {
             CheckSportId(sportID);
             return sportRepository.GetBySportID(sportID);
-
         }
         public List<Sport> GetFoodsByText(string text)
         {
             return sportRepository.GetSportsByText(text);
+        }
 
+        public bool Update(Sport sport)
+        {
+            return sportRepository.Update(sport);
+        }
+
+        public bool DoPassiveBySportID(int sportID)
+        {
+            Sport sport = GetBySportID(sportID);
+            sport.IsActive = false;
+            return Update(sport);
+        }
+        public bool DoActiveBySportID(int sportID)
+        {
+            Sport sport = GetBySportID(sportID);
+            sport.IsActive = true;
+            return Update(sport);
         }
     }
 }

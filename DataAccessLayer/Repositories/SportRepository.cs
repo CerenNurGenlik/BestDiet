@@ -41,7 +41,14 @@ namespace DataAccessLayer.Repositories
         public List<Sport> GetSportsByText(string text)
         {
             return MainRepository.db.Sports.Where(a => a.SportName.Contains(text)).ToList();
+        }
 
+        public bool Update(Sport sport)
+        {
+            Sport updateSport = GetBySportID(sport.SportID);
+            updateSport.SportName = sport.SportName;
+            updateSport.BurningCalori = sport.BurningCalori;
+            return MainRepository.db.SaveChanges()>0;
         }
     }
 }
