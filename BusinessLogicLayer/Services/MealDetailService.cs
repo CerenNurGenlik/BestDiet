@@ -23,9 +23,9 @@ namespace BusinessLogicLayer.Services
         {
             return mealDetailRepository.GetMealDeteailsByMealId(mealID);
         }
-        public List<MealDetail> GetMealDetailsByUserId(string userID)
+        public List<MealDetail> GetMealDetailsByUserId(string userID,DateTime dateTime)
         {
-            return mealDetailRepository.GetMealDetailsByUserId(userID);
+            return mealDetailRepository.GetMealDetailsByUserId(userID,dateTime);
         }
         public int GetSumCalori(List<MealDetail> mealDetails)
         {

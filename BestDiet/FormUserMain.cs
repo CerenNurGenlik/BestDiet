@@ -62,13 +62,14 @@ namespace BestDiet
 
         private void YakilanToplamKaloriyiGetir()
         {
+            
             List<ExerciseDetail> exerciseDetails = exerciseDetailService.GetSportsByExercise(user.UserID, dtpTarih.Value.Date);
             lblYakilanKalori.Text = exerciseDetailService.GetSumCalori(exerciseDetails).ToString();
         }
 
         private void AlinanToplamKaloriyiGetir()
         {
-            List<MealDetail> mealDetails = mealdetailService.GetMealDetailsByUserId(user.UserID);
+            List<MealDetail> mealDetails = mealdetailService.GetMealDetailsByUserId(user.UserID,dtpTarih.Value.Date);
             lblAlinanKalori.Text = mealdetailService.GetSumCalori(mealDetails).ToString();
         }
 
@@ -146,6 +147,8 @@ namespace BestDiet
 
         private void dtpTarih_ValueChanged(object sender, EventArgs e)
         {
+            AlinanToplamKaloriyiGetir();
+            YakilanToplamKaloriyiGetir();
             Water water = waterService.GetWaterByDateAndUserName(dtpTarih.Value.Date, user.UserID);
             if (water != null)
             {

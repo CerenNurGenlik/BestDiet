@@ -21,7 +21,12 @@ namespace BusinessLogicLayer.Services
 
         public List<ExerciseDetail> GetSportsByExercise (string userID,  DateTime dateTime)
         {
+            
             Exercise exercise = exerciseRepository.GetExercise(userID, dateTime);
+            if (exercise==null)
+            {
+                return null;
+            }
 
             List<ExerciseDetail> exerciseDetails = exerciseDetailRepository.GetExerciseDetails(exercise.ExerciseID);
 
@@ -44,8 +49,12 @@ namespace BusinessLogicLayer.Services
         }
         public int GetSumCalori(List<ExerciseDetail> exerciseDetails)
         {
-            
             int sum = 0;
+            if (exerciseDetails==null)
+            {
+                return sum;
+            }
+            
             foreach (ExerciseDetail item in exerciseDetails)
             {
                 sum += item.BurningCalori;
