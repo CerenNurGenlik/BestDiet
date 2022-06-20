@@ -84,6 +84,8 @@ namespace BestDiet
             txtYemekAdi.Text = food.FoodName;
             nudKalori.Value = food.Calori;
             txtResimYolu.Text = food.ImagePath;
+            if(!string.IsNullOrWhiteSpace(food.ImagePath))
+                pbResim.ImageLocation = food.ImagePath;
         }
 
         private void btnResimSec_Click(object sender, EventArgs e)
